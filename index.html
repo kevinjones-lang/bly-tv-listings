@@ -1,0 +1,85 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex">
+<title>The Bly Team - Active Listings</title><style>
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:100%;height:100%;background:#000;overflow:hidden;font-family:"Segoe UI","Helvetica Neue",Arial,"Liberation Sans",sans-serif;color:#fff}
+#stage{position:absolute;top:50%;left:50%;width:min(100vw,177.78vh);height:min(56.25vw,100vh);transform:translate(-50%,-50%);font-size:min(1vw,1.7778vh);
+ background:radial-gradient(ellipse at 20% 0%,#1d3a66 0%,#0b1a33 55%,#060e1d 100%);overflow:hidden}
+.slide{position:absolute;inset:0;opacity:0;transition:opacity 1.2s ease;display:flex;flex-direction:column;padding:4.5em 6em}
+.slide.active{opacity:1}
+.title{align-items:center;justify-content:center;text-align:center}
+.tbrand{font-size:2.6em;letter-spacing:.25em;color:#d4af37;margin-bottom:1em}
+.title h1{font-size:9em;font-weight:800;letter-spacing:-.02em;line-height:1}
+.rule{width:14em;height:.35em;background:#d4af37;margin:2.2em auto;border-radius:1em}
+.title h2{font-size:5.5em;font-weight:300;letter-spacing:.06em}
+.tsub{font-size:2.4em;color:#b9c6dc;margin-top:1.6em}
+.tcount{font-size:2em;color:#d4af37;margin-top:.8em;letter-spacing:.1em;text-transform:uppercase}
+.top{display:flex;justify-content:space-between;align-items:center}
+.chip{font-size:1.9em;padding:.35em 1.1em;border-radius:2em;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.25);letter-spacing:.05em}
+.occ-vacant{background:#1f7a4d;border-color:#2fa86a}
+.occ-occupied{background:#8a5a12;border-color:#d4a03a}
+.occ-unknown{background:#4a5568;border-color:#718096}
+.main{flex:1;padding-top:1.5em;display:flex;flex-direction:column;justify-content:center}
+.street{font-size:6.2em;font-weight:800;line-height:1.05;letter-spacing:-.01em}
+.city{font-size:3.6em;color:#b9c6dc;margin-top:.3em;font-weight:400}
+.price{font-size:9em;font-weight:800;color:#d4af37;margin-top:.35em;line-height:1}
+.stats{display:flex;gap:2.5em;margin-top:3.2em}
+.stat{background:rgba(255,255,255,.07);border-left:.35em solid #d4af37;padding:1.1em 2.2em;min-width:18em}
+.sv{font-size:4em;font-weight:700}
+.sl{font-size:1.8em;color:#9fb0cc;text-transform:uppercase;letter-spacing:.12em;margin-top:.3em}
+.foot{display:flex;gap:2.2em;white-space:nowrap;align-items:baseline;font-size:2em;border-top:1px solid rgba(255,255,255,.18);padding-top:.9em;color:#e6ecf5}
+.fl{color:#9fb0cc;font-size:.75em;text-transform:uppercase;letter-spacing:.12em;margin-right:.4em}
+.brand{margin-left:auto;color:#d4af37;font-weight:600}
+#bar{position:absolute;left:0;bottom:0;height:.45em;background:#d4af37;width:0}
+#hint{position:absolute;right:1.5em;top:1em;font-size:1.3em;color:rgba(255,255,255,.45);transition:opacity 1s}
+
+#asof{position:absolute;left:1.5em;top:1em;font-size:1.3em;color:rgba(255,255,255,.35)}
+#err{position:absolute;left:1.5em;bottom:1.2em;font-size:1.2em;color:rgba(255,200,120,.6)}
+</style></head><body><div id="stage"><div id="slides"></div>
+<div id="bar"></div><div id="asof"></div><div id="err"></div><div id="hint">&larr; &rarr; navigate &middot; F fullscreen</div></div><script>
+const FEED_ID='1rFoocO92dt3iqswf6IH6-oML7ZfhzdOAcVli5ujVJYU';
+const P=new URLSearchParams(location.search);
+const URLS=P.get('feed')?[P.get('feed')]:[
+ 'https://docs.google.com/spreadsheets/d/'+FEED_ID+'/export?format=csv',
+ 'https://docs.google.com/spreadsheets/d/'+FEED_ID+'/gviz/tq?tqx=out:csv'];
+const D=(+P.get('secs')||8)*1000;
+const SNAPSHOT=[["8213 Ocean Jasper Lane, Texas City", "$335,000", "4/4 & 3", "2136", "15", "Occupied"], ["3847 Ohana Lane, Galveston (Lot)", "$199,900", "N/A", ".1052 Acres", "189", "Vacant"], ["202 Meadowlawn Street, Shoreacres", "$444,000", "3/4 & 2/1", "2,354", "55", "Unknown"], ["205 Del Monte Drive, Friendswood", "$699,990", "4/5 & 4/2", "4,179", "68", "Vacant Staged"], ["1805 Sterling Creek Drive, Friendswood", "$1,200,000", "5/5 & 4/1", "4,728", "46", "Occupied"], ["15707 Fincher Drive, Friendswood", "$325,000", "4/4 &  2", "2,060", "32", "Vacant"], ["1102 Juniper Canyon Lane, Houston", "$329,000", "3/4 & 2/1", "2,310", "98", "Occupied"], ["911 Ruth Circle, Texas City", "$210,000", "3/3 & 2", "1,262", "91", "Occupied"], ["1102 Avenue C, Sweeny", "$219,000", "3/3 & 2", "1,691", "34", "Vacant"], ["721 Davis Road, League City", "$217,000", "2/2 & 2", "1,404", "30", "Occupied"], ["22314 Vista Del Mar, Galveston (Lot)", "$149,000", "N/A", "0.12 Acres", "30", "Vacant"], ["10244 Thomas T Trail, Cleveland (Lot)", "$860,130", "N/A", "3 Acres", "29", "Vacant"], ["6510 Wig Street, San Leon", "$840,000", "4 & 2", "3,210", "8", "Vacant"], ["143 Isles End Road, Tiki Island", "$1,325,000", "5/5 & 5/1", "2,867", "3", "Vacant"], ["2775 Glen Haven Drive, League City", "$274,500", "3/3 & 2", "1,560", "138", "Vacant"], ["5762 Birdwood Road, Houston", "$574,000", "6/7 & 4/1", "3,594", "39", "Vacant"], ["12823 Sandy Hook Drive, Houston", "$207,900", "3/3 & 2", "1,513", "64", "Occupied"], ["332 N 7th Street, La Porte", "$170,000", "3/3 & 1", "1,150", "178", "Vacant"], ["4331 Oakdale Mist Drive, Dickinson", "$325,000", "4/4 & 2", "1,877", "53", "Occupied"], ["4907 Autumn Hills Trail, Pearland", "$385,000", "3/4 & 2", "2,280", "11", "Occupied"], ["12638 Pirate Bend Drive, La Marque", "$250,000", "3 & 2", "1,616", "31", "Occupied"], ["111 Jamestown Avenue, Clute", "$265,000", "3/3 & 2", "1,722", "52", "Vacant"], ["2501 Gulf Freeway #258C, Dickinson", "$115,000", "2/2 & 1", "886", "60", "Vacant"], ["2336 Fairwind Road, Houston", "$276,500", "2/2 & 2/1", "1,343", "49", "Occupied"], ["8423 Venus St, Houston (Lot)", "$52,000", "N/A", "0.1263 Acres", "225", "Vacant"], ["2619 Bellview Street, La Marque", "$149,700", "2/2 & 1/1", "1,008", "195", "Vacant"], ["10112 Hermann Trace, Texas City", "$355,000", "4/4 & 2/1", "2,629", "35", "Occupied"], ["21155 Armstrong County Drive, Cypress", "$320,000", "4 & 2", "1,781", "137", "Vacant"], ["3502 Magnolia Avenue, Texas City", "$188,000", "3 & 1/0", "975", "158", "Vacant"], ["9621 Wall St, Texas City", "$315,000", "4/4 & 2/0", "2,033", "90", "Occupied"], ["16614 Hamill Drive, Rosharon (Lot)", "$158,000", "N/A", "2 Acres", "35", "Vacant"], ["18515 Egret Bay Blvd #1103, Webster", "$124,000", "2/2 & 2", "864", "14", "Vacant"], ["3134 California Avenue, Cleveland", "$290,000", "3 & 2", "1,440", "62", "Vacant"], ["1225 N Riviera Cir, Pearland", "$318,000", "3/3 & 2", "1,701", "55", "Vacant"], ["7108 E Hunter Drive, Hitchcock", "$289,999", "2/2 & 1/1", "1,200", "48", "Vacant"], ["874 Pebblebank Lane, League City", "$499,999", "5/5 & 3/1", "3,303", "28", "Vacant"], ["1407 Miller Street, Houston (Lot)", "$240,000", "N/A", "0.1226 acres", "249", "Vacant"], ["1220 Crystal Dunes Way, Crystal Beach (Lot)", "$329,000", "N/A", "0.877 acres", "26", "Vacant"], ["218 Shady Oaks, Alvin", "$89,995", "1 & 1", "384", "113", "Occupied"], ["1928 Purswell Road, Houston", "$399,000", "3/3 & 3/1", "2,524", "297", "Vacant"]];
+// Only these client-safe fields are ever read from the feed (matched by header name).
+const SAFE=[['address','address'],['price','list price'],['bb','bed/bath'],['size','sq ft'],['dom','dom'],['occ','vacant']];
+function parseCSV(t){const rows=[];let r=[],f='',q=false;for(let i=0;i<t.length;i++){const c=t[i];
+ if(q){if(c==='"'){if(t[i+1]==='"'){f+='"';i++}else q=false}else f+=c}
+ else if(c==='"')q=true;else if(c===','){r.push(f);f=''}else if(c==='\n'||c==='\r'){if(c==='\r'&&t[i+1]==='\n')i++;r.push(f);rows.push(r);r=[];f=''}else f+=c}
+ if(f!==''||r.length){r.push(f);rows.push(r)}return rows}
+function toListings(text){const rows=parseCSV(text);if(rows.length<2)throw Error('empty feed');
+ const h=rows[0].map(x=>x.trim().toLowerCase());const idx={};
+ for(const[k,p]of SAFE){const j=h.findIndex(x=>x.startsWith(p));if(j<0)throw Error('missing column '+p);idx[k]=j}
+ const out=[];for(const r of rows.slice(1)){const o={};for(const k in idx)o[k]=(r[idx[k]]||'').replace(/\s+/g,' ').trim();
+  if(o.address&&o.price&&o.address.toLowerCase()!=='address')out.push(o)}
+ if(!out.length)throw Error('no listings');return out}
+const fromSnap=()=>SNAPSHOT.map(a=>({address:a[0],price:a[1],bb:a[2],size:a[3],dom:a[4],occ:a[5]}));
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+function money(v){if(/^\d+(\.\d+)?$/.test(v))return '$'+Number(v).toLocaleString('en-US');return v}
+function num(v){return /^\d+$/.test(v)?Number(v).toLocaleString('en-US'):v}
+async function fetchFeed(){let last;for(const u of URLS){try{const r=await fetch(u+(u.includes('?')?'&':'?')+'_='+Date.now(),{cache:'no-store'});
+ if(!r.ok)throw Error('HTTP '+r.status);const t=await r.text();if(/^\s*</.test(t))throw Error('not CSV (sheet not public?)');return toListings(t)}catch(e){last=e}}throw last}
+let data=null,S=[],i=0,t;const stage=document.getElementById('slides'),bar=document.getElementById('bar');
+function render(L){const n=L.length;let h=`<section class="slide title"><div class="tbrand">eXp Realty</div><h1>The Bly Team</h1><div class="rule"></div><h2>Active Listings</h2><p class="tsub">League City &middot; Houston &middot; Galveston County</p><p class="tcount">${n} properties</p></section>`;
+ L.forEach((r,k)=>{const c=r.address.indexOf(',');const street=c<0?r.address:r.address.slice(0,c),city=c<0?'':r.address.slice(c+1).trim();
+  const size=num(r.size),sl=/acre/i.test(size)?'Lot Size':'Sq Ft';const occ=r.occ||'';const oc='occ-'+(occ.split(' ')[0]||'').toLowerCase();
+  const st=[['Bed / Bath',r.bb],[sl,size],['Days on Market',r.dom]].filter(x=>x[1]).map(([a,b])=>`<div class="stat"><div class="sv">${esc(b)}</div><div class="sl">${esc(a)}</div></div>`).join('');
+  h+=`<section class="slide listing"><div class="top"><span class="chip">Listing ${k+1} of ${n}</span>${occ?`<span class="chip ${esc(oc)}">${esc(occ)}</span>`:''}</div><div class="main"><div class="street">${esc(street)}</div><div class="city">${esc(city)}</div><div class="price">${esc(money(r.price))}</div><div class="stats">${st}</div></div><div class="foot"><div class="brand">The Bly Team &middot; eXp Realty</div></div></section>`});
+ stage.innerHTML=h;S=[...stage.querySelectorAll('.slide')];document.body.dataset.count=n}
+function show(n){S.forEach(s=>s.classList.remove('active'));i=(n+S.length)%S.length;S[i].classList.add('active');restart()}
+function restart(){clearTimeout(t);bar.style.transition='none';bar.style.width='0';void bar.offsetWidth;bar.style.transition='width '+D+'ms linear';bar.style.width='100%';t=setTimeout(next,D)}
+async function next(){if(i===S.length-1){await refresh();show(0)}else show(i+1)}
+function stamp(src,when){document.getElementById('asof').textContent=src==='live'?'Updated '+when.toLocaleTimeString([], {hour:'numeric',minute:'2-digit'}):''}
+async function refresh(){try{const L=await fetchFeed();data=L;localStorage.setItem('blyLast',JSON.stringify({t:Date.now(),L}));render(L);stamp('live',new Date());document.getElementById('err').textContent=''}
+ catch(e){console.warn('feed failed',e);if(!data){let c=null;try{c=JSON.parse(localStorage.getItem('blyLast'))}catch(_){}data=c&&c.L&&c.L.length?c.L:fromSnap();render(data)}
+  document.getElementById('err').textContent='\u25CF offline \u2013 showing last saved data';document.body.dataset.feedError=e.message}}
+function fs(){if(!document.fullscreenElement)document.documentElement.requestFullscreen&&document.documentElement.requestFullscreen();else document.exitFullscreen()}
+document.addEventListener('keydown',ev=>{const k=ev.key;if(k==='ArrowRight'||k===' '||k==='PageDown'){next();ev.preventDefault()}else if(k==='ArrowLeft'||k==='PageUp')show(i-1);else if(k==='f'||k==='F')fs();else if(k==='Home')show(0)});
+document.addEventListener('dblclick',fs);
+setTimeout(()=>{const h=document.getElementById('hint');if(h)h.style.opacity=0},6000);
+// Hard reload every 6h to pick up page updates and avoid memory creep on always-on TVs
+setTimeout(()=>location.reload(),6*3600*1000);
+refresh().then(()=>{document.body.dataset.ready='1';show(+P.get('slide')||0)});
+</script></body></html>
