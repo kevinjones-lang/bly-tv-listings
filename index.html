@@ -68,6 +68,31 @@ table.grid{width:100%;border-collapse:collapse;table-layout:fixed}
 .grid .chip{font-size:.66em;padding:.15em .7em;display:inline-block}
 .pbadge{font-size:1.7em;font-weight:900;letter-spacing:.12em;padding:.25em .9em;background:#e2552f;border:.1em solid #fff;border-radius:.3em}
 .slide.listing .foot{margin-top:auto;font-size:1.7em;padding-top:.6em}
+/* ---- FUB MTD Leaderboard theme (deep teal/emerald) ---- */
+.lb{background:radial-gradient(ellipse at 50% 0%,#0f5c57 0%,#0a3a3a 55%,#04201f 100%)}
+.lb .rule{background:#5fe0c0}.lb .tbrand,.lb .tcount{color:#7ff0d2}
+.lb .section-tag{background:#138a72}
+.lb .brand{color:#7ff0d2}
+.lbag{flex-direction:row;align-items:center;gap:4em;padding:4em 6em 6em;--acc:#5fe0c0}
+.lbag.r1{--acc:#f2c94c}.lbag.r2{--acc:#d6dde6}.lbag.r3{--acc:#e09a5a}
+.lbl{display:flex;flex-direction:column;align-items:center;width:24em;flex:none}
+.lbrk{font-size:17em;font-weight:900;line-height:.9;color:var(--acc);letter-spacing:-.04em}
+.lbrk small{font-size:.4em;vertical-align:top;opacity:.8}
+.lbav{margin-top:.8em;width:5.2em;height:5.2em;border-radius:50%;border:.12em solid var(--acc);display:flex;align-items:center;justify-content:center;font-size:3em;font-weight:700;background:rgba(255,255,255,.07)}
+.lbr{flex:1;display:flex;flex-direction:column;min-width:0}
+.lbkick{font-size:2em;letter-spacing:.22em;text-transform:uppercase;color:#7ff0d2;margin-bottom:.4em}
+.lbname{font-size:6.2em;font-weight:800;line-height:1.05;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.lbname.long{font-size:5.2em}
+.lbscore{margin:.3em 0 1em;display:flex;align-items:baseline;gap:.4em}
+.lbscore b{font-size:9em;font-weight:900;color:var(--acc);line-height:1}
+.lbscore span{font-size:2.6em;text-transform:uppercase;letter-spacing:.2em;color:#a9d6cc}
+.lbgrid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1.4em}
+.lbt{background:rgba(255,255,255,.08);border-left:.35em solid var(--acc);padding:1em 1.6em;min-height:10.5em}
+.lbt .v{font-size:4.4em;font-weight:800;line-height:1.05}
+.lbt .l{font-size:1.6em;color:#a9d6cc;text-transform:uppercase;letter-spacing:.12em;margin-top:.35em}
+.lbt .s{font-size:1.8em;color:#e6f5f1;margin-top:.2em}
+.lbfoot{position:absolute;left:6em;right:6em;bottom:2.4em;font-size:1.8em;color:rgba(255,255,255,.5);display:flex;justify-content:space-between}
+.lbtot .lbgrid{margin-top:2em}.lbtot .lbt{min-height:13em}.lbtot .lbt .v{font-size:6em}
 </style></head><body><div id="stage"><div id="slides"></div>
 <div id="bar"></div><div id="asof"></div><div id="err"></div><div id="hint">&larr; &rarr; navigate &middot; F fullscreen</div></div><script>
 const FEED_ID='1rFoocO92dt3iqswf6IH6-oML7ZfhzdOAcVli5ujVJYU';
@@ -75,6 +100,7 @@ const P=new URLSearchParams(location.search);
 const BASE='https://docs.google.com/spreadsheets/d/'+FEED_ID;
 const URLS=P.get('feed')?[P.get('feed')]:[BASE+'/gviz/tq?tqx=out:csv&headers=1', BASE+'/export?format=csv'];
 const D=(+P.get('secs')||18)*1000;
+const LB_URL=P.get('lb')||'leaderboard.json';
 const SNAP_A=[["8213 Ocean Jasper Lane, Texas City", "$335,000", "4/4 & 3", "2136", "16", "Occupied"], ["3847 Ohana Lane, Galveston (Lot)", "$199,900", "N/A", ".1052 Acres", "190", "Vacant"], ["202 Meadowlawn Street, Shoreacres", "$444,000", "3/4 & 2/1", "2,354", "56", "Unknown"], ["205 Del Monte Drive, Friendswood", "$699,990", "4/5 & 4/2", "4,179", "69", "Vacant Staged"], ["1805 Sterling Creek Drive, Friendswood", "$1,200,000", "5/5 & 4/1", "4,728", "47", "Occupied"], ["15707 Fincher Drive, Friendswood", "$325,000", "4/4 & 2", "2,060", "33", "Vacant"], ["1102 Juniper Canyon Lane, Houston", "$329,000", "3/4 & 2/1", "2,310", "99", "Occupied"], ["911 Ruth Circle, Texas City", "$210,000", "3/3 & 2", "1,262", "92", "Occupied"], ["1102 Avenue C, Sweeny", "$219,000", "3/3 & 2", "1,691", "35", "Vacant"], ["721 Davis Road, League City", "$217,000", "2/2 & 2", "1,404", "31", "Occupied"], ["22314 Vista Del Mar, Galveston (Lot)", "$149,000", "N/A", "0.12 Acres", "31", "Vacant"], ["10244 Thomas T Trail, Cleveland (Lot)", "$860,130", "N/A", "3 Acres", "30", "Vacant"], ["6510 Wig Street, San Leon", "$840,000", "4 & 2", "3,210", "9", "Vacant"], ["143 Isles End Road, Tiki Island", "$1,325,000", "5/5 & 5/1", "2,867", "4", "Vacant"], ["2775 Glen Haven Drive, League City", "$274,500", "3/3 & 2", "1,560", "139", "Vacant"], ["5762 Birdwood Road, Houston", "$574,000", "6/7 & 4/1", "3,594", "40", "Vacant"], ["332 N 7th Street, La Porte", "$170,000", "3/3 & 1", "1,150", "179", "Vacant"], ["4331 Oakdale Mist Drive, Dickinson", "$325,000", "4/4 & 2", "1,877", "54", "Occupied"], ["4907 Autumn Hills Trail, Pearland", "$385,000", "3/4 & 2", "2,280", "12", "Occupied"], ["12638 Pirate Bend Drive, La Marque", "$250,000", "3 & 2", "1,616", "32", "Occupied"], ["111 Jamestown Avenue, Clute", "$265,000", "3/3 & 2", "1,722", "53", "Vacant"], ["2501 Gulf Freeway #258C, Dickinson", "$115,000", "2/2 & 1", "886", "61", "Vacant"], ["2336 Fairwind Road, Houston", "$276,500", "2/2 & 2/1", "1,343", "50", "Occupied"], ["8423 Venus St, Houston (Lot)", "$52,000", "N/A", "0.1263 Acres", "226", "Vacant"], ["2619 Bellview Street, La Marque", "$149,700", "2/2 & 1/1", "1,008", "196", "Vacant"], ["10112 Hermann Trace, Texas City", "$355,000", "4/4 & 2/1", "2,629", "36", "Occupied"], ["21155 Armstrong County Drive, Cypress", "$320,000", "4 & 2", "1,781", "138", "Vacant"], ["3502 Magnolia Avenue, Texas City", "$188,000", "3 & 1/0", "975", "159", "Vacant"], ["9621 Wall St, Texas City", "$315,000", "4/4 & 2/0", "2,033", "91", "Occupied"], ["16614 Hamill Drive, Rosharon (Lot)", "$158,000", "N/A", "2 Acres", "36", "Vacant"], ["18515 Egret Bay Blvd #1103, Webster", "$124,000", "2/2 & 2", "864", "15", "Vacant"], ["3134 California Avenue, Cleveland", "$290,000", "3 & 2", "1,440", "63", "Vacant"], ["1225 N Riviera Cir, Pearland", "$318,000", "3/3 & 2", "1,701", "56", "Vacant"], ["7108 E Hunter Drive, Hitchcock", "$289,999", "2/2 & 1/1", "1,200", "49", "Vacant"], ["874 Pebblebank Lane, League City", "$499,999", "5/5 & 3/1", "3,303", "29", "Vacant"], ["6129 Creekside Lane, League City", "$249,500", "3/3 & 2", "1,520", "0", "Vacant"], ["1407 Miller Street, Houston (Lot)", "$240,000", "N/A", "0.1226 acres", "250", "Vacant"], ["1220 Crystal Dunes Way, Crystal Beach (Lot)", "$329,000", "N/A", "0.877 acres", "27", "Vacant"], ["218 Shady Oaks, Alvin", "$89,995", "1 & 1", "384", "114", "Occupied"], ["1928 Purswell Road, Houston", "$399,000", "3/3 & 3/1", "2,524", "298", "Vacant"], ["14710 S Isle Of Pines Court, Houston", "$279,900", "5/5 & 2/1", "2,340", "0", "Occupied"], ["00 Wincrest, Dickinson (Lot)", "$49,500", "N/A", "0.117 Acres", "0", "Vacant"]];
 const SNAP_P=[["920 Bruce Ave, League City", "$45,000", "extended"], ["4830 Houston Drive, Galveston", "$231,390", "11/06"], ["1611 Sweet Gum Lane, Kingwood", "$550,000", "10/30"], ["261 26TH STREET, SAN LEON", "$340,000", "11/16"], ["31210 Harvest Time Drive, Fulshear (NH)", "$420,000", "11/9"], ["31565 TIMBER GROVE LANE, SPRING", "$365,000", "10/26"], ["3108 Rey Avenue, Baytown", "$153,000", "10/28"], ["1904 Amy Drive, Baytown", "$160,000", "10/28"], ["12823 Sandy Hook Drive, Houston", "$207,000", "11/19"], ["2915 Early Turn Drive, Webster", "$239,900", "10/28"], ["2421 SANTIAGO LANE, LEAGUE CITY", "$344,900", "10/26"], ["2104 Bay Hill Drive, League City", "$410,000", "11/9"], ["9231 HOMELAND DRIVE, HOUSTON", "$225,000", "10/27"], ["11414 Kirkwyn Dr, Houston", "$141,000", "10/30"], ["1749 Stargrass Lane, Alvin ( NH)", "$328,990", "11/1"], ["3433 Wild Mustang St, League City (NH)", "$337,490", "10/30"], ["7411 Luce Del Porto Way, Texas City (NH)", "$252,995", "11/25"], ["5610 Blackbird Lane, Hitchcock (NH)", "$217,995", "TBD"], ["514 Idlewood Drive, Hitchcock", "$201,000", "10/27"], ["702 W Country Grove Circle, Pearland", "$190,000", "10/20"], ["1527 Watermont Drive, Missouri City (NH)", "$617,000", "10/27"], ["11319 Windy Dawn Dr, Pearland", "$445,000", "11/12"], ["7006 Texas Wrangler Drive, League City (NH)", "$439,990", "1/14"], ["7408 Luce Del Porto Way, Texas City (NH)", "$232,995", "11/20"], ["3722 WOODLACE DRIVE, HUMBLE", "$245,000", "11/23"], ["11954 RAMLA PLACE TRAIL, HOUSTON", "$230,000", "10/30"], ["2212 Palm Lagoon Drive, League City", "$349,000", "11/18"], ["5114 HEATHERBROOK DRIVE, HOUSTON", "$163,000", "10/30"], ["2008 Williamsburg Court N, League City", "$229,000", "10/30"], ["18519 Egret Bay Boulevard #1803, Webster", "$129,000", "10/26"], ["7000 SEAWALL BOULEVARD #813, GALVESTON", "$169,000", "11/16"], ["1500 Bay Area Blvd #282, Houston", "$71,800", "10/30"], ["1277 Ocean Manor Ln, League City", "$435,000", "10/29"], ["3204 Granite Gate Lane, League City", "$270,000", "10/22"], ["1408 N Pine Orchard Drive, Pearland", "$442,500", "11/2"]];
 // Only these client-safe columns are ever read, matched by exact header name. Anything else in the feed is ignored.
@@ -111,11 +137,30 @@ function render(d){const nA=d.A.length,nP=d.P.length;
  if(nP){h+=`<section class="slide title pend"><div class="section-tag">Under Contract</div><h1>Pending Sales</h1><div class="rule"></div><h2>Closing Soon</h2><p class="tsub">The Bly Team &middot; eXp Realty</p><p class="tcount">${nP} properties under contract</p></section>`;
  const pP=pages(d.P,PER);pP.forEach((g,k)=>{
   h+=`<section class="slide listing pend"><div class="lhead"><h3>Pending / Under Contract ${k+1} of ${pP.length}</h3><div class="pbadge">PENDING / UNDER CONTRACT</div></div><table class="grid"><colgroup><col style="width:58%"><col style="width:20%"><col style="width:22%"></colgroup><thead><tr><th>Address</th><th class="r">Price</th><th class="c">Expected Closing</th></tr></thead><tbody>${g.map(r=>`<tr><td class="addr">${addr(r.address)}</td><td class="r pr">${esc(money(r.price))}</td><td class="c">${esc(r.close||'')}</td></tr>`).join('')}</tbody></table>${foot}</section>`})}
+ if(lbData&&lbData.agents&&lbData.agents.length)h+=renderLB(lbData);
  stage.innerHTML=h;S=[...stage.querySelectorAll('.slide')];document.body.dataset.active=nA;document.body.dataset.pending=nP}
+
+// ---- Leaderboard (leaderboard.json, refetched each loop) ----
+async function fetchLB(){const r=await fetch(LB_URL+(LB_URL.includes('?')?'&':'?')+'_='+Date.now(),{cache:'no-store'});if(!r.ok)throw Error('HTTP '+r.status);
+ const j=await r.json();if(!j||!Array.isArray(j.agents)||!j.agents.length)throw Error('bad leaderboard.json');return j}
+const fmtN=v=>typeof v==='number'?v.toLocaleString('en-US'):esc(v==null?'':v);
+function lbAsOf(s){const d=new Date(s);if(isNaN(d))return esc(s||'');return d.toLocaleString('en-US',{timeZone:'America/Chicago',month:'short',day:'numeric',year:'numeric',hour:'numeric',minute:'2-digit'})+' CT'}
+const LBM=[['appointments','Appointments'],['conversations','Conversations','conversationTime'],['callAttempts','Call Attempts'],['texts','Texts'],['emails','Emails'],['zillowMessages','Zillow Messages']];
+const lbTiles=m=>`<div class="lbgrid">${LBM.map(([k,l,sub])=>`<div class="lbt"><div class="v">${fmtN((m||{})[k])}</div><div class="l">${l}</div>${sub&&m&&m[sub]?`<div class="s">${esc(m[sub])}</div>`:''}</div>`).join('')}</div>`;
+function renderLB(lb){const ag=lb.agents.slice().sort((a,b)=>a.rank-b.rank).slice(0,10),n=ag.length,asof=lbAsOf(lb.asOf);
+ const ft=x=>`<div class="lbfoot"><span>${x}</span><span>The Bly Team &middot; eXp Realty</span></div>`;
+ let h=`<section class="slide title lb"><div class="section-tag">Follow Up Boss</div><h1>${esc(lb.title||'October MTD Leaderboard')}</h1><div class="rule"></div><h2>Top ${n} Agents</h2><p class="tsub">Activity Leaderboard &middot; Everyone &middot; This Month</p><p class="tcount">as of ${asof}</p></section>`;
+ ag.forEach(a=>{const ini=String(a.name).split(/\s+/).map(w=>w[0]||'').join('').slice(0,2).toUpperCase();
+  h+=`<section class="slide lb lbag r${a.rank}"><div class="lbl"><div class="lbrk"><small>#</small>${esc(a.rank)}</div><div class="lbav">${esc(ini)}</div></div><div class="lbr"><div class="lbkick">October MTD Leaderboard</div><div class="lbname${String(a.name).length>16?' long':''}">${esc(a.name)}</div><div class="lbscore"><b>${fmtN(a.score)}</b><span>score</span></div>${lbTiles(a.metrics)}</div>${ft(`Rank ${esc(a.rank)} of ${n} &middot; as of ${asof}`)}</section>`});
+ if(lb.totals)h+=`<section class="slide lb lbag lbtot"><div class="lbr"><div class="lbkick">Everyone &middot; October MTD</div><div class="lbname">Team Totals</div>${lbTiles(lb.totals)}</div>${ft(`Follow Up Boss Activity &middot; as of ${asof}`)}</section>`;
+ return h}
+let lbData=null;
+async function refreshLB(){try{lbData=await fetchLB();localStorage.setItem('blyLB1',JSON.stringify(lbData))}catch(e){console.warn('leaderboard failed',e);document.body.dataset.lbError=e.message;
+ if(!lbData){try{lbData=JSON.parse(localStorage.getItem('blyLB1'))}catch(_){}}}}
 function show(n){S.forEach(s=>s.classList.remove('active'));i=(n+S.length)%S.length;S[i].classList.add('active');restart()}
 function restart(){clearTimeout(t);bar.style.transition='none';bar.style.width='0';void bar.offsetWidth;bar.style.transition='width '+D+'ms linear';bar.style.width='100%';t=setTimeout(next,D)}
 async function next(){if(i===S.length-1){await refresh();show(0)}else show(i+1)}
-async function refresh(){const e1=document.getElementById('err'),a=document.getElementById('asof');
+async function refresh(){await refreshLB();const e1=document.getElementById('err'),a=document.getElementById('asof');
  try{const d=await fetchFeed();data=d;localStorage.setItem('blyLast2',JSON.stringify({t:Date.now(),d}));render(d);a.textContent='Updated '+new Date().toLocaleTimeString([],{hour:'numeric',minute:'2-digit'});e1.textContent='';document.body.dataset.source='live'}
  catch(e){console.warn('feed failed',e);if(!data){let c=null;try{c=JSON.parse(localStorage.getItem('blyLast2'))}catch(_){}data=c&&c.d&&c.d.A&&c.d.A.length?c.d:snap();render(data)}
   e1.textContent='\u25CF offline \u2013 showing last saved data';document.body.dataset.source='fallback';document.body.dataset.feedError=e.message}}
