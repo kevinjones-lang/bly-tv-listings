@@ -1,5 +1,5 @@
 <!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex">
-<title>The Bly Team - Active Listings</title><style>
+<title>The Bly Team - TV Dashboard</title><style>
 *{box-sizing:border-box;margin:0;padding:0}
 html,body{width:100%;height:100%;background:#000;overflow:hidden;font-family:"Segoe UI","Helvetica Neue",Arial,"Liberation Sans",sans-serif;color:#fff}
 #stage{position:absolute;top:50%;left:50%;width:min(100vw,177.78vh);height:min(56.25vw,100vh);transform:translate(-50%,-50%);font-size:min(1vw,1.7778vh);
@@ -93,7 +93,73 @@ table.grid{width:100%;border-collapse:collapse;table-layout:fixed}
 .lbt .s{font-size:1.8em;color:#e6f5f1;margin-top:.2em}
 .lbfoot{position:absolute;left:6em;right:6em;bottom:2.4em;font-size:1.8em;color:rgba(255,255,255,.5);display:flex;justify-content:space-between}
 .lbtot .lbgrid{margin-top:2em}.lbtot .lbt{min-height:13em}.lbtot .lbt .v{font-size:6em}
-</style></head><body><div id="stage"><div id="slides"></div>
+/* ===== Split-screen dashboard (default view; ?view=classic for old slides) ===== */
+#dash{display:none;position:absolute;inset:0}
+body.dashmode #dash{display:grid;grid-template-columns:33.333% 66.667%}
+body.dashmode #slides,body.dashmode #bar,body.dashmode #asof,body.dashmode #hint{display:none}
+.dl{background:linear-gradient(180deg,#0a1630,#050c1b);border-right:.25em solid #d4af37;display:flex;flex-direction:column;padding:1.6em 1.4em 1.2em;min-width:0;overflow:hidden}
+.dlh{display:flex;justify-content:space-between;align-items:flex-end;border-bottom:.15em solid #d4af37;padding-bottom:.6em;margin-bottom:.6em}
+.dlh h2{white-space:nowrap;font-size:2.3em;font-weight:900;letter-spacing:.14em;color:#d4af37;line-height:1}
+.dlh .sub{white-space:nowrap;font-size:1.15em;color:#9fb0cc;letter-spacing:.12em;text-transform:uppercase;margin-top:.35em}
+.dlh .clk{white-space:nowrap;text-align:right;font-size:2.1em;font-weight:800;font-variant-numeric:tabular-nums;color:#fff;font-family:"DejaVu Sans Mono",Consolas,monospace}
+.dlh .pg{white-space:nowrap;font-size:1.15em;color:#9fb0cc;text-align:right;margin-top:.3em;letter-spacing:.1em}
+.rows{flex:1;display:flex;flex-direction:column;gap:.45em;perspective:60em}
+.row{flex:1;display:flex;gap:1em;align-items:center;background:rgba(255,255,255,.045);border-left:.3em solid #2fa8a0;padding:.4em .9em .4em .4em;min-height:0;transform-origin:50% 0;backface-visibility:hidden}
+.row.uc{border-left-color:#ff8a5c}
+.row.flip{animation:flip .7s ease both}
+@keyframes flip{0%{transform:rotateX(-90deg);opacity:0}60%{transform:rotateX(12deg);opacity:1}100%{transform:rotateX(0)}}
+.row img,.row .noimg{width:8em;height:5.8em;object-fit:cover;border-radius:.3em;flex:none;background:#1d3a66}
+.ri{flex:1;min-width:0;display:flex;flex-direction:column;gap:.15em}
+.r1{display:flex;justify-content:space-between;align-items:baseline;gap:.6em}
+.rst{min-width:0;font-size:1.5em;font-weight:800;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.rpr{font-size:1.6em;font-weight:900;color:#d4af37;white-space:nowrap;font-variant-numeric:tabular-nums}
+.rcity{font-size:1.2em;color:#b9c6dc;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.r3{display:flex;justify-content:space-between;align-items:center;gap:.6em}
+.rft{min-width:0;font-size:1.15em;color:#e6ecf5;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.rstat{font-size:.9em;font-weight:800;letter-spacing:.08em;text-transform:uppercase;padding:.15em .6em;border-radius:.3em;background:#1f7a4d;white-space:nowrap}
+.uc .rstat{background:#e2552f}
+.dlf{font-size:1.1em;color:rgba(255,255,255,.45);margin-top:.6em;display:flex;justify-content:space-between}
+.dr{display:grid;grid-template-rows:57% 43%;min-width:0}
+.mtd{position:relative;background:radial-gradient(ellipse at 50% 0%,#0f5c57 0%,#0a3a3a 55%,#04201f 100%);padding:1.8em 3em 1.6em;display:flex;flex-direction:column;overflow:hidden}
+.ph{display:flex;justify-content:space-between;align-items:baseline;gap:1em;white-space:nowrap}
+.ph h2{font-size:2em;font-weight:900;letter-spacing:.14em;text-transform:uppercase;color:#7ff0d2}
+.ph span{font-size:1.3em;color:rgba(255,255,255,.6)}
+.cards{position:relative;flex:1}
+.card{position:absolute;inset:0;display:flex;align-items:center;gap:3em;opacity:0;transition:opacity 1s;--acc:#5fe0c0}
+.card.on{opacity:1}
+.card.r1{--acc:#f2c94c}.card.r2{--acc:#d6dde6}.card.r3{--acc:#e09a5a}
+.hs{width:17em;height:17em;border-radius:50%;border:.35em solid var(--acc);flex:none;position:relative;overflow:hidden;background:rgba(255,255,255,.08);display:flex;align-items:center;justify-content:center}
+.hs img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+.hs .ini{font-size:5.5em;font-weight:800;color:#fff}
+.hs .rkb{position:absolute;bottom:0;left:0;right:0;text-align:center;background:var(--acc);color:#04201f;font-weight:900;font-size:2.2em;padding:.05em 0 .15em}
+.cr{flex:1;min-width:0}
+.cn{font-size:4.6em;font-weight:800;line-height:1.05;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.cn.long{font-size:3.8em}.cn.xlong{font-size:3.1em}
+.cs{display:flex;align-items:baseline;gap:.4em;margin:.15em 0 .6em}
+.cs b{font-size:6.5em;font-weight:900;color:var(--acc);line-height:1}
+.cs span{font-size:2em;letter-spacing:.2em;text-transform:uppercase;color:#a9d6cc}
+.mg{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:.9em}
+.mt{background:rgba(255,255,255,.08);border-left:.3em solid var(--acc);padding:.45em 1em;min-width:0}
+.mt .v{font-size:3em;font-weight:800;line-height:1.05}
+.mt .l{font-size:1.15em;color:#a9d6cc;text-transform:uppercase;letter-spacing:.05em;overflow:hidden;text-overflow:ellipsis;margin-top:.15em;white-space:nowrap}
+.mt .s{font-size:1.2em;color:#e6f5f1;white-space:nowrap}
+.dots{display:flex;gap:.5em;align-self:flex-end;margin-top:.4em}
+.dots i{width:.8em;height:.8em;border-radius:50%;background:rgba(255,255,255,.25)}.dots i.on{background:#7ff0d2}
+.ytd{background:radial-gradient(ellipse at 20% 0%,#1d3a66 0%,#0b1a33 60%,#060e1d 100%);border-top:.25em solid #d4af37;padding:1.4em 3em 1.2em;display:flex;flex-direction:column;overflow:hidden}
+.ytd .ph h2{color:#d4af37}
+.y3{flex:1;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1.4em;margin-top:.6em;min-height:0}
+.yc{background:rgba(255,255,255,.06);border-top:.3em solid var(--acc);padding:.7em 1em;display:flex;flex-direction:column;min-width:0;--acc:#d4af37}
+.yc.r2{--acc:#d6dde6}.yc.r3{--acc:#e09a5a}
+.yh{display:flex;align-items:center;gap:1em}
+.yh .hs{width:6em;height:6em;border-width:.22em}.yh .hs .ini{font-size:2.2em}.yh .hs .rkb{font-size:1.1em}
+.yn{font-size:1.6em;font-weight:800;line-height:1.1;min-width:0}
+.ys{font-size:2.4em;font-weight:900;color:var(--acc);line-height:1.1}
+.yg{margin-top:auto!important;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:.3em .8em;margin-top:.5em}
+.yg div{min-width:0}.yg b{display:block;font-size:1.45em;font-weight:800}.yg span{display:block;font-size:1.05em;color:#9fb0cc;text-transform:uppercase;letter-spacing:.06em;white-space:nowrap}
+.ytot{font-size:1.05em;color:#b9c6dc;margin-top:.7em;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.ywait{flex:1;display:flex;align-items:center;justify-content:center;font-size:3em;color:rgba(255,255,255,.5);letter-spacing:.1em}
+</style>
+</head><body><div id="stage"><div id="slides"></div><div id="dash"></div>
 <div id="bar"></div><div id="asof"></div><div id="err"></div><div id="hint">&larr; &rarr; navigate &middot; F fullscreen</div></div><script>
 const FEED_ID='1rFoocO92dt3iqswf6IH6-oML7ZfhzdOAcVli5ujVJYU';
 const P=new URLSearchParams(location.search);
@@ -146,7 +212,7 @@ async function fetchLB(){const r=await fetch(LB_URL+(LB_URL.includes('?')?'&':'?
 const fmtN=v=>typeof v==='number'?v.toLocaleString('en-US'):esc(v==null?'':v);
 function lbAsOf(s){const d=new Date(s);if(isNaN(d))return esc(s||'');return d.toLocaleString('en-US',{timeZone:'America/Chicago',month:'short',day:'numeric',year:'numeric',hour:'numeric',minute:'2-digit'})+' CT'}
 const LBM=[['appointments','Appointments'],['conversations','Conversations','conversationTime'],['callAttempts','Call Attempts'],['texts','Texts'],['emails','Emails'],['zillowMessages','Zillow Messages']];
-const lbTiles=m=>`<div class="lbgrid">${LBM.map(([k,l,sub])=>`<div class="lbt"><div class="v">${fmtN((m||{})[k])}</div><div class="l">${l}</div>${sub&&m&&m[sub]?`<div class="s">${esc(m[sub])}</div>`:''}</div>`).join('')}</div>`;
+const lbTiles=m=>`<div class="lbgrid">${LBM.map(([k,l,sub])=>`<div class="lbt"><div class="v">${fmtN((m||{})[k])}</div><div class="l">${l.replace('Zillow Messages','Zillow Msgs')}</div>${sub&&m&&m[sub]?`<div class="s">${esc(m[sub])}</div>`:''}</div>`).join('')}</div>`;
 function renderLB(lb){const ag=lb.agents.slice().sort((a,b)=>a.rank-b.rank).slice(0,10),n=ag.length,asof=lbAsOf(lb.asOf);
  const ft=x=>`<div class="lbfoot"><span>${x}</span><span>The Bly Team &middot; eXp Realty</span></div>`;
  let h=`<section class="slide title lb"><div class="section-tag">Follow Up Boss</div><h1>${esc(lb.title||'October MTD Leaderboard')}</h1><div class="rule"></div><h2>Top ${n} Agents</h2><p class="tsub">Activity Leaderboard &middot; Everyone &middot; This Month</p><p class="tcount">as of ${asof}</p></section>`;
@@ -165,9 +231,52 @@ async function refresh(){await refreshLB();const e1=document.getElementById('err
  catch(e){console.warn('feed failed',e);if(!data){let c=null;try{c=JSON.parse(localStorage.getItem('blyLast2'))}catch(_){}data=c&&c.d&&c.d.A&&c.d.A.length?c.d:snap();render(data)}
   e1.textContent='\u25CF offline \u2013 showing last saved data';document.body.dataset.source='fallback';document.body.dataset.feedError=e.message}}
 function fs(){if(!document.fullscreenElement)document.documentElement.requestFullscreen&&document.documentElement.requestFullscreen();else document.exitFullscreen()}
-document.addEventListener('keydown',ev=>{const k=ev.key;if(k==='ArrowRight'||k===' '||k==='PageDown'){next();ev.preventDefault()}else if(k==='ArrowLeft'||k==='PageUp')show(i-1);else if(k==='f'||k==='F')fs();else if(k==='Home')show(0)});
+document.addEventListener('keydown',ev=>{const k=ev.key;if(VIEW!=='classic'){if(k==='f'||k==='F')fs();return}if(k==='ArrowRight'||k===' '||k==='PageDown'){next();ev.preventDefault()}else if(k==='ArrowLeft'||k==='PageUp')show(i-1);else if(k==='f'||k==='F')fs();else if(k==='Home')show(0)});
 document.addEventListener('dblclick',fs);
 setTimeout(()=>{const h=document.getElementById('hint');if(h)h.style.opacity=0},6000);
 setTimeout(()=>location.reload(),6*3600*1000);
-refresh().then(()=>{document.body.dataset.ready='1';show(+P.get('slide')||0)});
+// ===== Split-screen dashboard =====
+const VIEW=P.get('view')||'dash';
+const DSECS=(+P.get('dsecs')||9)*1000,ROWS=6,LST_URL=P.get('listings')||'listings.json';
+const slug=n=>String(n).toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'');
+const inits=n=>String(n).split(/\s+/).map(w=>w[0]||'').join('').slice(0,2).toUpperCase();
+const head=(a,badge)=>`<div class="hs"><span class="ini">${esc(inits(a.name))}</span><img src="img/agents/${slug(a.name)}.jpg" alt="" onerror="this.remove()">${badge?`<div class="rkb">#${esc(a.rank)}</div>`:''}</div>`;
+const cleanLot=l=>(l||'').replace(/lot sqft\.?/i,'sf lot').replace(/acres?/i,'ac');
+function lstFromSnap(){return snap().A.map(r=>{const[st,c]=split(r.address);return{street:st,city:c,price:money(r.price),status:'Active',beds:null,bbText:r.bb,sqftText:r.size,photo:null}})}
+let L=[],lpage=0,lbD=null,card=0,cardT=null;
+async function getJSON(u){const r=await fetch(u+(u.includes('?')?'&':'?')+'_='+Date.now(),{cache:'no-store'});if(!r.ok)throw Error('HTTP '+r.status);return r.json()}
+async function loadListings(){try{const j=await getJSON(LST_URL);if(!j.listings||!j.listings.length)throw Error('empty');L=j.listings;localStorage.setItem('blyL3',JSON.stringify(j));document.getElementById('lasof').textContent='HAR.com \u00b7 '+lbAsOf(j.asOf);document.getElementById('err').textContent=''}
+ catch(e){console.warn('listings failed',e);if(!L.length){let c=null;try{c=JSON.parse(localStorage.getItem('blyL3'))}catch(_){}L=c&&c.listings&&c.listings.length?c.listings:lstFromSnap();document.getElementById('err').textContent='\u25CF offline \u2013 showing last saved listings'}}
+ document.getElementById('lcount').textContent=L.length+' listings'}
+function feat(x){const b=x.beds!=null?x.beds+' bd':'';const ba=x.fullBaths!=null?(x.fullBaths+(x.halfBaths?'/'+x.halfBaths:''))+' ba':(x.bbText&&x.bbText!=='N/A'?x.bbText:'');const sf=x.sqft?x.sqft.toLocaleString('en-US')+' sf':(x.lot?cleanLot(x.lot):(x.sqftText||''));return[b,ba,sf].filter(Boolean).join(' \u00b7 ')}
+function drawRows(){const pages=Math.max(1,Math.ceil(L.length/ROWS));lpage=lpage%pages;const g=L.slice(lpage*ROWS,lpage*ROWS+ROWS);
+ document.getElementById('rows').innerHTML=g.map((x,k)=>{const uc=/contract|pending|option/i.test(x.status||'');return `<div class="row flip${uc?' uc':''}" style="animation-delay:${k*90}ms">${x.photo?`<img src="${esc(x.photo)}" alt="">`:'<div class="noimg"></div>'}<div class="ri"><div class="rst">${esc(x.street)}</div><div class="r3"><div class="rcity">${esc((x.city||'').replace(/,\s*TX\b/,''))}</div><div class="rpr">${esc(x.price)}</div></div><div class="r3"><div class="rft">${esc(feat(x))}</div><div class="rstat">${esc((x.status||'').replace(/^Under Contract.*/i,'Pending'))}</div></div></div></div>`}).join('')+Array(ROWS-g.length).fill('<div class="row" style="visibility:hidden"></div>').join('');
+ document.getElementById('lpg').textContent='Page '+(lpage+1)+' of '+pages}
+async function boardTick(){const pages=Math.ceil(L.length/ROWS);if(lpage+1>=pages){await loadListings();lpage=0}else lpage++;drawRows()}
+const tiles=m=>`<div class="mg">${LBM.map(([k,l,sub])=>`<div class="mt"><div class="v">${fmtN((m||{})[k])}</div><div class="l">${l.replace('Zillow Messages','Zillow Msgs')}</div>${sub&&m&&m[sub]?`<div class="s">${esc(m[sub])}</div>`:''}</div>`).join('')}</div>`;
+function drawMTD(){const el=document.getElementById('cards');if(!lbD||!lbD.agents){el.innerHTML='<div class="ywait">Leaderboard loading</div>';return}
+ const ag=lbD.agents.slice().sort((a,b)=>a.rank-b.rank).slice(0,10);
+ document.getElementById('mtdt').textContent=lbD.title||'October MTD Leaderboard';document.getElementById('mtda').textContent='as of '+lbAsOf(lbD.asOf).replace(/&amp;/g,'&');
+ let h=ag.map(a=>`<div class="card r${a.rank}">${head(a,1)}<div class="cr"><div class="cn${String(a.name).length>20?' xlong':String(a.name).length>14?' long':''}">${esc(a.name)}</div><div class="cs"><b>${fmtN(a.score)}</b><span>score</span></div>${tiles(a.metrics)}</div></div>`).join('');
+ if(lbD.totals)h+=`<div class="card"><div class="hs" style="--acc:#7ff0d2"><span class="ini" style="font-size:3.6em">TEAM</span></div><div class="cr"><div class="cn">Team Totals</div><div class="cs"><span>Everyone \u00b7 Month to date</span></div>${tiles(lbD.totals)}</div></div>`;
+ el.innerHTML=h;const n=el.children.length;document.getElementById('dots').innerHTML='<i></i>'.repeat(n);card=card%n;showCard()}
+function showCard(){const C=[...document.getElementById('cards').children],Dt=[...document.getElementById('dots').children];C.forEach((c,k)=>c.classList.toggle('on',k===card));Dt.forEach((c,k)=>c.classList.toggle('on',k===card))}
+async function cardTick(){const n=document.getElementById('cards').children.length;if(card+1>=n){await refreshLB();lbD=lbData;card=0;drawMTD();drawYTD()}else{card++;showCard()}}
+function drawYTD(){const el=document.getElementById('ytdb'),y=lbD&&Array.isArray(lbD.ytd)&&lbD.ytd.length?lbD.ytd.slice().sort((a,b)=>a.rank-b.rank).slice(0,3):null;
+ document.getElementById('ytda').textContent=y&&lbD.ytdAsOf?'as of '+lbAsOf(lbD.ytdAsOf):'';
+ if(!y){el.innerHTML='<div class="ywait">YTD standings loading</div>';return}
+ const sm=[['appointments','Appts'],['conversations','Convos'],['callAttempts','Calls'],['texts','Texts'],['emails','Emails'],['zillowMessages','Zillow']];
+ let h='<div class="y3">'+y.map(a=>`<div class="yc r${a.rank}"><div class="yh">${head(a,1)}<div style="min-width:0"><div class="yn">${esc(a.name)}</div><div class="ys">${fmtN(a.score)}</div></div></div><div class="yg">${sm.map(([k,l])=>`<div><b>${fmtN(a.metrics[k])}</b><span>${l}</span></div>`).join('')}</div></div>`).join('')+'</div>';
+ const t=lbD.ytdTotals;if(t)h+=`<div class="ytot">Team YTD: ${sm.map(([k,l])=>`<b>${fmtN(t[k])}</b> ${l.toLowerCase()}${k==='conversations'&&t.conversationTime?' ('+esc(t.conversationTime)+')':''}`).join(' \u00b7 ')}</div>`;
+ el.innerHTML=h}
+function clock(){document.getElementById('clk').textContent=new Date().toLocaleTimeString('en-US',{timeZone:'America/Chicago',hour:'numeric',minute:'2-digit'})}
+async function startDash(){document.body.classList.add('dashmode');
+ document.getElementById('dash').innerHTML=`<div class="dl"><div class="dlh"><div><h2>NOW LISTED</h2><div class="sub">The Bly Team \u00b7 <span id="lcount"></span></div></div><div><div class="clk" id="clk"></div><div class="pg" id="lpg"></div></div></div><div class="rows" id="rows"></div><div class="dlf"><span id="lasof"></span><span>eXp Realty</span></div></div>
+ <div class="dr"><div class="mtd"><div class="ph"><h2 id="mtdt">October MTD Leaderboard</h2><span id="mtda"></span></div><div class="cards" id="cards"></div><div class="dots" id="dots"></div></div>
+ <div class="ytd"><div class="ph"><h2>Top 3 Year to Date</h2><span id="ytda"></span></div><div id="ytdb" style="flex:1;display:flex;flex-direction:column;min-height:0"></div></div></div>`;
+ clock();setInterval(clock,10000);
+ await Promise.all([loadListings(),refreshLB()]);lbD=lbData;drawRows();drawMTD();drawYTD();
+ setInterval(boardTick,DSECS);setInterval(cardTick,DSECS);document.body.dataset.ready='1'}
+if(VIEW==='classic')refresh().then(()=>{document.body.dataset.ready='1';show(+P.get('slide')||0)});
+else startDash();
 </script></body></html>

@@ -152,5 +152,59 @@
     "emails": 27546,
     "zillowMessages": 423,
     "conversationTime": "2 days 15 hrs"
+  },
+  "ytdAsOf": "2026-10-22T12:22:00-05:00",
+  "ytd": [
+    {
+      "rank": 1,
+      "name": "Tannika Phillips-Humphrey",
+      "score": 193830,
+      "metrics": {
+        "appointments": 245,
+        "conversations": 525,
+        "callAttempts": 447,
+        "texts": 5887,
+        "emails": 931,
+        "zillowMessages": 331,
+        "conversationTime": "3 days 19 hrs"
+      }
+    },
+    {
+      "rank": 2,
+      "name": "Meggan Flanagan",
+      "score": 185206,
+      "metrics": {
+        "appointments": 203,
+        "conversations": 593,
+        "callAttempts": 583,
+        "texts": 7849,
+        "emails": 1233,
+        "zillowMessages": 329,
+        "conversationTime": "4 days 17 hrs"
+      }
+    },
+    {
+      "rank": 3,
+      "name": "Deborah Bly",
+      "score": 149828,
+      "metrics": {
+        "appointments": 82,
+        "conversations": 827,
+        "callAttempts": 927,
+        "texts": 5717,
+        "emails": 5424,
+        "zillowMessages": 0,
+        "conversationTime": "5 days 2 hrs"
+      }
+    }
+  ],
+  "ytdTotals": {
+    "appointments": 1767,
+    "conversations": 7151,
+    "callAttempts": 10629,
+    "texts": 81070,
+    "emails": 127097,
+    "zillowMessages": 6085,
+    "conversationTime": "43 days 19 hrs"
   }
 }
