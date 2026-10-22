@@ -82,7 +82,7 @@ table.grid{width:100%;border-collapse:collapse;table-layout:fixed}
 .lbr{flex:1;display:flex;flex-direction:column;min-width:0}
 .lbkick{font-size:2em;letter-spacing:.22em;text-transform:uppercase;color:#7ff0d2;margin-bottom:.4em}
 .lbname{font-size:6.2em;font-weight:800;line-height:1.05;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.lbname.long{font-size:5.2em}
+.lbname.long{font-size:5.2em}.lbname.xlong{font-size:4.3em}
 .lbscore{margin:.3em 0 1em;display:flex;align-items:baseline;gap:.4em}
 .lbscore b{font-size:9em;font-weight:900;color:var(--acc);line-height:1}
 .lbscore span{font-size:2.6em;text-transform:uppercase;letter-spacing:.2em;color:#a9d6cc}
@@ -151,7 +151,7 @@ function renderLB(lb){const ag=lb.agents.slice().sort((a,b)=>a.rank-b.rank).slic
  const ft=x=>`<div class="lbfoot"><span>${x}</span><span>The Bly Team &middot; eXp Realty</span></div>`;
  let h=`<section class="slide title lb"><div class="section-tag">Follow Up Boss</div><h1>${esc(lb.title||'October MTD Leaderboard')}</h1><div class="rule"></div><h2>Top ${n} Agents</h2><p class="tsub">Activity Leaderboard &middot; Everyone &middot; This Month</p><p class="tcount">as of ${asof}</p></section>`;
  ag.forEach(a=>{const ini=String(a.name).split(/\s+/).map(w=>w[0]||'').join('').slice(0,2).toUpperCase();
-  h+=`<section class="slide lb lbag r${a.rank}"><div class="lbl"><div class="lbrk"><small>#</small>${esc(a.rank)}</div><div class="lbav">${esc(ini)}</div></div><div class="lbr"><div class="lbkick">October MTD Leaderboard</div><div class="lbname${String(a.name).length>16?' long':''}">${esc(a.name)}</div><div class="lbscore"><b>${fmtN(a.score)}</b><span>score</span></div>${lbTiles(a.metrics)}</div>${ft(`Rank ${esc(a.rank)} of ${n} &middot; as of ${asof}`)}</section>`});
+  h+=`<section class="slide lb lbag r${a.rank}"><div class="lbl"><div class="lbrk"><small>#</small>${esc(a.rank)}</div><div class="lbav">${esc(ini)}</div></div><div class="lbr"><div class="lbkick">October MTD Leaderboard</div><div class="lbname${String(a.name).length>22?' xlong':String(a.name).length>16?' long':''}">${esc(a.name)}</div><div class="lbscore"><b>${fmtN(a.score)}</b><span>score</span></div>${lbTiles(a.metrics)}</div>${ft(`Rank ${esc(a.rank)} of ${n} &middot; as of ${asof}`)}</section>`});
  if(lb.totals)h+=`<section class="slide lb lbag lbtot"><div class="lbr"><div class="lbkick">Everyone &middot; October MTD</div><div class="lbname">Team Totals</div>${lbTiles(lb.totals)}</div>${ft(`Follow Up Boss Activity &middot; as of ${asof}`)}</section>`;
  return h}
 let lbData=null;

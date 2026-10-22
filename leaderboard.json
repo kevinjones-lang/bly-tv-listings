@@ -1,18 +1,18 @@
 {
   "title": "October MTD Leaderboard",
   "source": "Follow Up Boss Activity Leaderboard (Everyone, This Month)",
-  "asOf": "2026-10-21T14:04:00-05:00",
+  "asOf": "2026-10-22T09:42:00-05:00",
   "agents": [
     {
       "rank": 1,
       "name": "Maria Pacheco",
-      "score": 19561,
+      "score": 19587,
       "metrics": {
         "appointments": 12,
         "conversations": 22,
         "callAttempts": 48,
-        "texts": 511,
-        "emails": 9804,
+        "texts": 520,
+        "emails": 9812,
         "zillowMessages": 11,
         "conversationTime": "3 hrs 50m"
       }
@@ -20,29 +20,29 @@
     {
       "rank": 2,
       "name": "Deborah Bly",
-      "score": 11844,
+      "score": 11981,
       "metrics": {
         "appointments": 6,
-        "conversations": 59,
-        "callAttempts": 70,
-        "texts": 351,
-        "emails": 1542,
+        "conversations": 60,
+        "callAttempts": 72,
+        "texts": 359,
+        "emails": 1543,
         "zillowMessages": 0,
-        "conversationTime": "9 hrs 10m"
+        "conversationTime": "9 hrs 37m"
       }
     },
     {
       "rank": 3,
       "name": "Meggan Flanagan",
-      "score": 11748,
+      "score": 11972,
       "metrics": {
         "appointments": 13,
-        "conversations": 36,
-        "callAttempts": 29,
-        "texts": 579,
+        "conversations": 37,
+        "callAttempts": 33,
+        "texts": 621,
         "emails": 60,
         "zillowMessages": 28,
-        "conversationTime": "6 hrs 30m"
+        "conversationTime": "6 hrs 37m"
       }
     },
     {
@@ -61,58 +61,58 @@
     },
     {
       "rank": 5,
+      "name": "Celia Flores",
+      "score": 9348,
+      "metrics": {
+        "appointments": 7,
+        "conversations": 40,
+        "callAttempts": 53,
+        "texts": 580,
+        "emails": 53,
+        "zillowMessages": 21,
+        "conversationTime": "5 hrs 13m"
+      }
+    },
+    {
+      "rank": 6,
       "name": "Shanna Ramon",
-      "score": 9147,
+      "score": 9165,
       "metrics": {
         "appointments": 9,
         "conversations": 30,
         "callAttempts": 72,
-        "texts": 271,
-        "emails": 265,
+        "texts": 279,
+        "emails": 267,
         "zillowMessages": 24,
         "conversationTime": "4 hrs 5m"
       }
     },
     {
-      "rank": 6,
-      "name": "Celia Flores",
-      "score": 9104,
-      "metrics": {
-        "appointments": 7,
-        "conversations": 38,
-        "callAttempts": 52,
-        "texts": 564,
-        "emails": 51,
-        "zillowMessages": 21,
-        "conversationTime": "5 hrs"
-      }
-    },
-    {
       "rank": 7,
-      "name": "Daisia Frank",
-      "score": 8063,
+      "name": "Sean Spellman",
+      "score": 8186,
       "metrics": {
-        "appointments": 10,
-        "conversations": 14,
-        "callAttempts": 33,
-        "texts": 164,
-        "emails": 895,
-        "zillowMessages": 22,
-        "conversationTime": "1 hr 51m"
+        "appointments": 8,
+        "conversations": 25,
+        "callAttempts": 16,
+        "texts": 636,
+        "emails": 139,
+        "zillowMessages": 23,
+        "conversationTime": "3 hrs 21m"
       }
     },
     {
       "rank": 8,
-      "name": "Sean Spellman",
-      "score": 8052,
+      "name": "Daisia Frank",
+      "score": 8175,
       "metrics": {
-        "appointments": 8,
-        "conversations": 24,
-        "callAttempts": 16,
-        "texts": 624,
-        "emails": 139,
-        "zillowMessages": 21,
-        "conversationTime": "3 hrs 16m"
+        "appointments": 10,
+        "conversations": 15,
+        "callAttempts": 34,
+        "texts": 165,
+        "emails": 895,
+        "zillowMessages": 22,
+        "conversationTime": "2 hrs 4m"
       }
     },
     {
@@ -126,31 +126,31 @@
         "texts": 56,
         "emails": 10,
         "zillowMessages": 1,
-        "conversationTime": "3 hrs 40m"
+        "conversationTime": "3 hrs 41m"
       }
     },
     {
       "rank": 10,
-      "name": "Sheryl Haag",
-      "score": 5523,
+      "name": "Tannika Phillips-Humphrey",
+      "score": 5666,
       "metrics": {
-        "appointments": 7,
-        "conversations": 14,
-        "callAttempts": 49,
-        "texts": 54,
-        "emails": 25,
+        "appointments": 8,
+        "conversations": 11,
+        "callAttempts": 9,
+        "texts": 231,
+        "emails": 14,
         "zillowMessages": 0,
-        "conversationTime": "1 hr 15m"
+        "conversationTime": "1 hr 28m"
       }
     }
   ],
   "totals": {
-    "appointments": 123,
-    "conversations": 420,
-    "callAttempts": 662,
-    "texts": 5244,
-    "emails": 27513,
-    "zillowMessages": 418,
-    "conversationTime": "2 days 13 hrs"
+    "appointments": 124,
+    "conversations": 438,
+    "callAttempts": 674,
+    "texts": 5428,
+    "emails": 27546,
+    "zillowMessages": 423,
+    "conversationTime": "2 days 15 hrs"
   }
 }
