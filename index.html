@@ -171,6 +171,34 @@ body.dashmode #dash{grid-template-rows:minmax(0,1fr) 3.4em}
 .ti:after{content:"\25C6";color:#d4af37;font-size:.6em;margin-left:1.6em}
 .ti .d{color:#d4af37;font-weight:800}.ti .n{font-weight:800;color:#fff}.ti .w{color:#7ff0d2;font-weight:700}.ti .x{color:#9fb0cc}
 .tnone{font-size:1.6em;color:#9fb0cc;padding-left:2em}
+/* ---- logo, MTD credits roll, YTD deals ---- */
+.logo{background:#fff;border-radius:.5em;padding:.45em .9em;display:inline-block;box-shadow:0 .2em .8em rgba(0,0,0,.4)}
+.logo img{height:2.9em;display:block}
+.dlh .sub{margin-top:.5em}
+.mtot{font-size:1.2em;color:#cfeee6;margin:.4em 0 .5em;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.mtot b{color:#fff}
+.roll{flex:1;position:relative;overflow:hidden;min-height:0;-webkit-mask-image:linear-gradient(transparent,#000 6%,#000 94%,transparent);mask-image:linear-gradient(transparent,#000 6%,#000 94%,transparent)}
+.rtrack{will-change:transform}.rtrack.run{animation:roll var(--rdur,120s) linear infinite}
+@keyframes roll{from{transform:translateY(0)}to{transform:translateY(-50%)}}
+.mr{display:flex;align-items:center;gap:1em;padding:.45em 1em;margin-bottom:.4em;background:rgba(255,255,255,.06);border-left:.3em solid #2fa8a0;--acc:#5fe0c0}
+.mr.p1{--acc:#f2c94c;background:linear-gradient(90deg,rgba(242,201,76,.28),rgba(242,201,76,.06))}.mr.p2{--acc:#d6dde6;background:linear-gradient(90deg,rgba(214,221,230,.24),rgba(214,221,230,.05))}.mr.p3{--acc:#e09a5a;background:linear-gradient(90deg,rgba(224,154,90,.26),rgba(224,154,90,.05))}
+.mr.p1,.mr.p2,.mr.p3{border-left-color:var(--acc)}
+.mk{width:2em;text-align:right;font-size:2em;font-weight:900;color:var(--acc);flex:none}
+.mr .hs{width:4.4em;height:4.4em;border-width:.18em}.mr .hs .ini{font-size:1.6em}
+.mi{flex:1;min-width:0}.mn{font-size:1.9em;font-weight:800;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.ml{font-size:1.1em;color:#a9d6cc;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.ml b{color:#e6f5f1}
+.ms{font-size:2.4em;font-weight:900;color:var(--acc);font-variant-numeric:tabular-nums;flex:none}
+.ypane{position:absolute;inset:0;opacity:0;transform:translateY(.6em);transition:opacity 1s ease,transform 1s ease}.ypane.on{opacity:1;transform:none}
+.ypane .y3{height:100%}
+#ytdh{transition:opacity .5s}#ytdh.fade{opacity:0}
+.ypane .yc{display:grid;grid-template-columns:auto minmax(0,1fr);grid-template-rows:auto 1fr;column-gap:1em;row-gap:.4em;align-items:center;padding:.7em 1.1em}
+.ypane .yc>.yn{grid-column:1/3;text-align:left}
+.ypane .yc .hs{width:6em;height:6em;flex:none}.ypane .yc .hs .rkb{font-size:1.1em}
+.yt{min-width:0;flex:1}
+.ypane .yn{font-size:1.75em;font-weight:800;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.yv{font-size:3em;font-weight:900;color:var(--acc);line-height:1.05}
+.yl{font-size:1em;color:#9fb0cc;text-transform:uppercase;letter-spacing:.14em}
+.ysub{font-size:1.15em;color:#e6ecf5;margin-top:.3em;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.mtd .ph h2{font-size:1.8em}.mtd .ph span{font-size:1.2em}
 </style>
 </head><body><div id="stage"><div id="slides"></div><div id="dash"></div>
 <div id="bar"></div><div id="asof"></div><div id="err"></div><div id="hint">&larr; &rarr; navigate &middot; F fullscreen</div></div><script>
@@ -251,7 +279,7 @@ setTimeout(()=>location.reload(),6*3600*1000);
 // ===== Split-screen dashboard =====
 const VIEW=P.get('view')||'dash';
 const DSECS=(+P.get('dsecs')||9)*1000,ROWS=6,LST_URL=P.get('listings')||'listings.json';
-const slug=n=>String(n).toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'');
+const slug=n=>String(n).replace(/['\u2019]/g,'').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'');
 const inits=n=>String(n).split(/\s+/).map(w=>w[0]||'').join('').slice(0,2).toUpperCase();
 const head=(a,badge)=>`<div class="hs"><span class="ini">${esc(inits(a.name))}</span><img src="img/agents/${slug(a.name)}.jpg" alt="" onerror="this.remove()">${badge?`<div class="rkb">#${esc(a.rank)}</div>`:''}</div>`;
 const cleanLot=l=>(l||'').replace(/lot sqft\.?/i,'sf lot').replace(/acres?/i,'ac');
@@ -266,22 +294,35 @@ function drawRows(){const pages=Math.max(1,Math.ceil(L.length/ROWS));lpage=lpage
  document.getElementById('rows').innerHTML=g.map((x,k)=>{const uc=/contract|pending|option/i.test(x.status||'');return `<div class="row flip${uc?' uc':''}" style="animation-delay:${k*90}ms">${x.photo?`<img src="${esc(x.photo)}" alt="">`:'<div class="noimg"></div>'}<div class="ri"><div class="rst">${esc(x.street)}</div><div class="r3"><div class="rcity">${esc((x.city||'').replace(/,\s*TX\b/,''))}</div><div class="rpr">${esc(x.price)}</div></div><div class="r3"><div class="rft">${esc(feat(x))}</div><div class="rstat">${esc((x.status||'').replace(/^Under Contract.*/i,'Pending'))}</div></div></div></div>`}).join('')+Array(ROWS-g.length).fill('<div class="row" style="visibility:hidden"></div>').join('');
  document.getElementById('lpg').textContent='Page '+(lpage+1)+' of '+pages}
 async function boardTick(){const pages=Math.ceil(L.length/ROWS);if(lpage+1>=pages){await loadListings();lpage=0}else lpage++;drawRows()}
-const tiles=m=>`<div class="mg">${LBM.map(([k,l,sub])=>`<div class="mt"><div class="v">${fmtN((m||{})[k])}</div><div class="l">${l.replace('Zillow Messages','Zillow Msgs')}</div>${sub&&m&&m[sub]?`<div class="s">${esc(m[sub])}</div>`:''}</div>`).join('')}</div>`;
-function drawMTD(){const el=document.getElementById('cards');if(!lbD||!lbD.agents){el.innerHTML='<div class="ywait">Leaderboard loading</div>';return}
- const ag=lbD.agents.slice().sort((a,b)=>a.rank-b.rank).slice(0,10);
- document.getElementById('mtdt').textContent=lbD.title||'October MTD Leaderboard';document.getElementById('mtda').textContent='as of '+lbAsOf(lbD.asOf).replace(/&amp;/g,'&');
- let h=ag.map(a=>`<div class="card r${a.rank}">${head(a,1)}<div class="cr"><div class="cn${String(a.name).length>20?' xlong':String(a.name).length>14?' long':''}">${esc(a.name)}</div><div class="cs"><b>${fmtN(a.score)}</b><span>score</span></div>${tiles(a.metrics)}</div></div>`).join('');
- if(lbD.totals)h+=`<div class="card"><div class="hs" style="--acc:#7ff0d2"><span class="ini" style="font-size:3.6em">TEAM</span></div><div class="cr"><div class="cn">Team Totals</div><div class="cs"><span>Everyone \u00b7 Month to date</span></div>${tiles(lbD.totals)}</div></div>`;
- el.innerHTML=h;const n=el.children.length;document.getElementById('dots').innerHTML='<i></i>'.repeat(n);card=card%n;showCard()}
-function showCard(){const C=[...document.getElementById('cards').children],Dt=[...document.getElementById('dots').children];C.forEach((c,k)=>c.classList.toggle('on',k===card));Dt.forEach((c,k)=>c.classList.toggle('on',k===card))}
-async function cardTick(){const n=document.getElementById('cards').children.length;if(card+1>=n){await Promise.all([refreshLB(),loadTraining()]);lbD=lbData;card=0;drawMTD();drawYTD()}else{card++;showCard()}}
-function drawYTD(){const el=document.getElementById('ytdb'),y=lbD&&Array.isArray(lbD.ytd)&&lbD.ytd.length?lbD.ytd.slice().sort((a,b)=>a.rank-b.rank).slice(0,3):null;
- document.getElementById('ytda').textContent=y&&lbD.ytdAsOf?'as of '+lbAsOf(lbD.ytdAsOf):'';
- if(!y){el.innerHTML='<div class="ywait">YTD standings loading</div>';return}
- const sm=[['appointments','Appts'],['conversations','Convos'],['callAttempts','Calls'],['texts','Texts'],['emails','Emails'],['zillowMessages','Zillow']];
- let h='<div class="y3">'+y.map(a=>`<div class="yc r${a.rank}"><div class="yh">${head(a,1)}<div style="min-width:0"><div class="yn">${esc(a.name)}</div><div class="ys">${fmtN(a.score)}</div></div></div><div class="yg">${sm.map(([k,l])=>`<div><b>${fmtN(a.metrics[k])}</b><span>${l}</span></div>`).join('')}</div></div>`).join('')+'</div>';
- const t=lbD.ytdTotals;if(t)h+=`<div class="ytot">Team YTD: ${sm.map(([k,l])=>`<b>${fmtN(t[k])}</b> ${l.toLowerCase()}${k==='conversations'&&t.conversationTime?' ('+esc(t.conversationTime)+')':''}`).join(' \u00b7 ')}</div>`;
- el.innerHTML=h}
+const EXCL=['transaction coordinator','transaction coordinator 2','training agent'];
+const isAgent=a=>a&&a.name&&!EXCL.includes(String(a.name).trim().toLowerCase())&&!(lbD&&Array.isArray(lbD.exclude)&&lbD.exclude.map(x=>x.toLowerCase()).includes(String(a.name).trim().toLowerCase()));
+const mline=m=>{m=m||{};return [[m.appointments,'appts'],[m.conversations,'convos'+(m.conversationTime?' ('+m.conversationTime+')':'')],[m.callAttempts,'calls'],[m.texts,'texts'],[m.emails,'emails'],[m.zillowMessages,'Zillow']].map(([v,l])=>`<b>${fmtN(v)}</b> ${esc(l)}`).join(' \u00b7 ')};
+let mtdKey='',ytdMode=0,ytdKey='';
+function drawMTD(){const el=document.getElementById('roll');if(!lbD){el.innerHTML='<div class="ywait">Leaderboard loading</div>';return}
+ const src=Array.isArray(lbD.mtdAll)&&lbD.mtdAll.length?lbD.mtdAll:(lbD.agents||[]);
+ const ag=src.filter(a=>isAgent(a)&&+a.score>0).sort((a,b)=>(a.rank||0)-(b.rank||0)||b.score-a.score).map((a,k)=>({...a,pos:k+1}));
+ document.getElementById('mtdt').textContent=lbD.title||'October MTD Leaderboard';document.getElementById('mtda').textContent='as of '+lbAsOf(lbD.asOf)+' \u00b7 '+ag.length+' agents';
+ const t=lbD.totals;document.getElementById('mtdtot').innerHTML=t?'Team MTD: '+mline(t):'';
+ const key=JSON.stringify(ag)+(t?JSON.stringify(t):'');if(key===mtdKey)return;mtdKey=key;
+ const row=a=>`<div class="mr${a.pos<=3?' p'+a.pos:''}"><div class="mk">${a.pos}</div>${head(a,0)}<div class="mi"><div class="mn">${esc(a.name)}</div><div class="ml">${mline(a.metrics)}</div></div><div class="ms">${fmtN(a.score)}</div></div>`;
+ const list=ag.map(row).join('');
+ el.innerHTML=`<div class="rtrack" id="rtrack"><div class="rset">${list}</div><div class="rset">${list}</div></div>`;
+ const tr=document.getElementById('rtrack'),h=tr.firstElementChild.offsetHeight,fit=h<=el.clientHeight;
+ if(fit){tr.lastElementChild.remove();return}
+ tr.style.setProperty('--rdur',(h/(window.innerWidth/1920*38)).toFixed(1)+'s');tr.classList.add('run');
+ tr.addEventListener('animationiteration',cycle)}
+let cycling=false;async function cycle(){if(cycling)return;cycling=true;try{await Promise.all([refreshLB(),loadTraining()]);if(lbData)lbD=lbData;drawMTD();drawYTD()}finally{cycling=false}}
+function dealsRank(mode){const rows=(lbD&&lbD.deals&&Array.isArray(lbD.deals.ytd)?lbD.deals.ytd:[]).filter(a=>isAgent(a)&&!(lbD.deals.exclude||[]).map(x=>x.toLowerCase()).includes(String(a.name).toLowerCase()));
+ const s=rows.slice().sort(mode?(a,b)=>b.closed-a.closed||b.volume-a.volume:(a,b)=>b.volume-a.volume||b.closed-a.closed);return s.slice(0,3).map((a,k)=>({...a,rank:k+1}))}
+const vtxt=a=>a.volumeText||('$'+(a.volume/1e6).toFixed(1)+'M');
+function drawYTD(){const el=document.getElementById('ytdb');const d=lbD&&lbD.deals&&lbD.deals.ytd&&lbD.deals.ytd.length;
+ document.getElementById('ytda').textContent=d&&lbD.dealsAsOf?'Closed deals \u00b7 as of '+lbAsOf(lbD.dealsAsOf):'';
+ if(!d){ytdKey='';el.innerHTML='<div class="ywait">YTD standings loading</div>';return}
+ const key=JSON.stringify(lbD.deals);if(key!==ytdKey){ytdKey=key;
+  const pane=(mode)=>`<div class="ypane${mode===ytdMode?' on':''}" data-mode="${mode}"><div class="y3">${dealsRank(mode).map(a=>`<div class="yc r${a.rank}"><div class="yn">${esc(a.name)}</div>${head(a,1)}<div class="yt"><div class="yv">${mode?fmtN(a.closed):esc(vtxt(a))}</div><div class="yl">${mode?'closings':'sales volume'}</div><div class="ysub">${mode?esc(vtxt(a))+' volume':fmtN(a.closed)+' closings'}</div>${a.dealAvgText?'<div class="ysub">'+esc(a.dealAvgText)+' avg deal</div>':''}</div></div>`).join('')}</div></div>`;
+  el.innerHTML=pane(0)+pane(1)}
+ document.getElementById('ytdh').textContent=ytdMode?'Top 3 YTD Closings':'Top 3 YTD Sales Volume'}
+function ytdFlip(){ytdMode^=1;document.querySelectorAll('.ypane').forEach(p=>p.classList.toggle('on',+p.dataset.mode===ytdMode));const h=document.getElementById('ytdh');h.classList.add('fade');setTimeout(()=>{h.textContent=ytdMode?'Top 3 YTD Closings':'Top 3 YTD Sales Volume';h.classList.remove('fade')},500)}
 function clock(){document.getElementById('clk').textContent=new Date().toLocaleTimeString('en-US',{timeZone:'America/Chicago',hour:'numeric',minute:'2-digit'})}
 
 // ---- Training ticker (training.json) ----
@@ -296,12 +337,12 @@ async function loadTraining(){let ev=null;try{const j=await getJSON(TR_URL);ev=(
  win.innerHTML=`<div class="ttrack" id="ttrack">${items}${items}</div>`;
  const tr=document.getElementById('ttrack');const px=tr.scrollWidth/2,speed=window.innerWidth/1920*130;tr.style.setProperty('--dur',(px/speed).toFixed(1)+'s');tr.classList.add('run')}
 async function startDash(){document.body.classList.add('dashmode');
- document.getElementById('dash').innerHTML=`<div class="dl"><div class="dlh"><div><h2>NOW LISTED</h2><div class="sub">The Bly Team \u00b7 <span id="lcount"></span></div></div><div><div class="clk" id="clk"></div><div class="pg" id="lpg"></div></div></div><div class="rows" id="rows"></div><div class="dlf"><span id="lasof"></span><span>eXp Realty</span></div></div>
- <div class="dr"><div class="mtd"><div class="ph"><h2 id="mtdt">October MTD Leaderboard</h2><span id="mtda"></span></div><div class="cards" id="cards"></div><div class="dots" id="dots"></div></div>
- <div class="ytd"><div class="ph"><h2>Top 3 Year to Date</h2><span id="ytda"></span></div><div id="ytdb" style="flex:1;display:flex;flex-direction:column;min-height:0"></div></div></div><div class="tick"><div class="tlab">TRAINING</div><div class="twin" id="twin"></div></div>`;
+ document.getElementById('dash').innerHTML=`<div class="dl"><div class="dlh"><div><div class="logo"><img src="img/logo.png" alt="The Bly Team | eXp Realty"></div><div class="sub">Now Listed \u00b7 <span id="lcount"></span></div></div><div><div class="clk" id="clk"></div><div class="pg" id="lpg"></div></div></div><div class="rows" id="rows"></div><div class="dlf"><span id="lasof"></span><span>eXp Realty</span></div></div>
+ <div class="dr"><div class="mtd"><div class="ph"><h2 id="mtdt">October MTD Leaderboard</h2><span id="mtda"></span></div><div class="mtot" id="mtdtot"></div><div class="roll" id="roll"></div></div>
+ <div class="ytd"><div class="ph"><h2 id="ytdh">Top 3 YTD Sales Volume</h2><span id="ytda"></span></div><div id="ytdb" style="flex:1;position:relative;min-height:0"></div></div></div><div class="tick"><div class="tlab">TRAINING</div><div class="twin" id="twin"></div></div>`;
  clock();setInterval(clock,10000);
  await Promise.all([loadListings(),refreshLB(),loadTraining()]);lbD=lbData;drawRows();drawMTD();drawYTD();
- setInterval(boardTick,DSECS);setInterval(cardTick,DSECS);document.body.dataset.ready='1'}
+ setInterval(boardTick,DSECS);setInterval(ytdFlip,(+P.get('ysecs')||15)*1000);setInterval(()=>{if(!document.querySelector('#rtrack.run'))cycle()},120000);document.body.dataset.ready='1'}
 if(VIEW==='classic')refresh().then(()=>{document.body.dataset.ready='1';show(+P.get('slide')||0)});
 else startDash();
 </script></body></html>
