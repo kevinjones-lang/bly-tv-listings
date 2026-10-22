@@ -120,7 +120,7 @@ body.dashmode #slides,body.dashmode #bar,body.dashmode #asof,body.dashmode #hint
 .uc .rstat{background:#e2552f}
 .dlf{font-size:1.1em;color:rgba(255,255,255,.45);margin-top:.6em;display:flex;justify-content:space-between}
 .dr{display:grid;grid-template-rows:57% 43%;min-width:0}
-.mtd{position:relative;background:radial-gradient(ellipse at 50% 0%,#0f5c57 0%,#0a3a3a 55%,#04201f 100%);padding:1.8em 3em 1.6em;display:flex;flex-direction:column;overflow:hidden}
+.mtd{position:relative;background:radial-gradient(ellipse at 50% 0%,#0f5c57 0%,#0a3a3a 55%,#04201f 100%);padding:1.4em 3em .8em;display:flex;flex-direction:column;overflow:hidden}
 .ph{display:flex;justify-content:space-between;align-items:baseline;gap:1em;white-space:nowrap}
 .ph h2{font-size:2em;font-weight:900;letter-spacing:.14em;text-transform:uppercase;color:#7ff0d2}
 .ph span{font-size:1.3em;color:rgba(255,255,255,.6)}
@@ -128,24 +128,24 @@ body.dashmode #slides,body.dashmode #bar,body.dashmode #asof,body.dashmode #hint
 .card{position:absolute;inset:0;display:flex;align-items:center;gap:3em;opacity:0;transition:opacity 1s;--acc:#5fe0c0}
 .card.on{opacity:1}
 .card.r1{--acc:#f2c94c}.card.r2{--acc:#d6dde6}.card.r3{--acc:#e09a5a}
-.hs{width:17em;height:17em;border-radius:50%;border:.35em solid var(--acc);flex:none;position:relative;overflow:hidden;background:rgba(255,255,255,.08);display:flex;align-items:center;justify-content:center}
+.hs{width:14.5em;height:14.5em;border-radius:50%;border:.35em solid var(--acc);flex:none;position:relative;overflow:hidden;background:rgba(255,255,255,.08);display:flex;align-items:center;justify-content:center}
 .hs img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
 .hs .ini{font-size:5.5em;font-weight:800;color:#fff}
 .hs .rkb{position:absolute;bottom:0;left:0;right:0;text-align:center;background:var(--acc);color:#04201f;font-weight:900;font-size:2.2em;padding:.05em 0 .15em}
 .cr{flex:1;min-width:0}
-.cn{font-size:4.6em;font-weight:800;line-height:1.05;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.cn.long{font-size:3.8em}.cn.xlong{font-size:3.1em}
-.cs{display:flex;align-items:baseline;gap:.4em;margin:.15em 0 .6em}
-.cs b{font-size:6.5em;font-weight:900;color:var(--acc);line-height:1}
+.cn{font-size:4em;font-weight:800;line-height:1.05;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.cn.long{font-size:3.5em}.cn.xlong{font-size:2.9em}
+.cs{display:flex;align-items:baseline;gap:.4em;margin:.1em 0 .5em}
+.cs b{font-size:5.2em;font-weight:900;color:var(--acc);line-height:1}
 .cs span{font-size:2em;letter-spacing:.2em;text-transform:uppercase;color:#a9d6cc}
-.mg{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:.9em}
+.mg{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:.7em}
 .mt{background:rgba(255,255,255,.08);border-left:.3em solid var(--acc);padding:.45em 1em;min-width:0}
-.mt .v{font-size:3em;font-weight:800;line-height:1.05}
+.mt .v{font-size:2.5em;font-weight:800;line-height:1.05}
 .mt .l{font-size:1.15em;color:#a9d6cc;text-transform:uppercase;letter-spacing:.05em;overflow:hidden;text-overflow:ellipsis;margin-top:.15em;white-space:nowrap}
 .mt .s{font-size:1.2em;color:#e6f5f1;white-space:nowrap}
 .dots{display:flex;gap:.5em;align-self:flex-end;margin-top:.4em}
 .dots i{width:.8em;height:.8em;border-radius:50%;background:rgba(255,255,255,.25)}.dots i.on{background:#7ff0d2}
-.ytd{background:radial-gradient(ellipse at 20% 0%,#1d3a66 0%,#0b1a33 60%,#060e1d 100%);border-top:.25em solid #d4af37;padding:1.4em 3em 1.2em;display:flex;flex-direction:column;overflow:hidden}
+.ytd{background:radial-gradient(ellipse at 20% 0%,#1d3a66 0%,#0b1a33 60%,#060e1d 100%);border-top:.25em solid #d4af37;padding:1em 3em .8em;display:flex;flex-direction:column;overflow:hidden}
 .ytd .ph h2{color:#d4af37}
 .y3{flex:1;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1.4em;margin-top:.6em;min-height:0}
 .yc{background:rgba(255,255,255,.06);border-top:.3em solid var(--acc);padding:.7em 1em;display:flex;flex-direction:column;min-width:0;--acc:#d4af37}
@@ -158,6 +158,19 @@ body.dashmode #slides,body.dashmode #bar,body.dashmode #asof,body.dashmode #hint
 .yg div{min-width:0}.yg b{display:block;font-size:1.45em;font-weight:800}.yg span{display:block;font-size:1.05em;color:#9fb0cc;text-transform:uppercase;letter-spacing:.06em;white-space:nowrap}
 .ytot{font-size:1.05em;color:#b9c6dc;margin-top:.7em;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .ywait{flex:1;display:flex;align-items:center;justify-content:center;font-size:3em;color:rgba(255,255,255,.5);letter-spacing:.1em}
+/* ---- Training ticker ---- */
+body.dashmode #dash{grid-template-rows:minmax(0,1fr) 3.4em}
+.tick{grid-column:1/3;display:flex;align-items:stretch;background:#071228;border-top:.2em solid #d4af37;overflow:hidden;min-width:0}
+.tlab{flex:none;display:flex;align-items:center;gap:.5em;background:#d4af37;color:#071228;font-weight:900;font-size:1.6em;letter-spacing:.18em;padding:0 1.1em;position:relative;z-index:2;box-shadow:.6em 0 1em rgba(0,0,0,.5)}
+.tlab:after{content:"";position:absolute;right:-.9em;top:0;bottom:0;width:0;border-left:.9em solid #d4af37;border-top:1.05em solid transparent;border-bottom:1.05em solid transparent}
+.twin{flex:1;overflow:hidden;position:relative;display:flex;align-items:center;min-width:0}
+.ttrack{display:flex;white-space:nowrap;will-change:transform;padding-left:2em}
+.ttrack.run{animation:crawl var(--dur,60s) linear infinite}
+@keyframes crawl{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+.ti{font-size:1.6em;color:#e6ecf5;padding-right:1.6em;display:inline-flex;align-items:center;gap:.45em}
+.ti:after{content:"\25C6";color:#d4af37;font-size:.6em;margin-left:1.6em}
+.ti .d{color:#d4af37;font-weight:800}.ti .n{font-weight:800;color:#fff}.ti .w{color:#7ff0d2;font-weight:700}.ti .x{color:#9fb0cc}
+.tnone{font-size:1.6em;color:#9fb0cc;padding-left:2em}
 </style>
 </head><body><div id="stage"><div id="slides"></div><div id="dash"></div>
 <div id="bar"></div><div id="asof"></div><div id="err"></div><div id="hint">&larr; &rarr; navigate &middot; F fullscreen</div></div><script>
@@ -261,7 +274,7 @@ function drawMTD(){const el=document.getElementById('cards');if(!lbD||!lbD.agent
  if(lbD.totals)h+=`<div class="card"><div class="hs" style="--acc:#7ff0d2"><span class="ini" style="font-size:3.6em">TEAM</span></div><div class="cr"><div class="cn">Team Totals</div><div class="cs"><span>Everyone \u00b7 Month to date</span></div>${tiles(lbD.totals)}</div></div>`;
  el.innerHTML=h;const n=el.children.length;document.getElementById('dots').innerHTML='<i></i>'.repeat(n);card=card%n;showCard()}
 function showCard(){const C=[...document.getElementById('cards').children],Dt=[...document.getElementById('dots').children];C.forEach((c,k)=>c.classList.toggle('on',k===card));Dt.forEach((c,k)=>c.classList.toggle('on',k===card))}
-async function cardTick(){const n=document.getElementById('cards').children.length;if(card+1>=n){await refreshLB();lbD=lbData;card=0;drawMTD();drawYTD()}else{card++;showCard()}}
+async function cardTick(){const n=document.getElementById('cards').children.length;if(card+1>=n){await Promise.all([refreshLB(),loadTraining()]);lbD=lbData;card=0;drawMTD();drawYTD()}else{card++;showCard()}}
 function drawYTD(){const el=document.getElementById('ytdb'),y=lbD&&Array.isArray(lbD.ytd)&&lbD.ytd.length?lbD.ytd.slice().sort((a,b)=>a.rank-b.rank).slice(0,3):null;
  document.getElementById('ytda').textContent=y&&lbD.ytdAsOf?'as of '+lbAsOf(lbD.ytdAsOf):'';
  if(!y){el.innerHTML='<div class="ywait">YTD standings loading</div>';return}
@@ -270,12 +283,24 @@ function drawYTD(){const el=document.getElementById('ytdb'),y=lbD&&Array.isArray
  const t=lbD.ytdTotals;if(t)h+=`<div class="ytot">Team YTD: ${sm.map(([k,l])=>`<b>${fmtN(t[k])}</b> ${l.toLowerCase()}${k==='conversations'&&t.conversationTime?' ('+esc(t.conversationTime)+')':''}`).join(' \u00b7 ')}</div>`;
  el.innerHTML=h}
 function clock(){document.getElementById('clk').textContent=new Date().toLocaleTimeString('en-US',{timeZone:'America/Chicago',hour:'numeric',minute:'2-digit'})}
+
+// ---- Training ticker (training.json) ----
+const TR_URL=P.get('training')||'training.json';let trKey='';
+function tDate(iso,allDay){const d=new Date(iso),o={timeZone:'America/Chicago'};const day=d.toLocaleDateString('en-US',{...o,weekday:'short',month:'short',day:'numeric'}).replace(',','');return allDay?day+' \u00b7 All day':day+' \u00b7 '+d.toLocaleTimeString('en-US',{...o,hour:'numeric',minute:'2-digit'})}
+async function loadTraining(){let ev=null;try{const j=await getJSON(TR_URL);ev=(j.events||[]);localStorage.setItem('blyTr1',JSON.stringify(j))}catch(e){console.warn('training failed',e);try{const c=JSON.parse(localStorage.getItem('blyTr1'));ev=c&&c.events}catch(_){}}
+ const now=Date.now();ev=(ev||[]).filter(e=>new Date(e.end||e.start).getTime()>=now).slice(0,40);
+ const key=JSON.stringify(ev);if(key===trKey)return;trKey=key;
+ const win=document.getElementById('twin');
+ if(!ev.length){win.innerHTML='<div class="tnone">No upcoming classes scheduled</div>';return}
+ const items=ev.map(e=>`<span class="ti"><span class="d">${esc(tDate(e.start,e.allDay))}</span><span class="n">${esc(e.title)}</span>${e.where?`<span class="w">\u00b7 ${esc(e.where)}</span>`:''}${e.detail?`<span class="x">\u00b7 ${esc(e.detail)}</span>`:''}</span>`).join('');
+ win.innerHTML=`<div class="ttrack" id="ttrack">${items}${items}</div>`;
+ const tr=document.getElementById('ttrack');const px=tr.scrollWidth/2,speed=window.innerWidth/1920*130;tr.style.setProperty('--dur',(px/speed).toFixed(1)+'s');tr.classList.add('run')}
 async function startDash(){document.body.classList.add('dashmode');
  document.getElementById('dash').innerHTML=`<div class="dl"><div class="dlh"><div><h2>NOW LISTED</h2><div class="sub">The Bly Team \u00b7 <span id="lcount"></span></div></div><div><div class="clk" id="clk"></div><div class="pg" id="lpg"></div></div></div><div class="rows" id="rows"></div><div class="dlf"><span id="lasof"></span><span>eXp Realty</span></div></div>
  <div class="dr"><div class="mtd"><div class="ph"><h2 id="mtdt">October MTD Leaderboard</h2><span id="mtda"></span></div><div class="cards" id="cards"></div><div class="dots" id="dots"></div></div>
- <div class="ytd"><div class="ph"><h2>Top 3 Year to Date</h2><span id="ytda"></span></div><div id="ytdb" style="flex:1;display:flex;flex-direction:column;min-height:0"></div></div></div>`;
+ <div class="ytd"><div class="ph"><h2>Top 3 Year to Date</h2><span id="ytda"></span></div><div id="ytdb" style="flex:1;display:flex;flex-direction:column;min-height:0"></div></div></div><div class="tick"><div class="tlab">TRAINING</div><div class="twin" id="twin"></div></div>`;
  clock();setInterval(clock,10000);
- await Promise.all([loadListings(),refreshLB()]);lbD=lbData;drawRows();drawMTD();drawYTD();
+ await Promise.all([loadListings(),refreshLB(),loadTraining()]);lbD=lbData;drawRows();drawMTD();drawYTD();
  setInterval(boardTick,DSECS);setInterval(cardTick,DSECS);document.body.dataset.ready='1'}
 if(VIEW==='classic')refresh().then(()=>{document.body.dataset.ready='1';show(+P.get('slide')||0)});
 else startDash();
