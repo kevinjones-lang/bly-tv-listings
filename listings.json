@@ -1,7 +1,23 @@
 {
-  "asOf": "2026-10-22T13:03-05:00",
+  "asOf": "2026-10-23T08:07-05:00",
   "source": "https://www.har.com/deborah-bly/listings_bly",
   "listings": [
+    {
+      "id": "11353643",
+      "street": "3056 Arbor Ranch Ct",
+      "city": "League City, TX 77539",
+      "price": "$330,000",
+      "status": "Active",
+      "type": "Single-Family",
+      "beds": 4,
+      "fullBaths": 2,
+      "halfBaths": null,
+      "sqft": 2100,
+      "lot": null,
+      "url": "https://www.har.com/homedetail/3056-arbor-ranch-ct-dickinson-tx-77539/13506269",
+      "photoSource": "https://mediahar.harstatic.com/817606043/lr/818994938.jpeg",
+      "photo": "img/listings/11353643.jpg"
+    },
     {
       "id": "11348536",
       "street": "6129 Creekside Ln",
@@ -259,22 +275,6 @@
       "photo": "img/listings/11251883.jpg"
     },
     {
-      "id": "11246498",
-      "street": "3204 Granite Gate Ln",
-      "city": "League City, TX 77539",
-      "price": "$275,000",
-      "status": "Under Contract - P",
-      "type": "Single-Family",
-      "beds": 3,
-      "fullBaths": 2,
-      "halfBaths": null,
-      "sqft": 1752,
-      "lot": null,
-      "url": "https://www.har.com/homedetail/3204-granite-gate-ln-dickinson-tx-77539/2589132",
-      "photoSource": "https://mediahar.harstatic.com/807718229/lr/808139701.jpeg",
-      "photo": "img/listings/11246498.jpg"
-    },
-    {
       "id": "11243092",
       "street": "5762 Birdwood Rd",
       "city": "Houston, TX 77096",
@@ -326,7 +326,7 @@
       "id": "11216078",
       "street": "7108 E Hunter Dr",
       "city": "Hitchcock, TX 77563",
-      "price": "$289,999",
+      "price": "$270,000",
       "status": "Active",
       "type": "Single-Family",
       "beds": 2,
@@ -711,7 +711,7 @@
       "street": "11319 Windy Dawn Dr",
       "city": "Pearland, TX 77584",
       "price": "$465,000",
-      "status": "Under Contract - OP",
+      "status": "Under Contract - P",
       "type": "Single-Family",
       "beds": 4,
       "fullBaths": 3,
