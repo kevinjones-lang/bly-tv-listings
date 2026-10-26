@@ -6,3 +6,5 @@ Full-screen, auto-advancing slideshow of The Bly Team's listings for the office 
 * The page fetches the feed's CSV when it loads and again each time the loop returns to the title slide. If the fetch fails, it keeps showing the last good data (it also has a built-in snapshot as a fallback).
 * Keys: left/right arrows, Space, Home, F = fullscreen (double-click also toggles it).
 * URL options: `?secs=10` sets seconds per slide; `?feed=<csv url>` uses a different CSV, e.g. a "Publish to web" CSV link.
+
+* Market ticker: `market.json` at the repo root holds this week's headline (overwrite and push to refresh; see `/workspace/bly-tv-listings-update-leaderboard.md`). The bottom NEWS strip shows a gold MARKET badge then the headline, ahead of training items.

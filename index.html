@@ -169,7 +169,7 @@ body.dashmode #dash{grid-template-rows:minmax(0,1fr) 3.4em}
 @keyframes crawl{from{transform:translateX(0)}to{transform:translateX(-50%)}}
 .ti{font-size:1.6em;color:#e6ecf5;padding-right:1.6em;display:inline-flex;align-items:center;gap:.45em}
 .ti:after{content:"\25C6";color:#d4af37;font-size:.6em;margin-left:1.6em}
-.ti .d{color:#d4af37;font-weight:800}.ti .n{font-weight:800;color:#fff}.ti .w{color:#7ff0d2;font-weight:700}.ti .x{color:#9fb0cc}
+.ti .d{color:#d4af37;font-weight:800}.ti .n{font-weight:800;color:#fff}.ti .w{color:#7ff0d2;font-weight:700}.ti .x{color:#9fb0cc}.ti .mkb{background:#d4af37;color:#071228;font-weight:900;font-size:.72em;letter-spacing:.14em;padding:.12em .5em;border-radius:.15em;flex:none}
 .tnone{font-size:1.6em;color:#9fb0cc;padding-left:2em}
 /* ---- logo, MTD credits roll, YTD deals ---- */
 .logo{background:#fff;border-radius:.5em;padding:.45em .9em;display:inline-block;box-shadow:0 .2em .8em rgba(0,0,0,.4)}
@@ -311,7 +311,7 @@ function drawMTD(){const el=document.getElementById('roll');if(!lbD){el.innerHTM
  if(fit){tr.lastElementChild.remove();return}
  tr.style.setProperty('--rdur',(h/(window.innerWidth/1920*38)).toFixed(1)+'s');tr.classList.add('run');
  tr.addEventListener('animationiteration',cycle)}
-let cycling=false;async function cycle(){if(cycling)return;cycling=true;try{await Promise.all([refreshLB(),loadTraining()]);if(lbData)lbD=lbData;drawMTD();drawYTD()}finally{cycling=false}}
+let cycling=false;async function cycle(){if(cycling)return;cycling=true;try{await Promise.all([refreshLB(),loadTraining(),loadMarket()]);if(lbData)lbD=lbData;drawMTD();drawYTD()}finally{cycling=false}}
 function dealsRank(mode){const rows=(lbD&&lbD.deals&&Array.isArray(lbD.deals.ytd)?lbD.deals.ytd:[]).filter(a=>isAgent(a)&&!(lbD.deals.exclude||[]).map(x=>x.toLowerCase()).includes(String(a.name).toLowerCase()));
  const s=rows.slice().sort(mode?(a,b)=>b.closed-a.closed||b.volume-a.volume:(a,b)=>b.volume-a.volume||b.closed-a.closed);return s.slice(0,3).map((a,k)=>({...a,rank:k+1}))}
 const vtxt=a=>a.volumeText||('$'+(a.volume/1e6).toFixed(1)+'M');
@@ -325,23 +325,28 @@ function drawYTD(){const el=document.getElementById('ytdb');const d=lbD&&lbD.dea
 function ytdFlip(){ytdMode^=1;document.querySelectorAll('.ypane').forEach(p=>p.classList.toggle('on',+p.dataset.mode===ytdMode));const h=document.getElementById('ytdh');h.classList.add('fade');setTimeout(()=>{h.textContent=ytdMode?'Top 3 YTD Closings':'Top 3 YTD Sales Volume';h.classList.remove('fade')},500)}
 function clock(){document.getElementById('clk').textContent=new Date().toLocaleTimeString('en-US',{timeZone:'America/Chicago',hour:'numeric',minute:'2-digit'})}
 
-// ---- Training ticker (training.json) ----
-const TR_URL=P.get('training')||'training.json';let trKey='';
+// ---- News ticker (market.json + training.json) ----
+const TR_URL=P.get('training')||'training.json',MK_URL=P.get('market')||'market.json';let trKey='',trEv=[],mkHead=[];
 function tDate(iso,allDay){const d=new Date(iso),o={timeZone:'America/Chicago'};const day=d.toLocaleDateString('en-US',{...o,weekday:'short',month:'short',day:'numeric'}).replace(',','');return allDay?day+' \u00b7 All day':day+' \u00b7 '+d.toLocaleTimeString('en-US',{...o,hour:'numeric',minute:'2-digit'})}
-async function loadTraining(){let ev=null;try{const j=await getJSON(TR_URL);ev=(j.events||[]);localStorage.setItem('blyTr1',JSON.stringify(j))}catch(e){console.warn('training failed',e);try{const c=JSON.parse(localStorage.getItem('blyTr1'));ev=c&&c.events}catch(_){}}
- const now=Date.now();ev=(ev||[]).filter(e=>new Date(e.end||e.start).getTime()>=now).slice(0,40);
- const key=JSON.stringify(ev);if(key===trKey)return;trKey=key;
+function renderTicker(){const key=JSON.stringify({m:mkHead,t:trEv});if(key===trKey)return;trKey=key;
  const win=document.getElementById('twin');
- if(!ev.length){win.innerHTML='<div class="tnone">No upcoming classes scheduled</div>';return}
- const items=ev.map(e=>`<span class="ti"><span class="d">${esc(tDate(e.start,e.allDay))}</span><span class="n">${esc(e.title)}</span>${e.where?`<span class="w">\u00b7 ${esc(e.where)}</span>`:''}${e.detail?`<span class="x">\u00b7 ${esc(e.detail)}</span>`:''}</span>`).join('');
+ const mItems=(mkHead||[]).map(h=>`<span class="ti"><span class="mkb">MARKET</span><span class="n">${esc(h.text||'')}</span></span>`).join('');
+ const tItems=(trEv||[]).map(e=>`<span class="ti"><span class="d">${esc(tDate(e.start,e.allDay))}</span><span class="n">${esc(e.title)}</span>${e.where?`<span class="w">\u00b7 ${esc(e.where)}</span>`:''}${e.detail?`<span class="x">\u00b7 ${esc(e.detail)}</span>`:''}</span>`).join('');
+ const items=mItems+tItems;
+ if(!items){win.innerHTML='<div class="tnone">No upcoming classes scheduled</div>';return}
  win.innerHTML=`<div class="ttrack" id="ttrack">${items}${items}</div>`;
  const tr=document.getElementById('ttrack');const px=tr.scrollWidth/2,speed=window.innerWidth/1920*130;tr.style.setProperty('--dur',(px/speed).toFixed(1)+'s');tr.classList.add('run')}
+async function loadMarket(){try{const j=await getJSON(MK_URL);mkHead=(j.headlines||[]);localStorage.setItem('blyMk1',JSON.stringify(j))}catch(e){console.warn('market failed',e);try{const c=JSON.parse(localStorage.getItem('blyMk1'));mkHead=(c&&c.headlines)||mkHead||[]}catch(_){mkHead=mkHead||[]}}
+ renderTicker()}
+async function loadTraining(){let ev=null;try{const j=await getJSON(TR_URL);ev=(j.events||[]);localStorage.setItem('blyTr1',JSON.stringify(j))}catch(e){console.warn('training failed',e);try{const c=JSON.parse(localStorage.getItem('blyTr1'));ev=c&&c.events}catch(_){}}
+ const now=Date.now();trEv=(ev||[]).filter(e=>new Date(e.end||e.start).getTime()>=now).slice(0,40);
+ renderTicker()}
 async function startDash(){document.body.classList.add('dashmode');
  document.getElementById('dash').innerHTML=`<div class="dl"><div class="dlh"><div><div class="logo"><img src="img/logo.png" alt="The Bly Team | eXp Realty"></div><div class="sub">Now Listed \u00b7 <span id="lcount"></span></div></div><div><div class="clk" id="clk"></div><div class="pg" id="lpg"></div></div></div><div class="rows" id="rows"></div><div class="dlf"><span id="lasof"></span><span>eXp Realty</span></div></div>
  <div class="dr"><div class="mtd"><div class="ph"><h2 id="mtdt">October MTD Leaderboard</h2><span id="mtda"></span></div><div class="mtot" id="mtdtot"></div><div class="roll" id="roll"></div></div>
- <div class="ytd"><div class="ph"><h2 id="ytdh">Top 3 YTD Sales Volume</h2><span id="ytda"></span></div><div id="ytdb" style="flex:1;position:relative;min-height:0"></div></div></div><div class="tick"><div class="tlab">TRAINING</div><div class="twin" id="twin"></div></div>`;
+ <div class="ytd"><div class="ph"><h2 id="ytdh">Top 3 YTD Sales Volume</h2><span id="ytda"></span></div><div id="ytdb" style="flex:1;position:relative;min-height:0"></div></div></div><div class="tick"><div class="tlab">NEWS</div><div class="twin" id="twin"></div></div>`;
  clock();setInterval(clock,10000);
- await Promise.all([loadListings(),refreshLB(),loadTraining()]);lbD=lbData;drawRows();drawMTD();drawYTD();
+ await Promise.all([loadListings(),refreshLB(),loadTraining(),loadMarket()]);lbD=lbData;drawRows();drawMTD();drawYTD();
  setInterval(boardTick,DSECS);setInterval(ytdFlip,(+P.get('ysecs')||15)*1000);setInterval(()=>{if(!document.querySelector('#rtrack.run'))cycle()},120000);document.body.dataset.ready='1'}
 if(VIEW==='classic')refresh().then(()=>{document.body.dataset.ready='1';show(+P.get('slide')||0)});
 else startDash();
