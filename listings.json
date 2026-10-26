@@ -1,5 +1,5 @@
 {
-  "asOf": "2026-10-26T08:04-05:00",
+  "asOf": "2026-10-26T13:07-05:00",
   "source": "https://www.har.com/deborah-bly/listings_bly",
   "listings": [
     {
@@ -102,7 +102,7 @@
       "id": "11318675",
       "street": "4907 Autumn Hills Trl",
       "city": "Pearland, TX 77584",
-      "price": "$385,000",
+      "price": "$380,000",
       "status": "Active",
       "type": "Single-Family",
       "beds": 3,
@@ -694,7 +694,7 @@
       "id": "10884180",
       "street": "3502 Magnolia Ave",
       "city": "Texas City, TX 77590",
-      "price": "$186,500",
+      "price": "$184,000",
       "status": "Active",
       "type": "Single-Family",
       "beds": 3,
