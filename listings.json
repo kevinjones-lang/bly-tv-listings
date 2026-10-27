@@ -1,5 +1,5 @@
 {
-  "asOf": "2026-10-26T13:07-05:00",
+  "asOf": "2026-10-27T08:10-05:00",
   "source": "https://www.har.com/deborah-bly/listings_bly",
   "listings": [
     {
@@ -387,22 +387,6 @@
       "photo": "img/listings/11212064.jpg"
     },
     {
-      "id": "11209793",
-      "street": "16614 Hamill Dr",
-      "city": "Rosharon, TX 77583",
-      "price": "$158,000",
-      "status": "Under Contract - OP",
-      "type": "Lots",
-      "beds": null,
-      "fullBaths": null,
-      "halfBaths": null,
-      "sqft": null,
-      "lot": "87120 Acres",
-      "url": "https://www.har.com/homedetail/16614-hamill-dr-rosharon-tx-77583/844986",
-      "photoSource": "https://mediahar.harstatic.com/804146570/lr/806699831.jpeg",
-      "photo": "img/listings/11209793.jpg"
-    },
-    {
       "id": "11205356",
       "street": "2104 Bay Hill Dr",
       "city": "League City, TX 77573",
@@ -417,6 +401,22 @@
       "url": "https://www.har.com/homedetail/2104-bay-hill-dr-league-city-tx-77573/2660173",
       "photoSource": "https://mediahar.harstatic.com/800396567/lr/815964717.jpeg",
       "photo": "img/listings/11205356.jpg"
+    },
+    {
+      "id": "11209793",
+      "street": "16614 Hamill Dr",
+      "city": "Rosharon, TX 77583",
+      "price": "$158,000",
+      "status": "Under Contract - P",
+      "type": "Lots",
+      "beds": null,
+      "fullBaths": null,
+      "halfBaths": null,
+      "sqft": null,
+      "lot": "87120 Acres",
+      "url": "https://www.har.com/homedetail/16614-hamill-dr-rosharon-tx-77583/844986",
+      "photoSource": "https://mediahar.harstatic.com/804146570/lr/806699831.jpeg",
+      "photo": "img/listings/11209793.jpg"
     },
     {
       "id": "11204391",
