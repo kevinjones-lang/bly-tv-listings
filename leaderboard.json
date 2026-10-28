@@ -1,17 +1,17 @@
 {
  "title": "October MTD Leaderboard",
  "source": "Follow Up Boss Activity Leaderboard (Everyone, This Month)",
- "asOf": "2026-10-27T13:10:00-05:00",
+ "asOf": "2026-10-28T08:06:00-05:00",
  "agents": [
   {
    "rank": 1,
    "name": "Maria Pacheco",
-   "score": 21462,
+   "score": 21486,
    "metrics": {
     "appointments": 15,
     "conversations": 24,
     "callAttempts": 54,
-    "texts": 569,
+    "texts": 581,
     "emails": 9829,
     "zillowMessages": 11,
     "conversationTime": "4 hrs 9m"
@@ -20,12 +20,12 @@
   {
    "rank": 2,
    "name": "Jesse Jones",
-   "score": 18088,
+   "score": 18092,
    "metrics": {
     "appointments": 0,
     "conversations": 2,
     "callAttempts": 0,
-    "texts": 1,
+    "texts": 3,
     "emails": 17886,
     "zillowMessages": 0,
     "conversationTime": "12m 40s"
@@ -34,43 +34,43 @@
   {
    "rank": 3,
    "name": "Deborah Bly",
-   "score": 16189,
+   "score": 17415,
    "metrics": {
     "appointments": 7,
-    "conversations": 92,
-    "callAttempts": 108,
-    "texts": 427,
-    "emails": 1555,
+    "conversations": 103,
+    "callAttempts": 117,
+    "texts": 441,
+    "emails": 1563,
     "zillowMessages": 0,
-    "conversationTime": "15 hrs 35m"
+    "conversationTime": "17 hrs 12m"
    }
   },
   {
    "rank": 4,
    "name": "Meggan Flanagan",
-   "score": 14251,
+   "score": 14986,
    "metrics": {
     "appointments": 14,
-    "conversations": 50,
-    "callAttempts": 45,
-    "texts": 794,
-    "emails": 68,
+    "conversations": 56,
+    "callAttempts": 52,
+    "texts": 826,
+    "emails": 69,
     "zillowMessages": 29,
-    "conversationTime": "10 hrs 39m"
+    "conversationTime": "12 hrs 2m"
    }
   },
   {
    "rank": 5,
    "name": "Celia Flores",
-   "score": 12264,
+   "score": 12520,
    "metrics": {
     "appointments": 10,
-    "conversations": 51,
-    "callAttempts": 64,
-    "texts": 673,
+    "conversations": 53,
+    "callAttempts": 66,
+    "texts": 691,
     "emails": 58,
     "zillowMessages": 24,
-    "conversationTime": "6 hrs 52m"
+    "conversationTime": "7 hrs 10m"
    }
   },
   {
@@ -90,29 +90,29 @@
   {
    "rank": 7,
    "name": "Shanna Ramon",
-   "score": 10710,
+   "score": 10867,
    "metrics": {
     "appointments": 10,
-    "conversations": 36,
-    "callAttempts": 88,
-    "texts": 312,
-    "emails": 476,
-    "zillowMessages": 26,
-    "conversationTime": "4 hrs 45m"
+    "conversations": 37,
+    "callAttempts": 91,
+    "texts": 322,
+    "emails": 478,
+    "zillowMessages": 27,
+    "conversationTime": "5 hrs"
    }
   },
   {
    "rank": 8,
    "name": "Jennifer Pampolina",
-   "score": 8540,
+   "score": 8712,
    "metrics": {
     "appointments": 11,
-    "conversations": 22,
-    "callAttempts": 68,
-    "texts": 69,
+    "conversations": 23,
+    "callAttempts": 74,
+    "texts": 75,
     "emails": 17,
     "zillowMessages": 1,
-    "conversationTime": "4 hrs 25m"
+    "conversationTime": "4 hrs 40m"
    }
   },
   {
@@ -132,82 +132,82 @@
   {
    "rank": 10,
    "name": "Tannika Phillips-Humphrey",
-   "score": 6899,
+   "score": 7453,
    "metrics": {
-    "appointments": 9,
+    "appointments": 10,
     "conversations": 17,
     "callAttempts": 10,
-    "texts": 287,
-    "emails": 15,
-    "zillowMessages": 2,
+    "texts": 311,
+    "emails": 16,
+    "zillowMessages": 3,
     "conversationTime": "2 hrs 20m"
    }
   }
  ],
  "totals": {
-  "appointments": 153,
-  "conversations": 558,
-  "callAttempts": 836,
-  "texts": 6543,
-  "emails": 37364,
-  "zillowMessages": 480,
-  "conversationTime": "3 days 13 hrs"
+  "appointments": 156,
+  "conversations": 582,
+  "callAttempts": 871,
+  "texts": 6717,
+  "emails": 37391,
+  "zillowMessages": 483,
+  "conversationTime": "3 days 18 hrs"
  },
- "ytdAsOf": "2026-10-27T13:10:00-05:00",
+ "ytdAsOf": "2026-10-28T08:06:00-05:00",
  "ytd": [
   {
    "rank": 1,
    "name": "Tannika Phillips-Humphrey",
-   "score": 195059,
+   "score": 195613,
    "metrics": {
-    "appointments": 246,
+    "appointments": 247,
     "conversations": 531,
     "callAttempts": 448,
-    "texts": 5941,
-    "emails": 932,
-    "zillowMessages": 333,
+    "texts": 5965,
+    "emails": 933,
+    "zillowMessages": 334,
     "conversationTime": "3 days 20 hrs"
    }
   },
   {
    "rank": 2,
    "name": "Meggan Flanagan",
-   "score": 187448,
+   "score": 188183,
    "metrics": {
     "appointments": 204,
-    "conversations": 606,
-    "callAttempts": 595,
-    "texts": 8004,
-    "emails": 1240,
+    "conversations": 612,
+    "callAttempts": 602,
+    "texts": 8036,
+    "emails": 1241,
     "zillowMessages": 330,
-    "conversationTime": "4 days 21 hrs"
+    "conversationTime": "4 days 22 hrs"
    }
   },
   {
    "rank": 3,
    "name": "Deborah Bly",
-   "score": 153922,
+   "score": 155148,
    "metrics": {
     "appointments": 83,
-    "conversations": 858,
-    "callAttempts": 962,
-    "texts": 5783,
-    "emails": 5436,
+    "conversations": 869,
+    "callAttempts": 971,
+    "texts": 5797,
+    "emails": 5444,
     "zillowMessages": 0,
-    "conversationTime": "5 days 8 hrs"
+    "conversationTime": "5 days 10 hrs"
    }
   }
  ],
  "ytdTotals": {
-  "appointments": 1794,
-  "conversations": 7269,
-  "callAttempts": 10787,
-  "texts": 82121,
-  "emails": 136905,
-  "zillowMessages": 6142,
-  "conversationTime": "44 days 17 hrs"
+  "appointments": 1797,
+  "conversations": 7293,
+  "callAttempts": 10822,
+  "texts": 82294,
+  "emails": 136932,
+  "zillowMessages": 6145,
+  "conversationTime": "44 days 22 hrs"
  },
- "dealsAsOf": "2026-10-27T13:10:00-05:00",
+ "dealsAsOf": "2026-10-28T08:06:00-05:00",
  "deals": {
   "source": "FUB Deals Leaderboard - All Pipelines, Everyone, This Year, closed deals",
   "exclude": [
@@ -334,12 +334,12 @@
   {
    "rank": 1,
    "name": "Maria Pacheco",
-   "score": 21462,
+   "score": 21486,
    "metrics": {
     "appointments": 15,
     "conversations": 24,
     "callAttempts": 54,
-    "texts": 569,
+    "texts": 581,
     "emails": 9829,
     "zillowMessages": 11,
     "conversationTime": "4 hrs 9m"
@@ -348,12 +348,12 @@
   {
    "rank": 2,
    "name": "Jesse Jones",
-   "score": 18088,
+   "score": 18092,
    "metrics": {
     "appointments": 0,
     "conversations": 2,
     "callAttempts": 0,
-    "texts": 1,
+    "texts": 3,
     "emails": 17886,
     "zillowMessages": 0,
     "conversationTime": "12m 40s"
@@ -362,43 +362,43 @@
   {
    "rank": 3,
    "name": "Deborah Bly",
-   "score": 16189,
+   "score": 17415,
    "metrics": {
     "appointments": 7,
-    "conversations": 92,
-    "callAttempts": 108,
-    "texts": 427,
-    "emails": 1555,
+    "conversations": 103,
+    "callAttempts": 117,
+    "texts": 441,
+    "emails": 1563,
     "zillowMessages": 0,
-    "conversationTime": "15 hrs 35m"
+    "conversationTime": "17 hrs 12m"
    }
   },
   {
    "rank": 4,
    "name": "Meggan Flanagan",
-   "score": 14251,
+   "score": 14986,
    "metrics": {
     "appointments": 14,
-    "conversations": 50,
-    "callAttempts": 45,
-    "texts": 794,
-    "emails": 68,
+    "conversations": 56,
+    "callAttempts": 52,
+    "texts": 826,
+    "emails": 69,
     "zillowMessages": 29,
-    "conversationTime": "10 hrs 39m"
+    "conversationTime": "12 hrs 2m"
    }
   },
   {
    "rank": 5,
    "name": "Celia Flores",
-   "score": 12264,
+   "score": 12520,
    "metrics": {
     "appointments": 10,
-    "conversations": 51,
-    "callAttempts": 64,
-    "texts": 673,
+    "conversations": 53,
+    "callAttempts": 66,
+    "texts": 691,
     "emails": 58,
     "zillowMessages": 24,
-    "conversationTime": "6 hrs 52m"
+    "conversationTime": "7 hrs 10m"
    }
   },
   {
@@ -418,29 +418,29 @@
   {
    "rank": 7,
    "name": "Shanna Ramon",
-   "score": 10710,
+   "score": 10867,
    "metrics": {
     "appointments": 10,
-    "conversations": 36,
-    "callAttempts": 88,
-    "texts": 312,
-    "emails": 476,
-    "zillowMessages": 26,
-    "conversationTime": "4 hrs 45m"
+    "conversations": 37,
+    "callAttempts": 91,
+    "texts": 322,
+    "emails": 478,
+    "zillowMessages": 27,
+    "conversationTime": "5 hrs"
    }
   },
   {
    "rank": 8,
    "name": "Jennifer Pampolina",
-   "score": 8540,
+   "score": 8712,
    "metrics": {
     "appointments": 11,
-    "conversations": 22,
-    "callAttempts": 68,
-    "texts": 69,
+    "conversations": 23,
+    "callAttempts": 74,
+    "texts": 75,
     "emails": 17,
     "zillowMessages": 1,
-    "conversationTime": "4 hrs 25m"
+    "conversationTime": "4 hrs 40m"
    }
   },
   {
@@ -460,19 +460,33 @@
   {
    "rank": 10,
    "name": "Tannika Phillips-Humphrey",
-   "score": 6899,
+   "score": 7453,
    "metrics": {
-    "appointments": 9,
+    "appointments": 10,
     "conversations": 17,
     "callAttempts": 10,
-    "texts": 287,
-    "emails": 15,
-    "zillowMessages": 2,
+    "texts": 311,
+    "emails": 16,
+    "zillowMessages": 3,
     "conversationTime": "2 hrs 20m"
    }
   },
   {
    "rank": 11,
+   "name": "Sheryl Haag",
+   "score": 6250,
+   "metrics": {
+    "appointments": 8,
+    "conversations": 15,
+    "callAttempts": 61,
+    "texts": 56,
+    "emails": 28,
+    "zillowMessages": 0,
+    "conversationTime": "1 hr 24m"
+   }
+  },
+  {
+   "rank": 12,
    "name": "Jessica Hart",
    "score": 6209,
    "metrics": {
@@ -483,20 +497,6 @@
     "emails": 120,
     "zillowMessages": 45,
     "conversationTime": "3 hrs 19m"
-   }
-  },
-  {
-   "rank": 12,
-   "name": "Sheryl Haag",
-   "score": 6187,
-   "metrics": {
-    "appointments": 8,
-    "conversations": 15,
-    "callAttempts": 55,
-    "texts": 55,
-    "emails": 27,
-    "zillowMessages": 0,
-    "conversationTime": "1 hr 23m"
    }
   },
   {
@@ -515,58 +515,58 @@
   },
   {
    "rank": 14,
-   "name": "Aurea Windsor",
-   "score": 3743,
-   "metrics": {
-    "appointments": 7,
-    "conversations": 1,
-    "callAttempts": 2,
-    "texts": 55,
-    "emails": 13,
-    "zillowMessages": 0,
-    "conversationTime": "2m 35s"
-   }
-  },
-  {
-   "rank": 15,
    "name": "Annie Otwell",
-   "score": 3584,
+   "score": 4105,
    "metrics": {
-    "appointments": 5,
+    "appointments": 6,
     "conversations": 7,
     "callAttempts": 16,
-    "texts": 86,
-    "emails": 12,
+    "texts": 96,
+    "emails": 13,
     "zillowMessages": 8,
     "conversationTime": "38m 41s"
    }
   },
   {
-   "rank": 16,
-   "name": "Sandra Fuller",
-   "score": 3466,
+   "rank": 15,
+   "name": "Aurea Windsor",
+   "score": 3855,
    "metrics": {
-    "appointments": 1,
-    "conversations": 25,
-    "callAttempts": 17,
-    "texts": 131,
-    "emails": 4,
-    "zillowMessages": 6,
-    "conversationTime": "2 hrs 46m"
+    "appointments": 7,
+    "conversations": 2,
+    "callAttempts": 3,
+    "texts": 56,
+    "emails": 13,
+    "zillowMessages": 0,
+    "conversationTime": "9m 50s"
+   }
+  },
+  {
+   "rank": 16,
+   "name": "Susan O'Rourke",
+   "score": 3536,
+   "metrics": {
+    "appointments": 3,
+    "conversations": 8,
+    "callAttempts": 7,
+    "texts": 455,
+    "emails": 26,
+    "zillowMessages": 46,
+    "conversationTime": "40m 9s"
    }
   },
   {
    "rank": 17,
-   "name": "Susan O'Rourke",
-   "score": 3418,
+   "name": "Sandra Fuller",
+   "score": 3470,
    "metrics": {
-    "appointments": 3,
-    "conversations": 7,
-    "callAttempts": 7,
-    "texts": 446,
-    "emails": 26,
-    "zillowMessages": 46,
-    "conversationTime": "37m 45s"
+    "appointments": 1,
+    "conversations": 25,
+    "callAttempts": 17,
+    "texts": 133,
+    "emails": 4,
+    "zillowMessages": 6,
+    "conversationTime": "2 hrs 46m"
    }
   },
   {
@@ -600,13 +600,13 @@
   {
    "rank": 20,
    "name": "Stephen Barnhill Jr.",
-   "score": 2344,
+   "score": 2351,
    "metrics": {
     "appointments": 2,
     "conversations": 11,
     "callAttempts": 12,
-    "texts": 56,
-    "emails": 12,
+    "texts": 58,
+    "emails": 15,
     "zillowMessages": 0,
     "conversationTime": "1 hr 16m"
    }
@@ -642,43 +642,43 @@
   {
    "rank": 23,
    "name": "Abbie Reeves",
-   "score": 2108,
+   "score": 2114,
    "metrics": {
     "appointments": 2,
     "conversations": 7,
     "callAttempts": 6,
-    "texts": 148,
+    "texts": 151,
     "emails": 22,
     "zillowMessages": 6,
-    "conversationTime": "33m 16s"
+    "conversationTime": "33m 57s"
    }
   },
   {
    "rank": 24,
    "name": "Monika Kardos",
-   "score": 1900,
+   "score": 1908,
    "metrics": {
     "appointments": 1,
     "conversations": 6,
     "callAttempts": 5,
-    "texts": 110,
-    "emails": 35,
-    "zillowMessages": 99,
-    "conversationTime": "43m 57s"
+    "texts": 111,
+    "emails": 36,
+    "zillowMessages": 100,
+    "conversationTime": "44m 32s"
    }
   },
   {
    "rank": 25,
    "name": "Jason Suchecki",
-   "score": 1525,
+   "score": 1630,
    "metrics": {
     "appointments": 1,
-    "conversations": 8,
+    "conversations": 9,
     "callAttempts": 5,
     "texts": 6,
-    "emails": 163,
+    "emails": 168,
     "zillowMessages": 0,
-    "conversationTime": "1 hr 36m"
+    "conversationTime": "1 hr 38m"
    }
   },
   {
@@ -692,11 +692,25 @@
     "texts": 42,
     "emails": 74,
     "zillowMessages": 43,
-    "conversationTime": "50m 56s"
+    "conversationTime": "50m 57s"
    }
   },
   {
    "rank": 27,
+   "name": "Kahla Bouse",
+   "score": 1469,
+   "metrics": {
+    "appointments": 2,
+    "conversations": 4,
+    "callAttempts": 2,
+    "texts": 21,
+    "emails": 7,
+    "zillowMessages": 0,
+    "conversationTime": "32m 31s"
+   }
+  },
+  {
+   "rank": 28,
    "name": "Paolo Del Rosario",
    "score": 1305,
    "metrics": {
@@ -710,7 +724,7 @@
    }
   },
   {
-   "rank": 28,
+   "rank": 29,
    "name": "Angelina Martinez",
    "score": 1239,
    "metrics": {
@@ -724,7 +738,7 @@
    }
   },
   {
-   "rank": 29,
+   "rank": 30,
    "name": "Michael Green",
    "score": 1121,
    "metrics": {
@@ -738,42 +752,28 @@
    }
   },
   {
-   "rank": 30,
+   "rank": 31,
    "name": "Melinda Suchecki",
-   "score": 1033,
+   "score": 1045,
    "metrics": {
     "appointments": 0,
     "conversations": 8,
-    "callAttempts": 8,
-    "texts": 65,
+    "callAttempts": 9,
+    "texts": 66,
     "emails": 3,
     "zillowMessages": 4,
-    "conversationTime": "1 hr 19m"
-   }
-  },
-  {
-   "rank": 31,
-   "name": "Kahla Bouse",
-   "score": 965,
-   "metrics": {
-    "appointments": 1,
-    "conversations": 4,
-    "callAttempts": 2,
-    "texts": 19,
-    "emails": 7,
-    "zillowMessages": 0,
-    "conversationTime": "32m 31s"
+    "conversationTime": "1 hr 20m"
    }
   },
   {
    "rank": 32,
    "name": "Brittany Hughes",
-   "score": 953,
+   "score": 957,
    "metrics": {
     "appointments": 0,
     "conversations": 8,
     "callAttempts": 10,
-    "texts": 23,
+    "texts": 25,
     "emails": 2,
     "zillowMessages": 1,
     "conversationTime": "1 hr 9m"
@@ -804,7 +804,7 @@
     "texts": 35,
     "emails": 8,
     "zillowMessages": 6,
-    "conversationTime": "32m 6s"
+    "conversationTime": "32m 9s"
    }
   },
   {
@@ -823,30 +823,30 @@
   },
   {
    "rank": 36,
-   "name": "Matthew Sears",
-   "score": 689,
-   "metrics": {
-    "appointments": 0,
-    "conversations": 4,
-    "callAttempts": 8,
-    "texts": 95,
-    "emails": 14,
-    "zillowMessages": 1,
-    "conversationTime": "24m 15s"
-   }
-  },
-  {
-   "rank": 37,
    "name": "Stephanie Cardona",
-   "score": 676,
+   "score": 706,
    "metrics": {
     "appointments": 0,
     "conversations": 4,
     "callAttempts": 1,
-    "texts": 123,
+    "texts": 138,
     "emails": 5,
     "zillowMessages": 3,
     "conversationTime": "36m 40s"
+   }
+  },
+  {
+   "rank": 37,
+   "name": "Matthew Sears",
+   "score": 693,
+   "metrics": {
+    "appointments": 0,
+    "conversations": 4,
+    "callAttempts": 8,
+    "texts": 97,
+    "emails": 14,
+    "zillowMessages": 1,
+    "conversationTime": "24m 15s"
    }
   },
   {
@@ -880,12 +880,12 @@
   {
    "rank": 40,
    "name": "Cecilia Cuellar",
-   "score": 446,
+   "score": 448,
    "metrics": {
     "appointments": 0,
     "conversations": 4,
     "callAttempts": 2,
-    "texts": 9,
+    "texts": 10,
     "emails": 3,
     "zillowMessages": 1,
     "conversationTime": "43m 17s"
@@ -936,12 +936,12 @@
   {
    "rank": 44,
    "name": "Awais Rashid",
-   "score": 160,
+   "score": 164,
    "metrics": {
     "appointments": 0,
     "conversations": 1,
     "callAttempts": 2,
-    "texts": 17,
+    "texts": 19,
     "emails": 6,
     "zillowMessages": 0,
     "conversationTime": "4m 53s"
@@ -950,15 +950,15 @@
   {
    "rank": 45,
    "name": "Kimi Cook",
-   "score": 153,
+   "score": 157,
    "metrics": {
     "appointments": 0,
     "conversations": 1,
     "callAttempts": 2,
-    "texts": 8,
+    "texts": 10,
     "emails": 2,
     "zillowMessages": 3,
-    "conversationTime": "5m 10s"
+    "conversationTime": "5m 33s"
    }
   },
   {
