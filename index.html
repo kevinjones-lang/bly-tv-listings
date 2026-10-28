@@ -103,7 +103,7 @@ body.dashmode #slides,body.dashmode #bar,body.dashmode #asof,body.dashmode #hint
 .dlh .sub{white-space:nowrap;font-size:1.15em;color:#9fb0cc;letter-spacing:.12em;text-transform:uppercase;margin-top:.35em}
 .dlh .clk{white-space:nowrap;text-align:right;font-size:2.1em;font-weight:800;font-variant-numeric:tabular-nums;color:#fff;font-family:"DejaVu Sans Mono",Consolas,monospace}
 .dlh .pg{white-space:nowrap;font-size:1.15em;color:#9fb0cc;text-align:right;margin-top:.3em;letter-spacing:.1em}
-.rows{flex:1;display:flex;flex-direction:column;gap:.45em;perspective:60em}
+.rows{flex:1;min-height:0;display:flex;flex-direction:column;gap:.45em;perspective:60em}
 .row{flex:1;display:flex;gap:1em;align-items:center;background:rgba(255,255,255,.045);border-left:.3em solid #2fa8a0;padding:.4em .9em .4em .4em;min-height:0;transform-origin:50% 0;backface-visibility:hidden}
 .row.uc{border-left-color:#ff8a5c}
 .row.flip{animation:flip .7s ease both}
@@ -118,6 +118,16 @@ body.dashmode #slides,body.dashmode #bar,body.dashmode #asof,body.dashmode #hint
 .rft{min-width:0;font-size:1.15em;color:#e6ecf5;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .rstat{font-size:.9em;font-weight:800;letter-spacing:.08em;text-transform:uppercase;padding:.15em .6em;border-radius:.3em;background:#1f7a4d;white-space:nowrap}
 .uc .rstat{background:#e2552f}
+.row.lease{border-left-color:#6ea8fe;background:rgba(110,168,254,.12)}
+.row.lease .rstat{background:#1857a4}
+.row.lease.uc{border-left-color:#ff8a5c;background:rgba(226,85,47,.14)}
+.row.lease.uc .rstat{background:#e2552f}
+.dlh>div:first-child{min-width:0;flex:1;overflow:hidden}
+.dlh>div:last-child{flex:none;margin-left:.8em}
+.dlh .sub{overflow:hidden;text-overflow:ellipsis}
+.rpr .mo{font-size:.62em;font-weight:800;letter-spacing:.02em;color:#c5d8f5}
+.row .noimg{display:flex;align-items:center;justify-content:center}
+.row.lease .noimg span{font-size:1.05em;font-weight:900;letter-spacing:.12em;text-transform:uppercase;color:#d6e6ff}
 .dlf{font-size:1.1em;color:rgba(255,255,255,.45);margin-top:.6em;display:flex;justify-content:space-between}
 .dr{display:grid;grid-template-rows:57% 43%;min-width:0}
 .mtd{position:relative;background:radial-gradient(ellipse at 50% 0%,#0f5c57 0%,#0a3a3a 55%,#04201f 100%);padding:1.4em 3em .8em;display:flex;flex-direction:column;overflow:hidden}
@@ -279,19 +289,44 @@ setTimeout(()=>location.reload(),6*3600*1000);
 // ===== Split-screen dashboard =====
 const VIEW=P.get('view')||'dash';
 const DSECS=(+P.get('dsecs')||9)*1000,ROWS=6,LST_URL=P.get('listings')||'listings.json';
+const START_PAGE=Math.max(0,(+P.get('lpage')||1)-1);
 const slug=n=>String(n).replace(/['\u2019]/g,'').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'');
 const inits=n=>String(n).split(/\s+/).map(w=>w[0]||'').join('').slice(0,2).toUpperCase();
 const head=(a,badge)=>`<div class="hs"><span class="ini">${esc(inits(a.name))}</span><img src="img/agents/${slug(a.name)}.jpg" alt="" onerror="this.remove()">${badge?`<div class="rkb">#${esc(a.rank)}</div>`:''}</div>`;
 const cleanLot=l=>(l||'').replace(/lot sqft\.?/i,'sf lot').replace(/acres?/i,'ac');
 function lstFromSnap(){return snap().A.map(r=>{const[st,c]=split(r.address);return{street:st,city:c,price:money(r.price),status:'Active',beds:null,bbText:r.bb,sqftText:r.size,photo:null}})}
-let L=[],lpage=0,lbD=null,card=0,cardT=null;
+let L=[],lpage=START_PAGE,lbD=null,card=0,cardT=null;
 async function getJSON(u){const r=await fetch(u+(u.includes('?')?'&':'?')+'_='+Date.now(),{cache:'no-store'});if(!r.ok)throw Error('HTTP '+r.status);return r.json()}
-async function loadListings(){try{const j=await getJSON(LST_URL);if(!j.listings||!j.listings.length)throw Error('empty');L=j.listings;localStorage.setItem('blyL3',JSON.stringify(j));document.getElementById('lasof').textContent='HAR.com \u00b7 '+lbAsOf(j.asOf);document.getElementById('err').textContent=''}
- catch(e){console.warn('listings failed',e);if(!L.length){let c=null;try{c=JSON.parse(localStorage.getItem('blyL3'))}catch(_){}L=c&&c.listings&&c.listings.length?c.listings:lstFromSnap();document.getElementById('err').textContent='\u25CF offline \u2013 showing last saved listings'}}
- document.getElementById('lcount').textContent=L.length+' listings'}
+// Sales stay in listings (HAR order). Leases are the sibling leases array and follow them on the same pages.
+function leaseRow(x){const baths=String(x.baths||'');const fm=/(\d+)\s*full/i.exec(baths),hm=/(\d+)\s*half/i.exec(baths);
+ const full=x.fullBaths!=null?x.fullBaths:(fm?+fm[1]:null),half=x.halfBaths!=null?x.halfBaths:(hm?+hm[1]:null);
+ let sq=x.sqft;if(typeof sq==='string'&&/^[\d,]+$/.test(sq.trim()))sq=parseInt(sq.replace(/,/g,''),10);
+ if(typeof sq!=='number'||!isFinite(sq))sq=null;
+ return Object.assign({},x,{kind:'lease',price:x.rent||x.price||'',rent:x.rent||x.price||'',fullBaths:full,halfBaths:half,sqft:sq,photo:x.photo||null})}
+function boardRows(j){const list=j&&Array.isArray(j.listings)?j.listings:[];
+ const sales=list.filter(x=>x&&x.kind!=='lease').map(x=>Object.assign({},x,{kind:'sale'}));
+ const leases=(j&&Array.isArray(j.leases)?j.leases:[]).concat(list.filter(x=>x&&x.kind==='lease'));
+ return sales.concat(leases.map(leaseRow))}
+function shortDay(s){const d=new Date(s);return isNaN(d)?'':d.toLocaleDateString('en-US',{timeZone:'America/Chicago',month:'short',day:'numeric'})}
+function asofLine(j){const s=j&&j.asOf?shortDay(j.asOf):'',l=j&&j.leaseAsOf?shortDay(j.leaseAsOf):'';
+ if(s&&l)return 'HAR.com \u00b7 sales '+s+' \u00b7 leases '+l;if(s)return 'HAR.com \u00b7 '+lbAsOf(j.asOf);return ''}
+function countLine(){const nL=L.filter(x=>x.kind==='lease').length,nS=L.length-nL;
+ document.body.dataset.sales=nS;document.body.dataset.leases=nL;return nL?nS+' sales \u00b7 '+nL+' leases':nS+' listings'}
+function moneyText(x){const p=x.price||'';if(x.kind!=='lease')return esc(p);if(/(\/\s*mo\b|per\s+month|\/\s*month)/i.test(p))return esc(p);return esc(p)+'<span class="mo">/mo</span>'}
+function statusText(x){const uc=/contract|pending|option/i.test(x.status||'');if(x.kind==='lease')return uc?'Pending':'For Lease';return (x.status||'').replace(/^Under Contract.*/i,'Pending')}
+function thumb(x){if(x.photo)return `<img src="${esc(x.photo)}" alt="">`;if(x.kind==='lease')return '<div class="noimg"><span>Lease</span></div>';return '<div class="noimg"></div>'}
+async function loadListings(){let src=null;
+ try{const j=await getJSON(LST_URL);const rows=boardRows(j);if(!rows.length)throw Error('empty');
+  L=rows;src=j;localStorage.setItem('blyL3',JSON.stringify(j));const err=document.getElementById('err');if(err)err.textContent=''}
+ catch(e){console.warn('listings failed',e);if(!L.length){let c=null;try{c=JSON.parse(localStorage.getItem('blyL3'))}catch(_){}
+  const rows=c?boardRows(c):[];if(rows.length){L=rows;src=c}else L=lstFromSnap();
+  const err=document.getElementById('err');if(err)err.textContent='\u25CF offline \u2013 showing last saved listings'}}
+ const as=document.getElementById('lasof');if(as&&src)as.textContent=asofLine(src);
+ const lc=document.getElementById('lcount');if(lc)lc.textContent=countLine()}
 function feat(x){const b=x.beds!=null?x.beds+' bd':'';const ba=x.fullBaths!=null?(x.fullBaths+(x.halfBaths?'/'+x.halfBaths:''))+' ba':(x.bbText&&x.bbText!=='N/A'?x.bbText:'');const sf=x.sqft?x.sqft.toLocaleString('en-US')+' sf':(x.lot?cleanLot(x.lot):(x.sqftText||''));return[b,ba,sf].filter(Boolean).join(' \u00b7 ')}
 function drawRows(){const pages=Math.max(1,Math.ceil(L.length/ROWS));lpage=lpage%pages;const g=L.slice(lpage*ROWS,lpage*ROWS+ROWS);
- document.getElementById('rows').innerHTML=g.map((x,k)=>{const uc=/contract|pending|option/i.test(x.status||'');return `<div class="row flip${uc?' uc':''}" style="animation-delay:${k*90}ms">${x.photo?`<img src="${esc(x.photo)}" alt="">`:'<div class="noimg"></div>'}<div class="ri"><div class="rst">${esc(x.street)}</div><div class="r3"><div class="rcity">${esc((x.city||'').replace(/,\s*TX\b/,''))}</div><div class="rpr">${esc(x.price)}</div></div><div class="r3"><div class="rft">${esc(feat(x))}</div><div class="rstat">${esc((x.status||'').replace(/^Under Contract.*/i,'Pending'))}</div></div></div></div>`}).join('')+Array(ROWS-g.length).fill('<div class="row" style="visibility:hidden"></div>').join('');
+ document.getElementById('rows').innerHTML=g.map((x,k)=>{const uc=/contract|pending|option/i.test(x.status||'');const lease=x.kind==='lease';
+  return `<div class="row flip${lease?' lease':''}${uc?' uc':''}" style="animation-delay:${k*90}ms">${thumb(x)}<div class="ri"><div class="rst">${esc(x.street)}</div><div class="r3"><div class="rcity">${esc((x.city||'').replace(/,\s*TX\b/,''))}</div><div class="rpr">${moneyText(x)}</div></div><div class="r3"><div class="rft">${esc(feat(x))}</div><div class="rstat">${esc(statusText(x))}</div></div></div></div>`}).join('')+Array(ROWS-g.length).fill('<div class="row" style="visibility:hidden"></div>').join('');
  document.getElementById('lpg').textContent='Page '+(lpage+1)+' of '+pages}
 async function boardTick(){const pages=Math.ceil(L.length/ROWS);if(lpage+1>=pages){await loadListings();lpage=0}else lpage++;drawRows()}
 const EXCL=['transaction coordinator','transaction coordinator 2','training agent'];
@@ -342,7 +377,7 @@ async function loadTraining(){let ev=null;try{const j=await getJSON(TR_URL);ev=(
  const now=Date.now();trEv=(ev||[]).filter(e=>new Date(e.end||e.start).getTime()>=now).slice(0,40);
  renderTicker()}
 async function startDash(){document.body.classList.add('dashmode');
- document.getElementById('dash').innerHTML=`<div class="dl"><div class="dlh"><div><div class="logo"><img src="img/logo.png" alt="The Bly Team | eXp Realty"></div><div class="sub">Now Listed \u00b7 <span id="lcount"></span></div></div><div><div class="clk" id="clk"></div><div class="pg" id="lpg"></div></div></div><div class="rows" id="rows"></div><div class="dlf"><span id="lasof"></span><span>eXp Realty</span></div></div>
+ document.getElementById('dash').innerHTML=`<div class="dl"><div class="dlh"><div><div class="logo"><img src="img/logo.png" alt="The Bly Team | eXp Realty"></div><div class="sub"><span id="lcount"></span></div></div><div><div class="clk" id="clk"></div><div class="pg" id="lpg"></div></div></div><div class="rows" id="rows"></div><div class="dlf"><span id="lasof"></span><span>eXp Realty</span></div></div>
  <div class="dr"><div class="mtd"><div class="ph"><h2 id="mtdt">October MTD Leaderboard</h2><span id="mtda"></span></div><div class="mtot" id="mtdtot"></div><div class="roll" id="roll"></div></div>
  <div class="ytd"><div class="ph"><h2 id="ytdh">Top 3 YTD Sales Volume</h2><span id="ytda"></span></div><div id="ytdb" style="flex:1;position:relative;min-height:0"></div></div></div><div class="tick"><div class="tlab">NEWS</div><div class="twin" id="twin"></div></div>`;
  clock();setInterval(clock,10000);
