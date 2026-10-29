@@ -1,5 +1,5 @@
 {
-  "asOf": "2026-10-28T13:12-05:00",
+  "asOf": "2026-10-29T08:07-05:00",
   "calendar": "Bly Team Training",
   "days": 30,
   "events": [
@@ -28,12 +28,12 @@
       "detail": "Unlock the potential of Matrix MLS with our foundational course designed for new realtors or those seeking to refresh…"
     },
     {
-      "title": "Weekly Marketing Department Meeting",
-      "start": "2026-10-30T09:00:00-05:00",
-      "end": "2026-10-30T09:45:00-05:00",
+      "title": "FFM — 4-Week Extreme Agent Attraction Growth Sprint (Curtis)",
+      "start": "2026-10-29T13:00:00-05:00",
+      "end": "2026-10-29T14:00:00-05:00",
       "allDay": false,
       "where": "Zoom",
-      "detail": "Weekly Marketing Department Meeting – The Bly Team This weekly meeting brings together the Bly Team Marketing…"
+      "detail": "Host: Curtis Johnson Live only — no recordings. Zoom"
     },
     {
       "title": "Agents' Contracts Q&A",
@@ -42,6 +42,22 @@
       "allDay": false,
       "where": "Zoom",
       "detail": ""
+    },
+    {
+      "title": "Weekly Marketing Department Meeting",
+      "start": "2026-10-30T09:00:00-05:00",
+      "end": "2026-10-30T09:45:00-05:00",
+      "allDay": false,
+      "where": "Zoom",
+      "detail": "Weekly Marketing Department Meeting – The Bly Team This weekly meeting brings together the Bly Team Marketing…"
+    },
+    {
+      "title": "FFM — Live Role Play & Sales Drills (Danney, Riell, Stella)",
+      "start": "2026-10-30T12:00:00-05:00",
+      "end": "2026-10-30T13:00:00-05:00",
+      "allDay": false,
+      "where": "Zoom",
+      "detail": "Hosts: Brian Danney, Ryan Riell, Antonio Stella Zoom"
     },
     {
       "title": "eXp Training Calendar",
@@ -116,6 +132,14 @@
       "detail": ""
     },
     {
+      "title": "FFM — Business Planning Workshop (Elias Astuto)",
+      "start": "2026-11-04T12:00:00-06:00",
+      "end": "2026-11-04T14:00:00-06:00",
+      "allDay": false,
+      "where": "Zoom",
+      "detail": "Host: Elias Astuto Register / entry: Hands-on workshop to design 2027 in real time — leave with KPIs, GCI and net…"
+    },
+    {
       "title": "Agents' Contracts Q&A",
       "start": "2026-11-05T09:00:00-06:00",
       "end": "2026-11-05T09:30:00-06:00",
@@ -132,12 +156,12 @@
       "detail": ""
     },
     {
-      "title": "Weekly Marketing Department Meeting",
-      "start": "2026-11-06T09:00:00-06:00",
-      "end": "2026-11-06T09:45:00-06:00",
+      "title": "FFM — 4-Week Extreme Agent Attraction Growth Sprint (Curtis)",
+      "start": "2026-11-05T13:00:00-06:00",
+      "end": "2026-11-05T14:00:00-06:00",
       "allDay": false,
       "where": "Zoom",
-      "detail": "Weekly Marketing Department Meeting – The Bly Team This weekly meeting brings together the Bly Team Marketing…"
+      "detail": "Host: Curtis Johnson Live only — no recordings. Zoom"
     },
     {
       "title": "Agents' Contracts Q&A",
@@ -146,6 +170,14 @@
       "allDay": false,
       "where": "Zoom",
       "detail": ""
+    },
+    {
+      "title": "Weekly Marketing Department Meeting",
+      "start": "2026-11-06T09:00:00-06:00",
+      "end": "2026-11-06T09:45:00-06:00",
+      "allDay": false,
+      "where": "Zoom",
+      "detail": "Weekly Marketing Department Meeting – The Bly Team This weekly meeting brings together the Bly Team Marketing…"
     },
     {
       "title": "eXp Training Calendar",
@@ -220,12 +252,12 @@
       "detail": ""
     },
     {
-      "title": "Weekly Marketing Department Meeting",
-      "start": "2026-11-13T09:00:00-06:00",
-      "end": "2026-11-13T09:45:00-06:00",
+      "title": "FFM — 4-Week Extreme Agent Attraction Growth Sprint (Curtis)",
+      "start": "2026-11-12T13:00:00-06:00",
+      "end": "2026-11-12T14:00:00-06:00",
       "allDay": false,
       "where": "Zoom",
-      "detail": "Weekly Marketing Department Meeting – The Bly Team This weekly meeting brings together the Bly Team Marketing…"
+      "detail": "Host: Curtis Johnson Live only — no recordings. Zoom"
     },
     {
       "title": "Agents' Contracts Q&A",
@@ -234,6 +266,14 @@
       "allDay": false,
       "where": "Zoom",
       "detail": ""
+    },
+    {
+      "title": "Weekly Marketing Department Meeting",
+      "start": "2026-11-13T09:00:00-06:00",
+      "end": "2026-11-13T09:45:00-06:00",
+      "allDay": false,
+      "where": "Zoom",
+      "detail": "Weekly Marketing Department Meeting – The Bly Team This weekly meeting brings together the Bly Team Marketing…"
     },
     {
       "title": "eXp Training Calendar",
@@ -324,12 +364,12 @@
       "detail": ""
     },
     {
-      "title": "Weekly Marketing Department Meeting",
-      "start": "2026-11-20T09:00:00-06:00",
-      "end": "2026-11-20T09:45:00-06:00",
+      "title": "FFM — 4-Week Extreme Agent Attraction Growth Sprint (Curtis)",
+      "start": "2026-11-19T13:00:00-06:00",
+      "end": "2026-11-19T14:00:00-06:00",
       "allDay": false,
       "where": "Zoom",
-      "detail": "Weekly Marketing Department Meeting – The Bly Team This weekly meeting brings together the Bly Team Marketing…"
+      "detail": "Host: Curtis Johnson Live only — no recordings. Zoom"
     },
     {
       "title": "Agents' Contracts Q&A",
@@ -338,6 +378,14 @@
       "allDay": false,
       "where": "Zoom",
       "detail": ""
+    },
+    {
+      "title": "Weekly Marketing Department Meeting",
+      "start": "2026-11-20T09:00:00-06:00",
+      "end": "2026-11-20T09:45:00-06:00",
+      "allDay": false,
+      "where": "Zoom",
+      "detail": "Weekly Marketing Department Meeting – The Bly Team This weekly meeting brings together the Bly Team Marketing…"
     },
     {
       "title": "eXp Training Calendar",
@@ -412,20 +460,20 @@
       "detail": ""
     },
     {
-      "title": "Weekly Marketing Department Meeting",
-      "start": "2026-11-27T09:00:00-06:00",
-      "end": "2026-11-27T09:45:00-06:00",
-      "allDay": false,
-      "where": "Zoom",
-      "detail": "Weekly Marketing Department Meeting – The Bly Team This weekly meeting brings together the Bly Team Marketing…"
-    },
-    {
       "title": "Agents' Contracts Q&A",
       "start": "2026-11-27T09:00:00-06:00",
       "end": "2026-11-27T09:30:00-06:00",
       "allDay": false,
       "where": "Zoom",
       "detail": ""
+    },
+    {
+      "title": "Weekly Marketing Department Meeting",
+      "start": "2026-11-27T09:00:00-06:00",
+      "end": "2026-11-27T09:45:00-06:00",
+      "allDay": false,
+      "where": "Zoom",
+      "detail": "Weekly Marketing Department Meeting – The Bly Team This weekly meeting brings together the Bly Team Marketing…"
     }
   ]
 }
