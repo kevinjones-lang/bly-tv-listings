@@ -1,32 +1,8 @@
 {
-  "asOf": "2026-10-30T08:03-05:00",
+  "asOf": "2026-10-30T13:05-05:00",
   "calendar": "Bly Team Training",
   "days": 30,
   "events": [
-    {
-      "title": "Agents' Contracts Q&A",
-      "start": "2026-10-30T09:00:00-05:00",
-      "end": "2026-10-30T09:30:00-05:00",
-      "allDay": false,
-      "where": "Zoom",
-      "detail": ""
-    },
-    {
-      "title": "Weekly Marketing Department Meeting",
-      "start": "2026-10-30T09:00:00-05:00",
-      "end": "2026-10-30T09:45:00-05:00",
-      "allDay": false,
-      "where": "Zoom",
-      "detail": "Weekly Marketing Department Meeting – The Bly Team This weekly meeting brings together the Bly Team Marketing…"
-    },
-    {
-      "title": "FFM — Live Role Play & Sales Drills (Danney, Riell, Stella)",
-      "start": "2026-10-30T12:00:00-05:00",
-      "end": "2026-10-30T13:00:00-05:00",
-      "allDay": false,
-      "where": "Zoom",
-      "detail": "Hosts: Brian Danney, Ryan Riell, Antonio Stella Zoom"
-    },
     {
       "title": "eXp Training Calendar",
       "start": "2026-11-02T08:30:00-06:00",
@@ -196,6 +172,14 @@
       "detail": ""
     },
     {
+      "title": "NAF Happy Hour- Schaeffers",
+      "start": "2026-11-11T16:00:00-06:00",
+      "end": "2026-11-11T18:00:00-06:00",
+      "allDay": false,
+      "where": "",
+      "detail": ""
+    },
+    {
       "title": "Agents' Contracts Q&A",
       "start": "2026-11-12T09:00:00-06:00",
       "end": "2026-11-12T09:30:00-06:00",
@@ -268,19 +252,19 @@
       "detail": ""
     },
     {
-      "title": "eXp Broker Meetings",
-      "start": "2026-11-17T09:00:00-06:00",
-      "end": "2026-11-17T10:00:00-06:00",
-      "allDay": false,
-      "where": "eXp World",
-      "detail": ""
-    },
-    {
       "title": "Business Planning Clinic",
       "start": "2026-11-17T09:00:00-06:00",
       "end": "2026-11-17T14:00:00-06:00",
       "allDay": false,
       "where": "",
+      "detail": ""
+    },
+    {
+      "title": "eXp Broker Meetings",
+      "start": "2026-11-17T09:00:00-06:00",
+      "end": "2026-11-17T10:00:00-06:00",
+      "allDay": false,
+      "where": "eXp World",
       "detail": ""
     },
     {
