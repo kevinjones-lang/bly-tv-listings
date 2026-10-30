@@ -33,3 +33,14 @@ HAR often returns HTTP 403 or a captcha page to automated fetches. The script ex
 * Lease cards use the same HAR portrait markup as sale cards (`cardv2--portrait`). A future refresh replaces `leases` only when at least one card parses.
 
 No client, lead, or lender fields are written. The lease list checked in on 2026-10-28 is the 14-row scrape of the rent-by-agent page from that day, so the board still has rents if HAR is blocking the script.
+
+## Pending closings (closings.json)
+
+`closings.json` holds the pending closings from the Closings Board sheet (`15k9G3UfIRNcTgxf3DW3nQesOW2KSCCoGZd5Ub0TNdO0`), "Closings" tab. The classic slideshow's pending slides read it first (same origin), then fall back to the feed sheet, then the saved data / built-in snapshot. `?closings=<url>` overrides the file. The ops hub's Listings & Closings tab reads the same file.
+
+Refresh (twice daily):
+
+1. Read the Closings tab columns `A:M` with the Google Sheets connector (`read_range`, read-only, displayed values) and save the raw JSON response to `/workspace/bly-tv-listings-closings-raw.json` (outside the repo: it contains agent, source and lender columns).
+2. From the repo root: `python3 scripts/update_closings.py --from-rows /workspace/bly-tv-listings-closings-raw.json`, then commit and push `closings.json`.
+
+Only address, price, expectedClose and status ("Pending") are written. Agent, lead source, lender, client names, emails, phone numbers and links are never published. Missing columns, an unreadable file or zero rows exit 2 and leave `closings.json` unchanged. Without `--from-rows` the script reads the public feed CSV instead (that only works if the feed sheet is shared publicly). Tests: `python3 scripts/test_update_closings.py`.

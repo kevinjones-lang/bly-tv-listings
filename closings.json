@@ -1,0 +1,192 @@
+{
+  "asOf": "2026-10-30T11:38-05:00",
+  "source": "Closings Board sheet, Closings tab",
+  "closings": [
+    {
+      "address": "920 Bruce Ave, League City",
+      "price": "$45,000",
+      "expectedClose": "extended",
+      "status": "Pending"
+    },
+    {
+      "address": "4830 Houston Drive, Galveston",
+      "price": "$231,390",
+      "expectedClose": "11/06",
+      "status": "Pending"
+    },
+    {
+      "address": "1611 Sweet Gum Lane, Kingwood",
+      "price": "$550,000",
+      "expectedClose": "11/6",
+      "status": "Pending"
+    },
+    {
+      "address": "261 26TH STREET, SAN LEON",
+      "price": "$340,000",
+      "expectedClose": "11/16",
+      "status": "Pending"
+    },
+    {
+      "address": "31210 Harvest Time Drive, Fulshear (NH)",
+      "price": "$420,000",
+      "expectedClose": "11/9",
+      "status": "Pending"
+    },
+    {
+      "address": "1904 Amy Drive, Baytown",
+      "price": "$160,000",
+      "expectedClose": "extended",
+      "status": "Pending"
+    },
+    {
+      "address": "12823 Sandy Hook Drive, Houston",
+      "price": "$207,000",
+      "expectedClose": "11/19",
+      "status": "Pending"
+    },
+    {
+      "address": "2104 Bay Hill Drive, League City",
+      "price": "$402,000",
+      "expectedClose": "11/9",
+      "status": "Pending"
+    },
+    {
+      "address": "111 Jamestown Avenue, Clute",
+      "price": "$265,000",
+      "expectedClose": "11/26",
+      "status": "Pending"
+    },
+    {
+      "address": "9607 HABITAT STREET, HOUSTON",
+      "price": "$243,000",
+      "expectedClose": "11/30",
+      "status": "Pending"
+    },
+    {
+      "address": "2212 Palm Lagoon Drive",
+      "price": "$350,000",
+      "expectedClose": "11/27",
+      "status": "Pending"
+    },
+    {
+      "address": "2775 Glen Haven Drive, League City",
+      "price": "$274,500",
+      "expectedClose": "12/3",
+      "status": "Pending"
+    },
+    {
+      "address": "11414 Kirkwyn Dr, Houston",
+      "price": "$141,000",
+      "expectedClose": "10/30",
+      "status": "Pending"
+    },
+    {
+      "address": "1749 Stargrass Lane, Alvin ( NH)",
+      "price": "$328,990",
+      "expectedClose": "11/1",
+      "status": "Pending"
+    },
+    {
+      "address": "3433 Wild Mustang St, League City (NH)",
+      "price": "$337,490",
+      "expectedClose": "10/30",
+      "status": "Pending"
+    },
+    {
+      "address": "7411 Luce Del Porto Way, Texas City (NH)",
+      "price": "$252,995",
+      "expectedClose": "11/25",
+      "status": "Pending"
+    },
+    {
+      "address": "5610 Blackbird Lane, Hitchcock (NH)",
+      "price": "$217,995",
+      "expectedClose": "TBD",
+      "status": "Pending"
+    },
+    {
+      "address": "514 Idlewood Drive, Hitchcock",
+      "price": "$191,000",
+      "expectedClose": "10/30",
+      "status": "Pending"
+    },
+    {
+      "address": "11319 Windy Dawn Dr, Pearland",
+      "price": "$445,000",
+      "expectedClose": "11/12",
+      "status": "Pending"
+    },
+    {
+      "address": "1115 25th Avenue N, Texas City",
+      "price": "$256,000",
+      "expectedClose": "11/23",
+      "status": "Pending"
+    },
+    {
+      "address": "7006 Texas Wrangler Drive, League City (NH)",
+      "price": "$439,990",
+      "expectedClose": "1/14",
+      "status": "Pending"
+    },
+    {
+      "address": "7408 Luce Del Porto Way, Texas City (NH)",
+      "price": "$232,995",
+      "expectedClose": "11/20",
+      "status": "Pending"
+    },
+    {
+      "address": "3722 WOODLACE DRIVE, HUMBLE",
+      "price": "$245,000",
+      "expectedClose": "11/23",
+      "status": "Pending"
+    },
+    {
+      "address": "11954 RAMLA PLACE TRAIL, HOUSTON",
+      "price": "$230,000",
+      "expectedClose": "10/30",
+      "status": "Pending"
+    },
+    {
+      "address": "2008 Williamsburg Court N, League City",
+      "price": "$229,000",
+      "expectedClose": "11/24",
+      "status": "Pending"
+    },
+    {
+      "address": "7000 SEAWALL BOULEVARD #813, GALVESTON",
+      "price": "$169,000",
+      "expectedClose": "11/16",
+      "status": "Pending"
+    },
+    {
+      "address": "3208 LEE CIRCLE, PEARLAND",
+      "price": "$339,000",
+      "expectedClose": "11/20",
+      "status": "Pending"
+    },
+    {
+      "address": "16614 Hamill Drive, Rosharon (Lot)",
+      "price": "$149,000",
+      "expectedClose": "11/13",
+      "status": "Pending"
+    },
+    {
+      "address": "1500 Bay Area Blvd #282, Houston",
+      "price": "$71,800",
+      "expectedClose": "10/30",
+      "status": "Pending"
+    },
+    {
+      "address": "1900 Clayton Dr, Baytown",
+      "price": "$225,000",
+      "expectedClose": "11/6",
+      "status": "Pending"
+    },
+    {
+      "address": "1408 N Pine Orchard Drive, Pearland",
+      "price": "$442,500",
+      "expectedClose": "11/2",
+      "status": "Pending"
+    }
+  ]
+}

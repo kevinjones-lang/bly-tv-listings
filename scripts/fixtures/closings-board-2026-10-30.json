@@ -1,0 +1,11 @@
+{
+ "spreadsheetId": "fixture",
+ "truncated": false,
+ "ranges": [
+  {
+   "sheet": "Closings",
+   "range": "Closings!A1:M1013",
+   "content": "Agent,Source,Address,List Price,Lender,Close Date,,Agent,Source,Address,List Price,Lender,Close Date\nDeb,SOI,\"920 Bruce Ave, League City\",\"$45,000\",CASH,extended,,Abbie,Zillow,\"11319 Windy Dawn Dr, Pearland\",\"$445,000\",PRIME STAR MORTGAGE,11/12\nDeb,Call In,\"4830 Houston Drive, Galveston\",\"$231,390\",Legend Lending,11/06,,Ada,ada@example.com,\"buyer@example.com\",\"$1\",281-555-0100,https://zoom.us/j/1\n,,,,,,,Angie,Zillow Preferred,\" 3722 WOODLACE DRIVE, HUMBLE\",\"$245,000\",FAIRWAY HOME MORTGAGE,https://zoom.us/j/9\n\nLindsey,Zillow Preferred,\"5610 Blackbird Lane, Hitchcock (NH)\",\"$217,995\",KB Home Loans,TBD\n,,,,,,,,,,\"$939,385\""
+  }
+ ]
+}
