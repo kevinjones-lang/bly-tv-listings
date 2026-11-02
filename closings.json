@@ -1,5 +1,5 @@
 {
-  "asOf": "2026-10-30T13:05-05:00",
+  "asOf": "2026-11-02T08:06-06:00",
   "source": "Closings Board sheet, Closings tab",
   "closings": [
     {
@@ -63,15 +63,15 @@
       "status": "Pending"
     },
     {
-      "address": "2212 Palm Lagoon Drive",
-      "price": "$350,000",
-      "expectedClose": "11/27",
+      "address": "5226 Chasewood Drive, Bacliff",
+      "price": "$242,000",
+      "expectedClose": "11/13",
       "status": "Pending"
     },
     {
-      "address": "2775 Glen Haven Drive, League City",
-      "price": "$274,500",
-      "expectedClose": "12/3",
+      "address": "2212 Palm Lagoon Drive",
+      "price": "$350,000",
+      "expectedClose": "11/27",
       "status": "Pending"
     },
     {
@@ -89,7 +89,7 @@
     {
       "address": "3433 Wild Mustang St, League City (NH)",
       "price": "$337,490",
-      "expectedClose": "10/30",
+      "expectedClose": "11/2",
       "status": "Pending"
     },
     {
@@ -141,9 +141,15 @@
       "status": "Pending"
     },
     {
-      "address": "11954 RAMLA PLACE TRAIL, HOUSTON",
-      "price": "$230,000",
-      "expectedClose": "10/30",
+      "address": "6129 Creekside Lane, League City",
+      "price": "$249,500",
+      "expectedClose": "11/25",
+      "status": "Pending"
+    },
+    {
+      "address": "2133 Greenlee Lane, Dickinson",
+      "price": "$215,000",
+      "expectedClose": "11/30",
       "status": "Pending"
     },
     {
@@ -156,12 +162,6 @@
       "address": "7000 SEAWALL BOULEVARD #813, GALVESTON",
       "price": "$169,000",
       "expectedClose": "11/16",
-      "status": "Pending"
-    },
-    {
-      "address": "3208 LEE CIRCLE, PEARLAND",
-      "price": "$339,000",
-      "expectedClose": "11/20",
       "status": "Pending"
     },
     {
