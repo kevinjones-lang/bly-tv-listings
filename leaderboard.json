@@ -207,9 +207,9 @@
     "zillowMessages": 6200,
     "conversationTime": "45 days 18 hrs"
   },
-  "dealsAsOf": "2026-11-02T13:10:00-06:00",
+  "dealsAsOf": "2026-11-02T13:58:00-06:00",
   "deals": {
-    "source": "FUB Deals Leaderboard - All Pipelines, Everyone, This Year, closed deals",
+    "source": "Metrics Tracker, working-agent closings (Sisu/SkySlope)",
     "exclude": [
       "Transaction Coordinator",
       "Transaction Coordinator 2",
@@ -219,115 +219,123 @@
     "ytd": [
       {
         "name": "Deborah Bly",
-        "volume": 12600000,
-        "volumeText": "$12.6M",
-        "dealAvg": 234100,
-        "dealAvgText": "$234.1K",
-        "closed": 54
-      },
-      {
-        "name": "Abbie Reeves",
-        "volume": 11700000,
-        "volumeText": "$11.7M",
-        "dealAvg": 451700,
-        "dealAvgText": "$451.7K",
-        "closed": 26
-      },
-      {
-        "name": "Melinda Suchecki",
-        "volume": 11400000,
-        "volumeText": "$11.4M",
-        "dealAvg": 326900,
-        "dealAvgText": "$326.9K",
-        "closed": 35
+        "volume": 12757208,
+        "volumeText": "$12.76M",
+        "dealAvg": 472489,
+        "dealAvgText": "$472.5K",
+        "closed": 27
       },
       {
         "name": "Susan O'Rourke",
-        "volume": 11100000,
-        "volumeText": "$11.1M",
-        "dealAvg": 318100,
-        "dealAvgText": "$318.1K",
-        "closed": 35
+        "volume": 11294901,
+        "volumeText": "$11.29M",
+        "dealAvg": 347535,
+        "dealAvgText": "$347.5K",
+        "closed": 32.5
       },
       {
-        "name": "Stephen Barnhill Jr.",
-        "volume": 7900000,
-        "volumeText": "$7.9M",
-        "dealAvg": 437200,
-        "dealAvgText": "$437.2K",
-        "closed": 18
+        "name": "Melinda Suchecki",
+        "volume": 11274023,
+        "volumeText": "$11.27M",
+        "dealAvg": 450961,
+        "dealAvgText": "$451K",
+        "closed": 25
       },
       {
-        "name": "Angelina Martinez",
-        "volume": 4700000,
-        "volumeText": "$4.7M",
-        "dealAvg": 222500,
-        "dealAvgText": "$222.5K",
-        "closed": 21
-      },
-      {
-        "name": "Meggan Flanagan",
-        "volume": 3900000,
-        "volumeText": "$3.9M",
-        "dealAvg": 169700,
-        "dealAvgText": "$169.7K",
-        "closed": 23
-      },
-      {
-        "name": "Tannika Phillips-Humphrey",
-        "volume": 3200000,
-        "volumeText": "$3.2M",
-        "dealAvg": 145700,
-        "dealAvgText": "$145.7K",
+        "name": "Abbie Reeves",
+        "volume": 10593000,
+        "volumeText": "$10.59M",
+        "dealAvg": 481500,
+        "dealAvgText": "$481.5K",
         "closed": 22
       },
       {
+        "name": "Stephen Barnhill Jr.",
+        "volume": 7853290,
+        "volumeText": "$7.85M",
+        "dealAvg": 654441,
+        "dealAvgText": "$654.4K",
+        "closed": 12
+      },
+      {
+        "name": "Angelina Martinez",
+        "volume": 4210612,
+        "volumeText": "$4.21M",
+        "dealAvg": 280707,
+        "dealAvgText": "$280.7K",
+        "closed": 15
+      },
+      {
+        "name": "Meggan Flanagan",
+        "volume": 3880500,
+        "volumeText": "$3.88M",
+        "dealAvg": 298500,
+        "dealAvgText": "$298.5K",
+        "closed": 13
+      },
+      {
+        "name": "Tannika Phillips-Humphrey",
+        "volume": 3185728,
+        "volumeText": "$3.19M",
+        "dealAvg": 289612,
+        "dealAvgText": "$289.6K",
+        "closed": 11
+      },
+      {
         "name": "Celia Flores",
-        "volume": 2500000,
-        "volumeText": "$2.5M",
-        "dealAvg": 181400,
-        "dealAvgText": "$181.4K",
-        "closed": 14
+        "volume": 2529390,
+        "volumeText": "$2.53M",
+        "dealAvg": 252939,
+        "dealAvgText": "$252.9K",
+        "closed": 10
       },
       {
         "name": "Meredith Heard",
-        "volume": 2300000,
-        "volumeText": "$2.3M",
-        "dealAvg": 582800,
+        "volume": 2331000,
+        "volumeText": "$2.33M",
+        "dealAvg": 582750,
         "dealAvgText": "$582.8K",
         "closed": 4
       },
       {
         "name": "Matthew Sears",
-        "volume": 2300000,
-        "volumeText": "$2.3M",
-        "dealAvg": 452000,
-        "dealAvgText": "$452K",
-        "closed": 5
+        "volume": 2255000,
+        "volumeText": "$2.25M",
+        "dealAvg": 563750,
+        "dealAvgText": "$563.8K",
+        "closed": 4
       },
       {
         "name": "Sean Spellman",
-        "volume": 2200000,
-        "volumeText": "$2.2M",
-        "dealAvg": 144300,
-        "dealAvgText": "$144.3K",
-        "closed": 15
+        "volume": 2150690,
+        "volumeText": "$2.15M",
+        "dealAvg": 268836,
+        "dealAvgText": "$268.8K",
+        "closed": 8
       },
       {
         "name": "Julia Carnley",
-        "volume": 1700000,
-        "volumeText": "$1.7M",
-        "dealAvg": 239100,
-        "dealAvgText": "$239.1K",
-        "closed": 7
+        "volume": 1669690,
+        "volumeText": "$1.67M",
+        "dealAvg": 278282,
+        "dealAvgText": "$278.3K",
+        "closed": 6
       },
       {
         "name": "Colbert Prince",
-        "volume": 1500000,
-        "volumeText": "$1.5M",
-        "dealAvg": 213500,
-        "dealAvgText": "$213.5K",
-        "closed": 7
+        "volume": 1490700,
+        "volumeText": "$1.49M",
+        "dealAvg": 298140,
+        "dealAvgText": "$298.1K",
+        "closed": 5
+      },
+      {
+        "name": "Nyka Valdez",
+        "volume": 1230000,
+        "volumeText": "$1.23M",
+        "dealAvg": 307500,
+        "dealAvgText": "$307.5K",
+        "closed": 4
       }
     ]
   },
