@@ -1,5 +1,5 @@
 {
-  "asOf": "2026-11-03T09:07-05:00",
+  "asOf": "2026-11-03T14:07-05:00",
   "source": "https://www.har.com/deborah-bly/listings_bly",
   "leaseAsOf": "2026-10-28T14:30:00-05:00",
   "leaseSource": "https://www.har.com/realestatepro/rent-by-agent/bly",
@@ -291,22 +291,6 @@
       "url": "https://www.har.com/homedetail/18515-egret-bay-blvd-1103-houston-tx-77058/3522258",
       "photoSource": "https://mediahar.harstatic.com/815042004/lr/815193391.jpeg",
       "photo": "img/listings/11310229.jpg"
-    },
-    {
-      "id": "11277608",
-      "street": "8213 Ocean Jasper Ln",
-      "city": "Texas City, TX 77591",
-      "price": "$335,000",
-      "status": "Active",
-      "type": "Single-Family",
-      "beds": 4,
-      "fullBaths": 3,
-      "halfBaths": null,
-      "sqft": 2136,
-      "lot": null,
-      "url": "https://www.har.com/homedetail/8213-ocean-jasper-ln-texas-city-tx-77591/15733115",
-      "photoSource": "https://mediahar.harstatic.com/810660298/lr/813009064.jpeg",
-      "photo": "img/listings/11277608.jpg"
     },
     {
       "id": "11277118",

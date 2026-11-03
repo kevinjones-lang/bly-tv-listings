@@ -1,5 +1,5 @@
 {
-  "asOf": "2026-11-03T08:06-06:00",
+  "asOf": "2026-11-03T13:08-06:00",
   "source": "Closings Board sheet, Closings tab",
   "closings": [
     {
@@ -99,12 +99,6 @@
       "status": "Pending"
     },
     {
-      "address": "514 Idlewood Drive, Hitchcock",
-      "price": "$191,000",
-      "expectedClose": "10/30",
-      "status": "Pending"
-    },
-    {
       "address": "1115 25th Avenue N, Texas City",
       "price": "$256,000",
       "expectedClose": "11/23",
@@ -153,6 +147,12 @@
       "status": "Pending"
     },
     {
+      "address": "3905 Spring Circle Drive W, Pearland",
+      "price": "$335,000",
+      "expectedClose": "12/1",
+      "status": "Pending"
+    },
+    {
       "address": "16614 Hamill Drive, Rosharon (Lot)",
       "price": "$149,000",
       "expectedClose": "11/13",
@@ -162,12 +162,6 @@
       "address": "1900 Clayton Dr, Baytown",
       "price": "$225,000",
       "expectedClose": "11/6",
-      "status": "Pending"
-    },
-    {
-      "address": "1408 N Pine Orchard Drive, Pearland",
-      "price": "$442,500",
-      "expectedClose": "11/2",
       "status": "Pending"
     }
   ]
