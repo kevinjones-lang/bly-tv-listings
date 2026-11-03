@@ -207,7 +207,7 @@
     "zillowMessages": 6200,
     "conversationTime": "45 days 18 hrs"
   },
-  "dealsAsOf": "2026-11-02T13:58:00-06:00",
+  "dealsAsOf": "2026-11-03T07:04:00-06:00",
   "deals": {
     "source": "Metrics Tracker, working-agent closings (Sisu/SkySlope)",
     "exclude": [
@@ -219,11 +219,11 @@
     "ytd": [
       {
         "name": "Deborah Bly",
-        "volume": 12757208,
-        "volumeText": "$12.76M",
-        "dealAvg": 472489,
-        "dealAvgText": "$472.5K",
-        "closed": 27
+        "volume": 12988598,
+        "volumeText": "$12.99M",
+        "dealAvg": 463878,
+        "dealAvgText": "$463.9K",
+        "closed": 28
       },
       {
         "name": "Susan O'Rourke",
@@ -243,11 +243,11 @@
       },
       {
         "name": "Abbie Reeves",
-        "volume": 10593000,
-        "volumeText": "$10.59M",
-        "dealAvg": 481500,
-        "dealAvgText": "$481.5K",
-        "closed": 22
+        "volume": 11038000,
+        "volumeText": "$11.04M",
+        "dealAvg": 479913,
+        "dealAvgText": "$479.9K",
+        "closed": 23
       },
       {
         "name": "Stephen Barnhill Jr.",
