@@ -1,5 +1,5 @@
 {
-  "asOf": "2026-11-02T14:07-05:00",
+  "asOf": "2026-11-03T09:07-05:00",
   "source": "https://www.har.com/deborah-bly/listings_bly",
   "leaseAsOf": "2026-10-28T14:30:00-05:00",
   "leaseSource": "https://www.har.com/realestatepro/rent-by-agent/bly",
@@ -105,7 +105,7 @@
       "street": "5505 Hardy St",
       "city": "Houston, TX 77009",
       "price": "$110,000",
-      "status": "Active",
+      "status": "Under Contract - P",
       "type": "Lots",
       "beds": null,
       "fullBaths": null,
@@ -337,7 +337,7 @@
       "sqft": 3303,
       "lot": null,
       "url": "https://www.har.com/homedetail/874-pebblebank-ln-league-city-tx-77573/8107381",
-      "photoSource": "https://mediahar.harstatic.com/804015529/lr/810150822.jpeg",
+      "photoSource": "https://mediahar.harstatic.com/804015529/lr/810150886.jpeg",
       "photo": "img/listings/11268585.jpg"
     },
     {
@@ -497,7 +497,7 @@
       "sqft": 1200,
       "lot": null,
       "url": "https://www.har.com/homedetail/7108-e-hunter-dr-hitchcock-tx-77563/2624564",
-      "photoSource": "https://mediahar.harstatic.com/803032062/lr/804045274.jpeg",
+      "photoSource": "https://mediahar.harstatic.com/803032062/lr/804045352.jpeg",
       "photo": "img/listings/11216078.jpg"
     },
     {
