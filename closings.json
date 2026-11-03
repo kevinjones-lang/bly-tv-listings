@@ -1,17 +1,11 @@
 {
-  "asOf": "2026-11-02T13:06-06:00",
+  "asOf": "2026-11-03T08:06-06:00",
   "source": "Closings Board sheet, Closings tab",
   "closings": [
     {
       "address": "920 Bruce Ave, League City",
       "price": "$45,000",
       "expectedClose": "extended",
-      "status": "Pending"
-    },
-    {
-      "address": "4830 Houston Drive, Galveston",
-      "price": "$231,390",
-      "expectedClose": "11/06",
       "status": "Pending"
     },
     {
@@ -69,6 +63,12 @@
       "status": "Pending"
     },
     {
+      "address": "5505 Hardy Street, Houston (Lot)",
+      "price": "$110,000",
+      "expectedClose": "11/30",
+      "status": "Pending"
+    },
+    {
       "address": "11414 Kirkwyn Dr, Houston",
       "price": "$141,000",
       "expectedClose": "11/2",
@@ -77,7 +77,7 @@
     {
       "address": "1749 Stargrass Lane, Alvin ( NH)",
       "price": "$328,990",
-      "expectedClose": "11/1",
+      "expectedClose": "11/30",
       "status": "Pending"
     },
     {
@@ -102,12 +102,6 @@
       "address": "514 Idlewood Drive, Hitchcock",
       "price": "$191,000",
       "expectedClose": "10/30",
-      "status": "Pending"
-    },
-    {
-      "address": "11319 Windy Dawn Dr, Pearland",
-      "price": "$445,000",
-      "expectedClose": "11/12",
       "status": "Pending"
     },
     {
