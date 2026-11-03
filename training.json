@@ -1,16 +1,8 @@
 {
-  "asOf": "2026-11-02T13:06-06:00",
+  "asOf": "2026-11-03T08:06-06:00",
   "calendar": "Bly Team Training",
   "days": 30,
   "events": [
-    {
-      "title": "eXp - Fast forward",
-      "start": "2026-11-02T12:00:00-06:00",
-      "end": "2026-11-02T14:00:00-06:00",
-      "allDay": false,
-      "where": "Zoom",
-      "detail": ""
-    },
     {
       "title": "eXp Broker Meetings",
       "start": "2026-11-03T09:00:00-06:00",
