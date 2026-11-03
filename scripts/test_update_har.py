@@ -139,8 +139,32 @@ class RefreshTests(unittest.TestCase):
         before = open(self.path, encoding="utf-8").read()
         def fetch(url):
             raise uh.Blocked(f"BLOCKED/ERROR: HTTP 403 from {url}; not retrying")
+        for argv in ([], ["--leases"]):
+            with self.assertRaises(SystemExit) as ctx:
+                uh.main(root=self.tmp, fetch=fetch, clock=lambda: "2026-10-28T16:00-05:00", argv=argv)
+            self.assertEqual(ctx.exception.code, 2)
+            self.assertEqual(open(self.path, encoding="utf-8").read(), before)
+
+    def test_default_refresh_saves_sales_and_clears_leases_without_fetching_rents(self):
+        seen = []
+        def fetch(url):
+            seen.append(url)
+            return SALE_PAGE
+        uh.main(root=self.tmp, fetch=fetch, clock=lambda: "2026-10-28T16:00-05:00", argv=[])
+        self.assertEqual(seen, [uh.SALE_URL])
+        doc = json.load(open(self.path, encoding="utf-8"))
+        self.assertEqual(doc["asOf"], "2026-10-28T16:00-05:00")
+        self.assertEqual(doc["source"], uh.SALE_URL)
+        self.assertEqual([x["id"] for x in doc["listings"]], ["11353643"])
+        self.assertEqual(doc["listings"][0]["price"], "$330,000")
+        self.assertEqual(doc["leases"], [])
+        self.assertIsNone(doc["leaseAsOf"])
+        self.assertIsNone(doc["leaseSource"])
+
+    def test_unknown_option_exits_2_without_writing(self):
+        before = open(self.path, encoding="utf-8").read()
         with self.assertRaises(SystemExit) as ctx:
-            uh.main(root=self.tmp, fetch=fetch, clock=lambda: "2026-10-28T16:00-05:00")
+            uh.main(root=self.tmp, fetch=lambda url: SALE_PAGE, argv=["--lease"])
         self.assertEqual(ctx.exception.code, 2)
         self.assertEqual(open(self.path, encoding="utf-8").read(), before)
 
@@ -150,7 +174,7 @@ class RefreshTests(unittest.TestCase):
                 raise uh.Blocked(f"BLOCKED/ERROR: HTTP 403 from {url}; not retrying")
             return SALE_PAGE
         with self.assertRaises(SystemExit) as ctx:
-            uh.main(root=self.tmp, fetch=fetch, clock=lambda: "2026-10-28T16:00-05:00")
+            uh.main(root=self.tmp, fetch=fetch, clock=lambda: "2026-10-28T16:00-05:00", argv=["--leases"])
         self.assertEqual(ctx.exception.code, 2)
         doc = json.load(open(self.path, encoding="utf-8"))
         self.assertEqual(doc["asOf"], "2026-10-28T16:00-05:00")
@@ -163,7 +187,7 @@ class RefreshTests(unittest.TestCase):
     def test_both_pages_replace_leases(self):
         def fetch(url):
             return SALE_PAGE if url == uh.SALE_URL else RENT_PAGE
-        doc = uh.run(root=self.tmp, fetch=fetch, clock=lambda: "2026-10-28T16:00-05:00")
+        doc = uh.run(root=self.tmp, fetch=fetch, clock=lambda: "2026-10-28T16:00-05:00", leases_enabled=True)
         self.assertEqual([x["id"] for x in doc["listings"]], ["11353643"])
         self.assertEqual([x["id"] for x in doc["leases"]], ["10507595", "8770598"])
         self.assertEqual(doc["leases"][0]["rent"], "$2,150")
@@ -173,31 +197,18 @@ class RefreshTests(unittest.TestCase):
 
 
 class SeedTests(unittest.TestCase):
-    def test_committed_leases_match_scrape_and_keep_under_contract(self):
-        seed = json.load(open(FIXTURE, encoding="utf-8"))
+    def test_committed_listings_have_no_leases_while_leases_are_off(self):
         doc = json.load(open(os.path.join(ROOT, "listings.json"), encoding="utf-8"))
-        self.assertEqual(len(doc["listings"]), 52)
-        self.assertEqual(doc["leaseSource"], seed["source"])
-        self.assertEqual(doc["leaseAsOf"], seed["asOf"])
-        self.assertEqual(len(doc["leases"]), seed["count"])
-        self.assertEqual(len(doc["leases"]), 14)
-        by_id = {x["listingId"]: x for x in doc["leases"]}
-        self.assertEqual(set(by_id), {x["listingId"] for x in seed["listings"]})
-        pending = []
-        for src in seed["listings"]:
-            rec = by_id[src["listingId"]]
-            for key in ("street", "city", "rent", "status", "beds", "baths", "sqft", "lot", "propertyType", "harUrl", "listingId", "photoUrl"):
-                self.assertEqual(rec[key], src[key], key)
-            self.assertEqual(rec["kind"], "lease")
-            self.assertEqual(rec["price"], src["rent"])
-            self.assertEqual(rec["url"], src["harUrl"])
-            self.assertEqual(rec["id"], src["listingId"])
-            self.assertIsNone(rec["photo"])
-            self.assertTrue(FORBIDDEN.isdisjoint(rec))
-            if "contract" in src["status"].lower():
-                pending.append(rec["street"])
-        self.assertEqual(pending, ["313 Winding Oak Ln S"])
+        self.assertGreater(len(doc["listings"]), 0)
+        self.assertEqual(doc["leases"], [])
+        self.assertIsNone(doc["leaseAsOf"])
+        self.assertIsNone(doc["leaseSource"])
         self.assertTrue(all(x.get("kind") != "lease" for x in doc["listings"]))
+        self.assertTrue(all(FORBIDDEN.isdisjoint(x) for x in doc["listings"]))
+
+    def test_lease_fixture_is_kept_for_when_leases_return(self):
+        seed = json.load(open(FIXTURE, encoding="utf-8"))
+        self.assertEqual(seed["count"], len(seed["listings"]))
 
 
 if __name__ == "__main__":

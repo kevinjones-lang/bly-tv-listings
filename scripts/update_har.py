@@ -4,14 +4,21 @@
 Sales:  https://www.har.com/deborah-bly/listings_bly  (active section only)
 Leases: https://www.har.com/realestatepro/rent-by-agent/bly
 
-Usage: python3 scripts/update_har.py   (run from repo root). Needs Pillow.
+Usage: python3 scripts/update_har.py            (run from repo root). Needs Pillow.
+       python3 scripts/update_har.py --leases   (also refresh leases; opt-in)
+
+Leases are OFF by default: the plain command refreshes sales only, does not
+fetch the rent page, and writes an empty leases array (leaseAsOf/leaseSource
+null), so stale rents never come back. Pass --leases once there is a working
+lease source again.
 
 HAR often answers with HTTP 403 or a captcha page. This script stops on that
 (exit 2) and never retries, changes identity, or fills in numbers.
 
 * A blocked or unreadable sale page leaves listings.json untouched.
-* A blocked or unreadable lease page still saves a successful sale refresh
-  and keeps the previous leases array. It does not clear or invent rents.
+* With --leases, a blocked or unreadable lease page still saves a successful
+  sale refresh and keeps the previous leases array (empty while leases are
+  off). It does not invent rents.
 * Leases are replaced only when the rent page parses as HAR portrait cards
   (the same cardv2 markup as the sale page). Zero cards is treated as a failed
   read, not as an empty inventory, so a restyled or challenge page cannot wipe
@@ -185,12 +192,12 @@ def load_json(path):
     return data if isinstance(data, dict) else {}
 
 
-def listing_document(sales, leases, sale_asof, lease_asof):
+def listing_document(sales, leases, sale_asof, lease_asof, lease_source=RENT_URL):
     return {
         "asOf": sale_asof,
         "source": SALE_URL,
         "leaseAsOf": lease_asof,
-        "leaseSource": RENT_URL,
+        "leaseSource": lease_source,
         "listings": sales,
         "leases": leases,
     }
@@ -208,7 +215,7 @@ def preserved_leases(existing):
     return leases, asof
 
 
-def run(root=None, fetch=None, clock=None):
+def run(root=None, fetch=None, clock=None, leases_enabled=False):
     root = root or ROOT
     fetch = fetch or fetch_page
     clock = clock or now_ct
@@ -221,28 +228,38 @@ def run(root=None, fetch=None, clock=None):
     for rec in sales:
         rec["photo"] = save_photo(rec["id"], rec.get("photoSource"), img_dir)
     blocked = None
-    try:
-        leases = parse_lease_page(fetch(RENT_URL))
-        for rec in leases:
-            rec["photo"] = save_photo(rec["id"], rec.get("photoSource"), img_dir)
-        lease_asof = stamped
-    except Blocked as e:
-        blocked = e
-        leases, lease_asof = preserved_leases(existing)
+    leases, lease_asof, lease_source = [], None, None
+    if leases_enabled:
+        lease_source = RENT_URL
+        try:
+            leases = parse_lease_page(fetch(RENT_URL))
+            for rec in leases:
+                rec["photo"] = save_photo(rec["id"], rec.get("photoSource"), img_dir)
+            lease_asof = stamped
+        except Blocked as e:
+            blocked = e
+            leases, lease_asof = preserved_leases(existing)
     prune_photos(sales, leases, img_dir)
-    doc = listing_document(sales, leases, stamped, lease_asof)
+    doc = listing_document(sales, leases, stamped, lease_asof, lease_source)
     write_document(doc, path)
     nphoto = sum(1 for x in sales if x.get("photo"))
     lphoto = sum(1 for x in leases if x.get("photo"))
-    print(f"{len(sales)} sale listings, {nphoto} with photos; {len(leases)} leases, {lphoto} with photos")
+    if leases_enabled:
+        print(f"{len(sales)} sale listings, {nphoto} with photos; {len(leases)} leases, {lphoto} with photos")
+    else:
+        print(f"{len(sales)} sale listings, {nphoto} with photos; leases off (pass --leases to refresh them)")
     if blocked:
         stop(f"{blocked} Sale listings were updated; previous leases were left unchanged.")
     return doc
 
 
-def main(root=None, fetch=None, clock=None):
+def main(root=None, fetch=None, clock=None, argv=None):
+    args = sys.argv[1:] if argv is None else argv
+    unknown = [a for a in args if a != "--leases"]
+    if unknown:
+        stop(f"unknown option(s): {' '.join(unknown)}. Usage: update_har.py [--leases]")
     try:
-        run(root=root, fetch=fetch, clock=clock)
+        run(root=root, fetch=fetch, clock=clock, leases_enabled="--leases" in args)
     except Blocked as e:
         stop(str(e))
 

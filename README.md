@@ -11,28 +11,34 @@ Full-screen, auto-advancing slideshow of The Bly Team's listings for the office 
 
 ## Left board
 
-The default TV view is a split screen. The left panel cycles `listings.json`: sale rows first, in HAR order, then for-lease rows. Six rows show at a time. A lease uses the price slot for monthly rent (`$2,150/mo`), a blue **For Lease** badge, and a Lease placeholder where the photo would be. An under-contract lease stays on the board: same Lease placeholder, orange row, and **Pending** badge (the same pending treatment as a sale, so the rent price and Lease mark are what separate it). `?lpage=10` opens on that page of the rotation (1-based).
+The default TV view is a split screen. The left panel cycles `listings.json`: sale rows first, in HAR order, then for-lease rows (none while leases are off; the board then just pages through sales). Six rows show at a time. A lease uses the price slot for monthly rent (`$2,150/mo`), a blue **For Lease** badge, and a Lease placeholder where the photo would be. An under-contract lease stays on the board: same Lease placeholder, orange row, and **Pending** badge (the same pending treatment as a sale, so the rent price and Lease mark are what separate it). `?lpage=10` opens on that page of the rotation (1-based).
 
 ## Refreshing HAR listings
 
-From the repo root:
+From the repo root (this is the twice-daily command):
 
 ```bash
 python3 scripts/update_har.py
 ```
 
-The script reads two public pages and rewrites `listings.json`:
+**Leases are off by default** (since 2026-11-03: HAR has blocked the rent page since Oct 30 and there is no other lease source). The plain command refreshes sales only: it does not fetch the rent page and writes `leases: []` with `leaseAsOf`/`leaseSource` set to `null`, so stale rents cannot come back. With zero leases the TV board shows sale rows only ("N listings", no lease rows, no lease date in the footer). To turn leases back on once there is a working source, run:
+
+```bash
+python3 scripts/update_har.py --leases
+```
+
+The script reads public HAR pages and rewrites `listings.json`:
 
 * Sales — `https://www.har.com/deborah-bly/listings_bly` (the active section only), stored in `listings`.
-* Leases — `https://www.har.com/realestatepro/rent-by-agent/bly`, stored in the sibling `leases` array (`kind` is `lease`, `price` is the monthly rent on the card).
+* Leases (only with `--leases`) — `https://www.har.com/realestatepro/rent-by-agent/bly`, stored in the sibling `leases` array (`kind` is `lease`, `price` is the monthly rent on the card).
 
 HAR often returns HTTP 403 or a captcha page to automated fetches. The script exits 2 when that happens. It does not retry, change its user agent, or fill in numbers.
 
 * If the sale page is blocked or is not the expected listings page, `listings.json` is left unchanged.
-* If sales load and the lease page is blocked or has no portrait cards, the new sales are saved and the previous `leases` array is kept. Zero cards is a failed read, not an empty inventory, so a restyled page cannot wipe rents.
-* Lease cards use the same HAR portrait markup as sale cards (`cardv2--portrait`). A future refresh replaces `leases` only when at least one card parses.
+* With `--leases`: if sales load and the lease page is blocked or has no portrait cards, the new sales are saved and the previous `leases` array is kept (empty while leases are off). Zero cards is a failed read, not an empty inventory.
+* Lease cards use the same HAR portrait markup as sale cards (`cardv2--portrait`).
 
-No client, lead, or lender fields are written. The lease list checked in on 2026-10-28 is the 14-row scrape of the rent-by-agent page from that day, so the board still has rents if HAR is blocking the script.
+No client, lead, or lender fields are written. The 14-row lease scrape from 2026-10-28 is kept only as a test fixture (`scripts/fixtures/har-leases-2026-10-28.json`); it is no longer on the board. Tests: `python3 scripts/test_update_har.py`.
 
 ## Pending closings (closings.json)
 

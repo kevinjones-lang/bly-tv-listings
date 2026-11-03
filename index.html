@@ -315,7 +315,7 @@ function boardRows(j){const list=j&&Array.isArray(j.listings)?j.listings:[];
  const leases=(j&&Array.isArray(j.leases)?j.leases:[]).concat(list.filter(x=>x&&x.kind==='lease'));
  return sales.concat(leases.map(leaseRow))}
 function shortDay(s){const d=new Date(s);return isNaN(d)?'':d.toLocaleDateString('en-US',{timeZone:'America/Chicago',month:'short',day:'numeric'})}
-function asofLine(j){const s=j&&j.asOf?shortDay(j.asOf):'',l=j&&j.leaseAsOf?shortDay(j.leaseAsOf):'';
+function asofLine(j){const s=j&&j.asOf?shortDay(j.asOf):'',l=j&&j.leaseAsOf&&L.some(x=>x.kind==='lease')?shortDay(j.leaseAsOf):'';
  if(s&&l)return 'HAR.com \u00b7 sales '+s+' \u00b7 leases '+l;if(s)return 'HAR.com \u00b7 '+lbAsOf(j.asOf);return ''}
 function countLine(){const nL=L.filter(x=>x.kind==='lease').length,nS=L.length-nL;
  document.body.dataset.sales=nS;document.body.dataset.leases=nL;return nL?nS+' sales \u00b7 '+nL+' leases':nS+' listings'}
