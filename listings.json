@@ -1,5 +1,5 @@
 {
-  "asOf": "2026-11-04T09:05-05:00",
+  "asOf": "2026-11-04T14:00-05:00",
   "source": "https://www.har.com/deborah-bly/listings_bly",
   "leaseAsOf": null,
   "leaseSource": null,
@@ -753,7 +753,7 @@
       "sqft": 2310,
       "lot": null,
       "url": "https://www.har.com/homedetail/1102-juniper-canyon-ln-houston-tx-77062/3581218",
-      "photoSource": "https://mediahar.harstatic.com/792465460/lr/792711393.jpeg",
+      "photoSource": "https://mediahar.harstatic.com/792465460/lr/792711339.jpeg",
       "photo": "img/listings/11069363.jpg"
     },
     {
@@ -819,22 +819,6 @@
       "url": "https://www.har.com/homedetail/2775-glen-haven-dr-league-city-tx-77573/2641952",
       "photoSource": "https://mediahar.harstatic.com/780436799/lr/793575097.jpeg",
       "photo": "img/listings/10946063.jpg"
-    },
-    {
-      "id": "10884180",
-      "street": "3502 Magnolia Ave",
-      "city": "Texas City, TX 77590",
-      "price": "$184,000",
-      "status": "Active",
-      "type": "Single-Family",
-      "beds": 3,
-      "fullBaths": 1,
-      "halfBaths": null,
-      "sqft": 975,
-      "lot": null,
-      "url": "https://www.har.com/homedetail/3502-magnolia-ave-texas-city-tx-77590/2624948",
-      "photoSource": "https://mediahar.harstatic.com/775636339/lr/775639961.jpeg",
-      "photo": "img/listings/10884180.jpg"
     },
     {
       "id": "10782722",
