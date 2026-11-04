@@ -1,24 +1,8 @@
 {
-  "asOf": "2026-11-03T13:08-06:00",
+  "asOf": "2026-11-04T08:05-06:00",
   "calendar": "Bly Team Training",
   "days": 30,
   "events": [
-    {
-      "title": "FFM en Español Mastermind",
-      "start": "2026-11-03T14:00:00-06:00",
-      "end": "2026-11-03T15:00:00-06:00",
-      "allDay": false,
-      "where": "Zoom",
-      "detail": ""
-    },
-    {
-      "title": "4 Aces Mastermind",
-      "start": "2026-11-03T15:00:00-06:00",
-      "end": "2026-11-03T16:00:00-06:00",
-      "allDay": false,
-      "where": "Zoom",
-      "detail": "First Tuesday of Every Month ⏰1:00 PM Pacific Time / 4:00 PM Eastern Time Third Tuesday of Every Month ⏰1:00 PM Pacific…"
-    },
     {
       "title": "New Agent Training/Role Playing/Flex",
       "start": "2026-11-04T09:15:00-06:00",
@@ -156,20 +140,20 @@
       "detail": ""
     },
     {
-      "title": "Media Mayor Mastermind",
-      "start": "2026-11-12T13:00:00-06:00",
-      "end": "2026-11-12T14:00:00-06:00",
-      "allDay": false,
-      "where": "Zoom",
-      "detail": ""
-    },
-    {
       "title": "FFM — 4-Week Extreme Agent Attraction Growth Sprint (Curtis)",
       "start": "2026-11-12T13:00:00-06:00",
       "end": "2026-11-12T14:00:00-06:00",
       "allDay": false,
       "where": "Zoom",
       "detail": "Host: Curtis Johnson Live only — no recordings. Zoom"
+    },
+    {
+      "title": "Media Mayor Mastermind",
+      "start": "2026-11-12T13:00:00-06:00",
+      "end": "2026-11-12T14:00:00-06:00",
+      "allDay": false,
+      "where": "Zoom",
+      "detail": ""
     },
     {
       "title": "Weekly Marketing Department Meeting",
@@ -212,19 +196,19 @@
       "detail": ""
     },
     {
-      "title": "Business Planning Clinic",
-      "start": "2026-11-17T09:00:00-06:00",
-      "end": "2026-11-17T14:00:00-06:00",
-      "allDay": false,
-      "where": "",
-      "detail": ""
-    },
-    {
       "title": "eXp Broker Meetings",
       "start": "2026-11-17T09:00:00-06:00",
       "end": "2026-11-17T10:00:00-06:00",
       "allDay": false,
       "where": "eXp World",
+      "detail": ""
+    },
+    {
+      "title": "Business Planning Clinic",
+      "start": "2026-11-17T09:00:00-06:00",
+      "end": "2026-11-17T14:00:00-06:00",
+      "allDay": false,
+      "where": "",
       "detail": ""
     },
     {

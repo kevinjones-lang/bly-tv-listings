@@ -1,5 +1,5 @@
 {
-  "asOf": "2026-11-03T14:07-05:00",
+  "asOf": "2026-11-04T09:05-05:00",
   "source": "https://www.har.com/deborah-bly/listings_bly",
   "leaseAsOf": null,
   "leaseSource": null,
@@ -312,7 +312,7 @@
       "id": "11268585",
       "street": "874 Pebblebank Ln",
       "city": "League City, TX 77573",
-      "price": "$499,999",
+      "price": "$479,000",
       "status": "Active",
       "type": "Single-Family",
       "beds": 5,
