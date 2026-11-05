@@ -1,5 +1,5 @@
 {
-  "asOf": "2026-11-04T14:00-05:00",
+  "asOf": "2026-11-05T09:14-05:00",
   "source": "https://www.har.com/deborah-bly/listings_bly",
   "leaseAsOf": null,
   "leaseSource": null,
@@ -472,7 +472,7 @@
       "id": "11216078",
       "street": "7108 E Hunter Dr",
       "city": "Hitchcock, TX 77563",
-      "price": "$270,000",
+      "price": "$260,000",
       "status": "Active",
       "type": "Single-Family",
       "beds": 2,
@@ -632,7 +632,7 @@
       "id": "11147451",
       "street": "202 Meadowlawn St",
       "city": "Shoreacres, TX 77571",
-      "price": "$425,000",
+      "price": "$405,000",
       "status": "Active",
       "type": "Single-Family",
       "beds": 3,
@@ -787,22 +787,6 @@
       "url": "https://www.har.com/homedetail/645-and-643-n-monroe-st-la-grange-tx-78945/17625357",
       "photoSource": "https://mediahar.harstatic.com/784478568/lr/784496305.jpeg",
       "photo": "img/listings/10987226.jpg"
-    },
-    {
-      "id": "10950475",
-      "street": "21155 Armstrong County Dr",
-      "city": "Cypress, TX 77433",
-      "price": "$320,000",
-      "status": "Active",
-      "type": "Single-Family",
-      "beds": 3,
-      "fullBaths": 2,
-      "halfBaths": null,
-      "sqft": 1781,
-      "lot": null,
-      "url": "https://www.har.com/homedetail/21155-armstrong-county-dr-cypress-tx-77433/17075284",
-      "photoSource": "https://mediahar.harstatic.com/779195242/lr/780722837.jpeg",
-      "photo": "img/listings/10950475.jpg"
     },
     {
       "id": "10946063",

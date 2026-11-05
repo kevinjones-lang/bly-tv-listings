@@ -1,5 +1,5 @@
 {
-  "asOf": "2026-11-04T13:01-06:00",
+  "asOf": "2026-11-05T08:14-06:00",
   "source": "Closings Board sheet, Closings tab",
   "closings": [
     {
@@ -105,6 +105,12 @@
       "status": "Pending"
     },
     {
+      "address": "9718 Perdita Trail, Missouri City",
+      "price": "$400,000",
+      "expectedClose": "11/23",
+      "status": "Pending"
+    },
+    {
       "address": "7006 Texas Wrangler Drive, League City (NH)",
       "price": "$439,990",
       "expectedClose": "1/14",
@@ -132,12 +138,6 @@
       "address": "2133 Greenlee Lane, Dickinson",
       "price": "$215,000",
       "expectedClose": "11/30",
-      "status": "Pending"
-    },
-    {
-      "address": "2008 Williamsburg Court N, League City",
-      "price": "$229,000",
-      "expectedClose": "11/24",
       "status": "Pending"
     },
     {
