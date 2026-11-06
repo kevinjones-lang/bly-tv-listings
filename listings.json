@@ -1,25 +1,9 @@
 {
-  "asOf": "2026-11-05T14:10-05:00",
+  "asOf": "2026-11-06T09:07-05:00",
   "source": "https://www.har.com/deborah-bly/listings_bly",
   "leaseAsOf": null,
   "leaseSource": null,
   "listings": [
-    {
-      "id": "11388179",
-      "street": "21155 Armstrong County Dr",
-      "city": "Cypress, TX 77433",
-      "price": "$320,000",
-      "status": "Active",
-      "type": "Single-Family",
-      "beds": 3,
-      "fullBaths": 2,
-      "halfBaths": null,
-      "sqft": 1781,
-      "lot": null,
-      "url": "https://www.har.com/homedetail/21155-armstrong-county-dr-cypress-tx-77433/17075284",
-      "photoSource": "https://mediahar.harstatic.com/822174634/lr/822179200.jpeg",
-      "photo": "img/listings/11388179.jpg"
-    },
     {
       "id": "11375134",
       "street": "4406 Anthony Court Ln",
@@ -35,6 +19,22 @@
       "url": "https://www.har.com/homedetail/4406-anthony-court-ln-seabrook-tx-77586/16601078",
       "photoSource": "https://mediahar.harstatic.com/820293113/lr/820319120.jpeg",
       "photo": "img/listings/11375134.jpg"
+    },
+    {
+      "id": "11388179",
+      "street": "21155 Armstrong County Dr",
+      "city": "Cypress, TX 77433",
+      "price": "$320,000",
+      "status": "Active",
+      "type": "Single-Family",
+      "beds": 3,
+      "fullBaths": 2,
+      "halfBaths": null,
+      "sqft": 1781,
+      "lot": null,
+      "url": "https://www.har.com/homedetail/21155-armstrong-county-dr-cypress-tx-77433/17075284",
+      "photoSource": "https://mediahar.harstatic.com/822174634/lr/822179200.jpeg",
+      "photo": "img/listings/11388179.jpg"
     },
     {
       "id": "11375132",

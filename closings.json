@@ -1,5 +1,5 @@
 {
-  "asOf": "2026-11-05T13:13-06:00",
+  "asOf": "2026-11-06T08:07-06:00",
   "source": "Closings Board sheet, Closings tab",
   "closings": [
     {
@@ -162,6 +162,12 @@
       "address": "1900 Clayton Dr, Baytown",
       "price": "$225,000",
       "expectedClose": "11/6",
+      "status": "Pending"
+    },
+    {
+      "address": "4526 Selwyn Road, Richmond",
+      "price": "$410,000",
+      "expectedClose": "11/30",
       "status": "Pending"
     }
   ]
