@@ -1,17 +1,11 @@
 {
-  "asOf": "2026-11-06T13:09-06:00",
+  "asOf": "2026-11-09T08:09-06:00",
   "source": "Closings Board sheet, Closings tab",
   "closings": [
     {
       "address": "920 Bruce Ave, League City",
       "price": "$45,000",
       "expectedClose": "extended",
-      "status": "Pending"
-    },
-    {
-      "address": "1611 Sweet Gum Lane, Kingwood",
-      "price": "$550,000",
-      "expectedClose": "11/6",
       "status": "Pending"
     },
     {
@@ -99,6 +93,12 @@
       "status": "Pending"
     },
     {
+      "address": "21155 Armstrong County Drive, Cypress",
+      "price": "$310,000",
+      "expectedClose": "12/31",
+      "status": "Pending"
+    },
+    {
       "address": "1115 25th Avenue N, Texas City",
       "price": "$256,000",
       "expectedClose": "11/23",
@@ -108,6 +108,12 @@
       "address": "9718 Perdita Trail, Missouri City",
       "price": "$400,000",
       "expectedClose": "11/23",
+      "status": "Pending"
+    },
+    {
+      "address": "15707 Fincher Drive, Friendswood",
+      "price": "$325,000",
+      "expectedClose": "11/27",
       "status": "Pending"
     },
     {
@@ -141,6 +147,12 @@
       "status": "Pending"
     },
     {
+      "address": "15707 Fincher Drive, Friendswood",
+      "price": "$325,000",
+      "expectedClose": "11/27",
+      "status": "Pending"
+    },
+    {
       "address": "7000 SEAWALL BOULEVARD #813, GALVESTON",
       "price": "$169,000",
       "expectedClose": "11/16",
@@ -155,7 +167,7 @@
     {
       "address": "16614 Hamill Drive, Rosharon (Lot)",
       "price": "$149,000",
-      "expectedClose": "11/13",
+      "expectedClose": "11/30",
       "status": "Pending"
     },
     {
