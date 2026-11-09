@@ -1,32 +1,8 @@
 {
-  "asOf": "2026-11-09T08:09-06:00",
+  "asOf": "2026-11-09T13:09-06:00",
   "calendar": "Bly Team Training",
   "days": 30,
   "events": [
-    {
-      "title": "eXp Training Calendar",
-      "start": "2026-11-09T08:30:00-06:00",
-      "end": "2026-11-09T09:30:00-06:00",
-      "allDay": false,
-      "where": "Google Meet",
-      "detail": "Do you have an extra time? Check out these eXp Trainings about systems and processes on this calendar link: Join with…"
-    },
-    {
-      "title": "Agents' Contracts Q&A",
-      "start": "2026-11-09T09:00:00-06:00",
-      "end": "2026-11-09T09:30:00-06:00",
-      "allDay": false,
-      "where": "Zoom",
-      "detail": ""
-    },
-    {
-      "title": "Systems Overview",
-      "start": "2026-11-09T09:30:00-06:00",
-      "end": "2026-11-09T11:30:00-06:00",
-      "allDay": false,
-      "where": "",
-      "detail": "Trainer(s): Connor Dunwoodie, Kahla Bouse, Kevin Jones, Kristie Bly, Melissa Balderas Meet the team and log into every…"
-    },
     {
       "title": "eXp - Fast forward",
       "start": "2026-11-09T12:00:00-06:00",
@@ -220,20 +196,20 @@
       "detail": "Trainer(s): Melissa Balderas The team's transaction process from accepted offer to closing. Agent Advantage Academy…"
     },
     {
-      "title": "Media Mayor Mastermind",
-      "start": "2026-11-12T13:00:00-06:00",
-      "end": "2026-11-12T14:00:00-06:00",
-      "allDay": false,
-      "where": "Zoom",
-      "detail": ""
-    },
-    {
       "title": "FFM — 4-Week Extreme Agent Attraction Growth Sprint (Curtis)",
       "start": "2026-11-12T13:00:00-06:00",
       "end": "2026-11-12T14:00:00-06:00",
       "allDay": false,
       "where": "Zoom",
       "detail": "Host: Curtis Johnson Live only — no recordings. Zoom"
+    },
+    {
+      "title": "Media Mayor Mastermind",
+      "start": "2026-11-12T13:00:00-06:00",
+      "end": "2026-11-12T14:00:00-06:00",
+      "allDay": false,
+      "where": "Zoom",
+      "detail": ""
     },
     {
       "title": "Listing Part 1",
@@ -665,6 +641,14 @@
       "end": "2026-12-08T11:00:00-06:00",
       "allDay": false,
       "where": "In office",
+      "detail": ""
+    },
+    {
+      "title": "New Agent Training/Role Playing/Flex",
+      "start": "2026-12-09T09:15:00-06:00",
+      "end": "2026-12-09T11:00:00-06:00",
+      "allDay": false,
+      "where": "",
       "detail": ""
     }
   ]

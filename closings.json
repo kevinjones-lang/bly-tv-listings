@@ -1,5 +1,5 @@
 {
-  "asOf": "2026-11-09T08:09-06:00",
+  "asOf": "2026-11-09T13:09-06:00",
   "source": "Closings Board sheet, Closings tab",
   "closings": [
     {
@@ -75,12 +75,6 @@
       "status": "Pending"
     },
     {
-      "address": "3433 Wild Mustang St, League City (NH)",
-      "price": "$337,490",
-      "expectedClose": "11/2",
-      "status": "Pending"
-    },
-    {
       "address": "7411 Luce Del Porto Way, Texas City (NH)",
       "price": "$252,995",
       "expectedClose": "11/25",
@@ -135,9 +129,9 @@
       "status": "Pending"
     },
     {
-      "address": "6129 Creekside Lane, League City",
-      "price": "$249,500",
-      "expectedClose": "11/25",
+      "address": "3 S ERIK DRIVE, ANGLETON",
+      "price": "$243,000",
+      "expectedClose": "12/4",
       "status": "Pending"
     },
     {
@@ -168,12 +162,6 @@
       "address": "16614 Hamill Drive, Rosharon (Lot)",
       "price": "$149,000",
       "expectedClose": "11/30",
-      "status": "Pending"
-    },
-    {
-      "address": "1900 Clayton Dr, Baytown",
-      "price": "$225,000",
-      "expectedClose": "11/6",
       "status": "Pending"
     },
     {

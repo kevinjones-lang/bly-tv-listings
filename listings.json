@@ -1,5 +1,5 @@
 {
-  "asOf": "2026-11-09T09:09-05:00",
+  "asOf": "2026-11-09T14:09-05:00",
   "source": "https://www.har.com/deborah-bly/listings_bly",
   "leaseAsOf": null,
   "leaseSource": null,
@@ -197,22 +197,6 @@
       "photo": "img/listings/11353643.jpg"
     },
     {
-      "id": "11348536",
-      "street": "6129 Creekside Ln",
-      "city": "League City, TX 77573",
-      "price": "$249,500",
-      "status": "Under Contract - OP",
-      "type": "Single-Family",
-      "beds": 3,
-      "fullBaths": 2,
-      "halfBaths": null,
-      "sqft": 1520,
-      "lot": null,
-      "url": "https://www.har.com/homedetail/6129-creekside-ln-league-city-tx-77573/2607449",
-      "photoSource": "https://mediahar.harstatic.com/801913432/lr/818222918.jpeg",
-      "photo": "img/listings/11348536.jpg"
-    },
-    {
       "id": "11348932",
       "street": "14710 S Isle Of Pines Ct",
       "city": "Houston, TX 77049",
@@ -227,6 +211,22 @@
       "url": "https://www.har.com/homedetail/14710-isle-of-pines-ct-houston-tx-77049/9435494",
       "photoSource": "https://mediahar.harstatic.com/816731386/lr/818530563.jpeg",
       "photo": "img/listings/11348932.jpg"
+    },
+    {
+      "id": "11348536",
+      "street": "6129 Creekside Ln",
+      "city": "League City, TX 77573",
+      "price": "$249,500",
+      "status": "Active",
+      "type": "Single-Family",
+      "beds": 3,
+      "fullBaths": 2,
+      "halfBaths": null,
+      "sqft": 1520,
+      "lot": null,
+      "url": "https://www.har.com/homedetail/6129-creekside-ln-league-city-tx-77573/2607449",
+      "photoSource": "https://mediahar.harstatic.com/801913432/lr/818222918.jpeg",
+      "photo": "img/listings/11348536.jpg"
     },
     {
       "id": "11348539",
