@@ -1,40 +1,8 @@
 {
-  "asOf": "2026-11-10T08:17-06:00",
+  "asOf": "2026-11-10T13:24-06:00",
   "calendar": "Bly Team Training",
   "days": 30,
   "events": [
-    {
-      "title": "eXp Broker Meetings",
-      "start": "2026-11-10T09:00:00-06:00",
-      "end": "2026-11-10T10:00:00-06:00",
-      "allDay": false,
-      "where": "eXp World",
-      "detail": ""
-    },
-    {
-      "title": "Tuesday Team Meeting - FIRM",
-      "start": "2026-11-10T09:15:00-06:00",
-      "end": "2026-11-10T11:00:00-06:00",
-      "allDay": false,
-      "where": "In office",
-      "detail": ""
-    },
-    {
-      "title": "Agent Headshots / Photo Shoot",
-      "start": "2026-11-10T11:00:00-06:00",
-      "end": "2026-11-10T13:00:00-06:00",
-      "allDay": false,
-      "where": "",
-      "detail": "Trainer(s): Connor Dunwoodie Professional headshots for your bio, Marketing Hub, Zillow and FUB profiles. Agent…"
-    },
-    {
-      "title": "Homework review, scripts & role-play",
-      "start": "2026-11-10T13:00:00-06:00",
-      "end": "2026-11-10T13:15:00-06:00",
-      "allDay": false,
-      "where": "",
-      "detail": "Trainer(s): Kevin Jones Quick check of Day 1 homework before eXp Systems. Agent Advantage Academy, Nov 9-13 class."
-    },
     {
       "title": "eXp Systems",
       "start": "2026-11-10T13:15:00-06:00",
@@ -156,20 +124,20 @@
       "detail": "Trainer(s): Melissa Balderas The team's transaction process from accepted offer to closing. Agent Advantage Academy…"
     },
     {
-      "title": "Media Mayor Mastermind",
-      "start": "2026-11-12T13:00:00-06:00",
-      "end": "2026-11-12T14:00:00-06:00",
-      "allDay": false,
-      "where": "Zoom",
-      "detail": ""
-    },
-    {
       "title": "FFM — 4-Week Extreme Agent Attraction Growth Sprint (Curtis)",
       "start": "2026-11-12T13:00:00-06:00",
       "end": "2026-11-12T14:00:00-06:00",
       "allDay": false,
       "where": "Zoom",
       "detail": "Host: Curtis Johnson Live only — no recordings. Zoom"
+    },
+    {
+      "title": "Media Mayor Mastermind",
+      "start": "2026-11-12T13:00:00-06:00",
+      "end": "2026-11-12T14:00:00-06:00",
+      "allDay": false,
+      "where": "Zoom",
+      "detail": ""
     },
     {
       "title": "Listing Part 1",
@@ -609,6 +577,30 @@
       "end": "2026-12-09T11:00:00-06:00",
       "allDay": false,
       "where": "",
+      "detail": ""
+    },
+    {
+      "title": "Agents' Contracts Q&A",
+      "start": "2026-12-10T09:00:00-06:00",
+      "end": "2026-12-10T09:30:00-06:00",
+      "allDay": false,
+      "where": "Zoom",
+      "detail": ""
+    },
+    {
+      "title": "Ylopo Mastermind: Ylopo AI Radar",
+      "start": "2026-12-10T10:00:00-06:00",
+      "end": "2026-12-10T11:00:00-06:00",
+      "allDay": false,
+      "where": "Zoom",
+      "detail": ""
+    },
+    {
+      "title": "Media Mayor Mastermind",
+      "start": "2026-12-10T13:00:00-06:00",
+      "end": "2026-12-10T14:00:00-06:00",
+      "allDay": false,
+      "where": "Zoom",
       "detail": ""
     }
   ]

@@ -1,5 +1,5 @@
 {
-  "asOf": "2026-11-10T09:16-06:00",
+  "asOf": "2026-11-10T13:25-06:00",
   "source": "Closings Board sheet, Closings tab",
   "closings": [
     {
@@ -71,7 +71,7 @@
     {
       "address": "7411 Luce Del Porto Way, Texas City (NH)",
       "price": "$252,995",
-      "expectedClose": "11/25",
+      "expectedClose": "11/19",
       "status": "Pending"
     },
     {
@@ -150,6 +150,12 @@
       "address": "3905 Spring Circle Drive W, Pearland",
       "price": "$335,000",
       "expectedClose": "12/1",
+      "status": "Pending"
+    },
+    {
+      "address": "2008 Williamsburg Court N, League City",
+      "price": "$229,000",
+      "expectedClose": "11/24",
       "status": "Pending"
     },
     {
