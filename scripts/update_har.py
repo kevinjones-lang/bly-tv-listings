@@ -65,7 +65,7 @@ def txt(s):
 
 
 def now_ct():
-    return datetime.datetime.now(datetime.timezone(datetime.timedelta(hours=-5))).isoformat(timespec="minutes")
+    return datetime.datetime.now(__import__("zoneinfo").ZoneInfo("America/Chicago")).isoformat(timespec="minutes")
 
 
 def parse_cards(sec, kind):
