@@ -1,5 +1,5 @@
 {
-  "asOf": "2026-11-09T14:09-05:00",
+  "asOf": "2026-11-10T09:17-05:00",
   "source": "https://www.har.com/deborah-bly/listings_bly",
   "leaseAsOf": null,
   "leaseSource": null,
@@ -197,22 +197,6 @@
       "photo": "img/listings/11353643.jpg"
     },
     {
-      "id": "11348932",
-      "street": "14710 S Isle Of Pines Ct",
-      "city": "Houston, TX 77049",
-      "price": "$279,900",
-      "status": "Active",
-      "type": "Single-Family",
-      "beds": 5,
-      "fullBaths": 2,
-      "halfBaths": 1,
-      "sqft": 2340,
-      "lot": null,
-      "url": "https://www.har.com/homedetail/14710-isle-of-pines-ct-houston-tx-77049/9435494",
-      "photoSource": "https://mediahar.harstatic.com/816731386/lr/818530563.jpeg",
-      "photo": "img/listings/11348932.jpg"
-    },
-    {
       "id": "11348536",
       "street": "6129 Creekside Ln",
       "city": "League City, TX 77573",
@@ -227,6 +211,22 @@
       "url": "https://www.har.com/homedetail/6129-creekside-ln-league-city-tx-77573/2607449",
       "photoSource": "https://mediahar.harstatic.com/801913432/lr/818222918.jpeg",
       "photo": "img/listings/11348536.jpg"
+    },
+    {
+      "id": "11348932",
+      "street": "14710 S Isle Of Pines Ct",
+      "city": "Houston, TX 77049",
+      "price": "$279,900",
+      "status": "Active",
+      "type": "Single-Family",
+      "beds": 5,
+      "fullBaths": 2,
+      "halfBaths": 1,
+      "sqft": 2340,
+      "lot": null,
+      "url": "https://www.har.com/homedetail/14710-isle-of-pines-ct-houston-tx-77049/9435494",
+      "photoSource": "https://mediahar.harstatic.com/816731386/lr/818530563.jpeg",
+      "photo": "img/listings/11348932.jpg"
     },
     {
       "id": "11348539",
@@ -533,22 +533,6 @@
       "photo": "img/listings/11212129.jpg"
     },
     {
-      "id": "11205356",
-      "street": "2104 Bay Hill Dr",
-      "city": "League City, TX 77573",
-      "price": "$399,000",
-      "status": "Under Contract - P",
-      "type": "Single-Family",
-      "beds": 4,
-      "fullBaths": 2,
-      "halfBaths": 1,
-      "sqft": 3410,
-      "lot": null,
-      "url": "https://www.har.com/homedetail/2104-bay-hill-dr-league-city-tx-77573/2660173",
-      "photoSource": "https://mediahar.harstatic.com/800396567/lr/815964717.jpeg",
-      "photo": "img/listings/11205356.jpg"
-    },
-    {
       "id": "11209793",
       "street": "16614 Hamill Dr",
       "city": "Rosharon, TX 77583",
@@ -689,7 +673,7 @@
       "sqft": 1440,
       "lot": null,
       "url": "https://www.har.com/homedetail/3134-california-ave-cleveland-tx-77328/5209336",
-      "photoSource": "https://mediahar.harstatic.com/799889240/lr/801627827.jpeg",
+      "photoSource": "https://mediahar.harstatic.com/799889240/lr/801627837.jpeg",
       "photo": "img/listings/11177425.jpg"
     },
     {

@@ -1,48 +1,8 @@
 {
-  "asOf": "2026-11-09T13:09-06:00",
+  "asOf": "2026-11-10T08:17-06:00",
   "calendar": "Bly Team Training",
   "days": 30,
   "events": [
-    {
-      "title": "eXp - Fast forward",
-      "start": "2026-11-09T12:00:00-06:00",
-      "end": "2026-11-09T14:00:00-06:00",
-      "allDay": false,
-      "where": "Zoom",
-      "detail": ""
-    },
-    {
-      "title": "Follow Up Boss & Ylopo",
-      "start": "2026-11-09T12:30:00-06:00",
-      "end": "2026-11-09T14:00:00-06:00",
-      "allDay": false,
-      "where": "",
-      "detail": "Trainer(s): Kahla Bouse Find your way around Follow Up Boss and set up your first Ylopo search. Agent Advantage…"
-    },
-    {
-      "title": "Zillow",
-      "start": "2026-11-09T14:00:00-06:00",
-      "end": "2026-11-09T14:30:00-06:00",
-      "allDay": false,
-      "where": "",
-      "detail": "Trainer(s): Kahla Bouse How Zillow leads come in, setting up your Zillow profile, and how Zillow connects to FUB. Agent…"
-    },
-    {
-      "title": "Contacts: SOI to FUB",
-      "start": "2026-11-09T14:30:00-06:00",
-      "end": "2026-11-09T15:00:00-06:00",
-      "allDay": false,
-      "where": "",
-      "detail": "Trainer(s): Kevin Jones Export your Google and iCloud contacts so your sphere becomes your first FUB database. Agent…"
-    },
-    {
-      "title": "Q&A, deliverables & homework",
-      "start": "2026-11-09T15:00:00-06:00",
-      "end": "2026-11-09T15:30:00-06:00",
-      "allDay": false,
-      "where": "",
-      "detail": "Trainer(s): Kevin Jones, Deb Bly Questions, today's login check, and tonight's homework. Agent Advantage Academy, Nov…"
-    },
     {
       "title": "eXp Broker Meetings",
       "start": "2026-11-10T09:00:00-06:00",
@@ -196,20 +156,20 @@
       "detail": "Trainer(s): Melissa Balderas The team's transaction process from accepted offer to closing. Agent Advantage Academy…"
     },
     {
-      "title": "FFM — 4-Week Extreme Agent Attraction Growth Sprint (Curtis)",
-      "start": "2026-11-12T13:00:00-06:00",
-      "end": "2026-11-12T14:00:00-06:00",
-      "allDay": false,
-      "where": "Zoom",
-      "detail": "Host: Curtis Johnson Live only — no recordings. Zoom"
-    },
-    {
       "title": "Media Mayor Mastermind",
       "start": "2026-11-12T13:00:00-06:00",
       "end": "2026-11-12T14:00:00-06:00",
       "allDay": false,
       "where": "Zoom",
       "detail": ""
+    },
+    {
+      "title": "FFM — 4-Week Extreme Agent Attraction Growth Sprint (Curtis)",
+      "start": "2026-11-12T13:00:00-06:00",
+      "end": "2026-11-12T14:00:00-06:00",
+      "allDay": false,
+      "where": "Zoom",
+      "detail": "Host: Curtis Johnson Live only — no recordings. Zoom"
     },
     {
       "title": "Listing Part 1",
@@ -316,19 +276,19 @@
       "detail": ""
     },
     {
-      "title": "eXp Broker Meetings",
-      "start": "2026-11-17T09:00:00-06:00",
-      "end": "2026-11-17T10:00:00-06:00",
-      "allDay": false,
-      "where": "eXp World",
-      "detail": ""
-    },
-    {
       "title": "Business Planning Clinic",
       "start": "2026-11-17T09:00:00-06:00",
       "end": "2026-11-17T14:00:00-06:00",
       "allDay": false,
       "where": "",
+      "detail": ""
+    },
+    {
+      "title": "eXp Broker Meetings",
+      "start": "2026-11-17T09:00:00-06:00",
+      "end": "2026-11-17T10:00:00-06:00",
+      "allDay": false,
+      "where": "eXp World",
       "detail": ""
     },
     {
