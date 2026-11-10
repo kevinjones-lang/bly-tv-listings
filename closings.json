@@ -1,5 +1,5 @@
 {
-  "asOf": "2026-11-09T13:09-06:00",
+  "asOf": "2026-11-10T09:16-06:00",
   "source": "Closings Board sheet, Closings tab",
   "closings": [
     {
@@ -30,12 +30,6 @@
       "address": "12823 Sandy Hook Drive, Houston",
       "price": "$207,000",
       "expectedClose": "11/19",
-      "status": "Pending"
-    },
-    {
-      "address": "2104 Bay Hill Drive, League City",
-      "price": "$402,000",
-      "expectedClose": "11/9",
       "status": "Pending"
     },
     {
