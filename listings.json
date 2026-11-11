@@ -1,5 +1,5 @@
 {
-  "asOf": "2026-11-11T08:19-06:00",
+  "asOf": "2026-11-11T13:22-06:00",
   "source": "https://www.har.com/deborah-bly/listings_bly",
   "leaseAsOf": null,
   "leaseSource": null,
@@ -53,22 +53,6 @@
       "photo": "img/listings/11388179.jpg"
     },
     {
-      "id": "11375177",
-      "street": "4408 Anthony Court Ln",
-      "city": "Seabrook, TX 77586",
-      "price": "$599,890",
-      "status": "Active",
-      "type": "Single-Family",
-      "beds": 4,
-      "fullBaths": 3,
-      "halfBaths": 1,
-      "sqft": 2402,
-      "lot": null,
-      "url": "https://www.har.com/homedetail/4408-anthony-court-ln-seabrook-tx-77586/16601077",
-      "photoSource": "https://mediahar.harstatic.com/820279727/lr/820337551.jpeg",
-      "photo": "img/listings/11375177.jpg"
-    },
-    {
       "id": "11375132",
       "street": "4402 Anthony Court Ln",
       "city": "Seabrook, TX 77586",
@@ -83,6 +67,22 @@
       "url": "https://www.har.com/homedetail/4402-anthony-court-ln-seabrook-tx-77586/16601080",
       "photoSource": "https://mediahar.harstatic.com/820288318/lr/820332358.jpeg",
       "photo": "img/listings/11375132.jpg"
+    },
+    {
+      "id": "11375177",
+      "street": "4408 Anthony Court Ln",
+      "city": "Seabrook, TX 77586",
+      "price": "$599,890",
+      "status": "Active",
+      "type": "Single-Family",
+      "beds": 4,
+      "fullBaths": 3,
+      "halfBaths": 1,
+      "sqft": 2402,
+      "lot": null,
+      "url": "https://www.har.com/homedetail/4408-anthony-court-ln-seabrook-tx-77586/16601077",
+      "photoSource": "https://mediahar.harstatic.com/820279727/lr/820337551.jpeg",
+      "photo": "img/listings/11375177.jpg"
     },
     {
       "id": "11375133",
@@ -101,22 +101,6 @@
       "photo": "img/listings/11375133.jpg"
     },
     {
-      "id": "11374577",
-      "street": "6607 Independence Blvd",
-      "city": "Baytown, TX 77521",
-      "price": "$230,000",
-      "status": "Active",
-      "type": "Townhouse/Condo - Townhouse",
-      "beds": 3,
-      "fullBaths": 2,
-      "halfBaths": null,
-      "sqft": 1505,
-      "lot": null,
-      "url": "https://www.har.com/homedetail/6607-independence-blvd-baytown-tx-77521/3740793",
-      "photoSource": "https://mediahar.harstatic.com/820280104/lr/820736846.jpeg",
-      "photo": "img/listings/11374577.jpg"
-    },
-    {
       "id": "11373545",
       "street": "2311 Thompson St",
       "city": "La Marque, TX 77568",
@@ -131,6 +115,22 @@
       "url": "https://www.har.com/homedetail/2311-thompson-st-la-marque-tx-77568/8769875",
       "photoSource": "https://mediahar.harstatic.com/820227741/lr/820527997.jpeg",
       "photo": "img/listings/11373545.jpg"
+    },
+    {
+      "id": "11374577",
+      "street": "6607 Independence Blvd",
+      "city": "Baytown, TX 77521",
+      "price": "$230,000",
+      "status": "Active",
+      "type": "Townhouse/Condo - Townhouse",
+      "beds": 3,
+      "fullBaths": 2,
+      "halfBaths": null,
+      "sqft": 1505,
+      "lot": null,
+      "url": "https://www.har.com/homedetail/6607-independence-blvd-baytown-tx-77521/3740793",
+      "photoSource": "https://mediahar.harstatic.com/820280104/lr/820736846.jpeg",
+      "photo": "img/listings/11374577.jpg"
     },
     {
       "id": "11370403",

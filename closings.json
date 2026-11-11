@@ -1,5 +1,5 @@
 {
-  "asOf": "2026-11-11T08:19-06:00",
+  "asOf": "2026-11-11T13:23-06:00",
   "source": "Closings Board sheet, Closings tab",
   "closings": [
     {
@@ -17,7 +17,7 @@
     {
       "address": "31210 Harvest Time Drive, Fulshear (NH)",
       "price": "$420,000",
-      "expectedClose": "11/9",
+      "expectedClose": "11/16",
       "status": "Pending"
     },
     {
@@ -59,7 +59,7 @@
     {
       "address": "11414 Kirkwyn Dr, Houston",
       "price": "$141,000",
-      "expectedClose": "11/2",
+      "expectedClose": "extended",
       "status": "Pending"
     },
     {
