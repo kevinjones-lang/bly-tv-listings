@@ -1,9 +1,25 @@
 {
-  "asOf": "2026-11-10T13:24-06:00",
+  "asOf": "2026-11-11T08:19-06:00",
   "source": "https://www.har.com/deborah-bly/listings_bly",
   "leaseAsOf": null,
   "leaseSource": null,
   "listings": [
+    {
+      "id": "11401944",
+      "street": "25234 Morgan Cemetery Rd",
+      "city": "Cleveland, TX 77328",
+      "price": "$105,000",
+      "status": "Active",
+      "type": "Single-Family",
+      "beds": 2,
+      "fullBaths": 1,
+      "halfBaths": null,
+      "sqft": 1008,
+      "lot": null,
+      "url": "https://www.har.com/homedetail/25234-morgan-cemetery-rd-cleveland-tx-77328/5270825",
+      "photoSource": "https://mediahar.harstatic.com/820570405/lr/822255879.jpeg",
+      "photo": "img/listings/11401944.jpg"
+    },
     {
       "id": "11375134",
       "street": "4406 Anthony Court Ln",
@@ -37,22 +53,6 @@
       "photo": "img/listings/11388179.jpg"
     },
     {
-      "id": "11375132",
-      "street": "4402 Anthony Court Ln",
-      "city": "Seabrook, TX 77586",
-      "price": "$579,890",
-      "status": "Active",
-      "type": "Single-Family",
-      "beds": 4,
-      "fullBaths": 3,
-      "halfBaths": 1,
-      "sqft": 2402,
-      "lot": null,
-      "url": "https://www.har.com/homedetail/4402-anthony-court-ln-seabrook-tx-77586/16601080",
-      "photoSource": "https://mediahar.harstatic.com/820288318/lr/820332358.jpeg",
-      "photo": "img/listings/11375132.jpg"
-    },
-    {
       "id": "11375177",
       "street": "4408 Anthony Court Ln",
       "city": "Seabrook, TX 77586",
@@ -67,6 +67,22 @@
       "url": "https://www.har.com/homedetail/4408-anthony-court-ln-seabrook-tx-77586/16601077",
       "photoSource": "https://mediahar.harstatic.com/820279727/lr/820337551.jpeg",
       "photo": "img/listings/11375177.jpg"
+    },
+    {
+      "id": "11375132",
+      "street": "4402 Anthony Court Ln",
+      "city": "Seabrook, TX 77586",
+      "price": "$579,890",
+      "status": "Active",
+      "type": "Single-Family",
+      "beds": 4,
+      "fullBaths": 3,
+      "halfBaths": 1,
+      "sqft": 2402,
+      "lot": null,
+      "url": "https://www.har.com/homedetail/4402-anthony-court-ln-seabrook-tx-77586/16601080",
+      "photoSource": "https://mediahar.harstatic.com/820288318/lr/820332358.jpeg",
+      "photo": "img/listings/11375132.jpg"
     },
     {
       "id": "11375133",
@@ -85,22 +101,6 @@
       "photo": "img/listings/11375133.jpg"
     },
     {
-      "id": "11373545",
-      "street": "2311 Thompson St",
-      "city": "La Marque, TX 77568",
-      "price": "$239,000",
-      "status": "Active",
-      "type": "Single-Family",
-      "beds": 3,
-      "fullBaths": 2,
-      "halfBaths": null,
-      "sqft": 1410,
-      "lot": null,
-      "url": "https://www.har.com/homedetail/2311-thompson-st-la-marque-tx-77568/8769875",
-      "photoSource": "https://mediahar.harstatic.com/820227741/lr/820527997.jpeg",
-      "photo": "img/listings/11373545.jpg"
-    },
-    {
       "id": "11374577",
       "street": "6607 Independence Blvd",
       "city": "Baytown, TX 77521",
@@ -115,6 +115,22 @@
       "url": "https://www.har.com/homedetail/6607-independence-blvd-baytown-tx-77521/3740793",
       "photoSource": "https://mediahar.harstatic.com/820280104/lr/820736846.jpeg",
       "photo": "img/listings/11374577.jpg"
+    },
+    {
+      "id": "11373545",
+      "street": "2311 Thompson St",
+      "city": "La Marque, TX 77568",
+      "price": "$239,000",
+      "status": "Active",
+      "type": "Single-Family",
+      "beds": 3,
+      "fullBaths": 2,
+      "halfBaths": null,
+      "sqft": 1410,
+      "lot": null,
+      "url": "https://www.har.com/homedetail/2311-thompson-st-la-marque-tx-77568/8769875",
+      "photoSource": "https://mediahar.harstatic.com/820227741/lr/820527997.jpeg",
+      "photo": "img/listings/11373545.jpg"
     },
     {
       "id": "11370403",
@@ -771,22 +787,6 @@
       "url": "https://www.har.com/homedetail/218-shady-oaks-hbr-alvin-tx-77511/835091",
       "photoSource": "https://mediahar.harstatic.com/786763538/lr/788755482.jpeg",
       "photo": "img/listings/11022933.jpg"
-    },
-    {
-      "id": "10987226",
-      "street": "645 & 643 N Monroe St",
-      "city": "La Grange, TX 78945",
-      "price": "$199,000",
-      "status": "Active",
-      "type": "Single-Family",
-      "beds": 4,
-      "fullBaths": 3,
-      "halfBaths": 1,
-      "sqft": 2642,
-      "lot": null,
-      "url": "https://www.har.com/homedetail/645-and-643-n-monroe-st-la-grange-tx-78945/17625357",
-      "photoSource": "https://mediahar.harstatic.com/784478568/lr/784496305.jpeg",
-      "photo": "img/listings/10987226.jpg"
     },
     {
       "id": "10946063",

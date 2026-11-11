@@ -1,32 +1,8 @@
 {
-  "asOf": "2026-11-10T13:24-06:00",
+  "asOf": "2026-11-11T08:19-06:00",
   "calendar": "Bly Team Training",
   "days": 30,
   "events": [
-    {
-      "title": "eXp Systems",
-      "start": "2026-11-10T13:15:00-06:00",
-      "end": "2026-11-10T14:00:00-06:00",
-      "allDay": false,
-      "where": "",
-      "detail": "Trainer(s): Kevin Jones Log in and find your way around My eXp. Agent Advantage Academy, Nov 9-13 class."
-    },
-    {
-      "title": "FUB operations: upload & tag clients, stages, tags",
-      "start": "2026-11-10T14:00:00-06:00",
-      "end": "2026-11-10T15:00:00-06:00",
-      "allDay": false,
-      "where": "",
-      "detail": "Trainer(s): Kevin Jones, Deb Bly Upload your contacts, clean and tag them, and set stages and smart lists. Agent…"
-    },
-    {
-      "title": "Q&A, deliverables & homework",
-      "start": "2026-11-10T15:00:00-06:00",
-      "end": "2026-11-10T15:30:00-06:00",
-      "allDay": false,
-      "where": "",
-      "detail": "Trainer(s): Kevin Jones, Deb Bly Questions, check today's FUB setup, and tonight's homework. Agent Advantage Academy…"
-    },
     {
       "title": "Homework review, scripts & role-play",
       "start": "2026-11-11T09:30:00-06:00",
