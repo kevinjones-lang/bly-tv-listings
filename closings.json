@@ -1,5 +1,5 @@
 {
-  "asOf": "2026-11-12T08:18-06:00",
+  "asOf": "2026-11-12T13:21-06:00",
   "source": "Closings Board sheet, Closings tab",
   "closings": [
     {
@@ -30,6 +30,12 @@
       "address": "12823 Sandy Hook Drive, Houston",
       "price": "$207,000",
       "expectedClose": "11/19",
+      "status": "Pending"
+    },
+    {
+      "address": "2590 Bering, Houston",
+      "price": "$210,000",
+      "expectedClose": "12/17",
       "status": "Pending"
     },
     {
@@ -72,12 +78,6 @@
       "address": "7411 Luce Del Porto Way, Texas City (NH)",
       "price": "$252,995",
       "expectedClose": "11/19",
-      "status": "Pending"
-    },
-    {
-      "address": "5610 Blackbird Lane, Hitchcock (NH)",
-      "price": "$217,995",
-      "expectedClose": "TBD",
       "status": "Pending"
     },
     {
