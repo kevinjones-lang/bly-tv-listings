@@ -1,5 +1,5 @@
 {
-  "asOf": "2026-11-13T08:20-06:00",
+  "asOf": "2026-11-13T13:24-06:00",
   "source": "https://www.har.com/deborah-bly/listings_bly",
   "leaseAsOf": null,
   "leaseSource": null,
@@ -169,7 +169,7 @@
       "street": "19730 Terrace Cliff Ct",
       "city": "Richmond, TX 77407",
       "price": "$449,000",
-      "status": "Active",
+      "status": "Under Contract - OP",
       "type": "Single-Family",
       "beds": 4,
       "fullBaths": 4,
