@@ -1,9 +1,25 @@
 {
-  "asOf": "2026-11-12T13:21-06:00",
+  "asOf": "2026-11-13T08:20-06:00",
   "source": "https://www.har.com/deborah-bly/listings_bly",
   "leaseAsOf": null,
   "leaseSource": null,
   "listings": [
+    {
+      "id": "11409101",
+      "street": "1614 Roaring Springs Ln",
+      "city": "Pasadena, TX 77586",
+      "price": "$369,500",
+      "status": "Active",
+      "type": "Single-Family",
+      "beds": 4,
+      "fullBaths": 2,
+      "halfBaths": 1,
+      "sqft": 3137,
+      "lot": null,
+      "url": "https://www.har.com/homedetail/1614-roaring-springs-ln-seabrook-tx-77586/11773061",
+      "photoSource": "https://mediahar.harstatic.com/823710054/lr/823976871.jpeg",
+      "photo": "img/listings/11409101.jpg"
+    },
     {
       "id": "11401944",
       "street": "25234 Morgan Cemetery Rd",
@@ -213,22 +229,6 @@
       "photo": "img/listings/11353643.jpg"
     },
     {
-      "id": "11348932",
-      "street": "14710 S Isle Of Pines Ct",
-      "city": "Houston, TX 77049",
-      "price": "$279,900",
-      "status": "Active",
-      "type": "Single-Family",
-      "beds": 5,
-      "fullBaths": 2,
-      "halfBaths": 1,
-      "sqft": 2340,
-      "lot": null,
-      "url": "https://www.har.com/homedetail/14710-isle-of-pines-ct-houston-tx-77049/9435494",
-      "photoSource": "https://mediahar.harstatic.com/816731386/lr/818530563.jpeg",
-      "photo": "img/listings/11348932.jpg"
-    },
-    {
       "id": "11348536",
       "street": "6129 Creekside Ln",
       "city": "League City, TX 77573",
@@ -243,6 +243,22 @@
       "url": "https://www.har.com/homedetail/6129-creekside-ln-league-city-tx-77573/2607449",
       "photoSource": "https://mediahar.harstatic.com/801913432/lr/818222918.jpeg",
       "photo": "img/listings/11348536.jpg"
+    },
+    {
+      "id": "11348932",
+      "street": "14710 S Isle Of Pines Ct",
+      "city": "Houston, TX 77049",
+      "price": "$279,900",
+      "status": "Active",
+      "type": "Single-Family",
+      "beds": 5,
+      "fullBaths": 2,
+      "halfBaths": 1,
+      "sqft": 2340,
+      "lot": null,
+      "url": "https://www.har.com/homedetail/14710-isle-of-pines-ct-houston-tx-77049/9435494",
+      "photoSource": "https://mediahar.harstatic.com/816731386/lr/818530563.jpeg",
+      "photo": "img/listings/11348932.jpg"
     },
     {
       "id": "11348539",
