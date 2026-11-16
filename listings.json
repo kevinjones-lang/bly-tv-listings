@@ -1,5 +1,5 @@
 {
-  "asOf": "2026-11-16T08:16-06:00",
+  "asOf": "2026-11-16T13:18-06:00",
   "source": "https://www.har.com/deborah-bly/listings_bly",
   "leaseAsOf": null,
   "leaseSource": null,
@@ -289,7 +289,7 @@
       "sqft": 2867,
       "lot": null,
       "url": "https://www.har.com/homedetail/143-isles-end-rd-tiki-island-tx-77554/10503232",
-      "photoSource": "https://mediahar.harstatic.com/816828776/lr/817333327.jpeg",
+      "photoSource": "https://mediahar.harstatic.com/816828776/lr/817333443.jpeg",
       "photo": "img/listings/11341142.jpg"
     },
     {
@@ -305,7 +305,7 @@
       "sqft": 3210,
       "lot": null,
       "url": "https://www.har.com/homedetail/6510-wig-st-dickinson-tx-77539/2658462",
-      "photoSource": "https://mediahar.harstatic.com/814910088/lr/815733323.jpeg",
+      "photoSource": "https://mediahar.harstatic.com/814910088/lr/815478360.jpeg",
       "photo": "img/listings/11324680.jpg"
     },
     {
@@ -401,7 +401,7 @@
       "sqft": null,
       "lot": "5,097 lot Sqft.",
       "url": "https://www.har.com/homedetail/22314-vista-del-mar-galveston-tx-77554/8728000",
-      "photoSource": "https://mediahar.harstatic.com/809712494/lr/810288596.jpeg",
+      "photoSource": "https://mediahar.harstatic.com/809712494/lr/810288609.jpeg",
       "photo": "img/listings/11267120.jpg"
     },
     {
@@ -417,7 +417,7 @@
       "sqft": 1404,
       "lot": null,
       "url": "https://www.har.com/homedetail/721-davis-rd-league-city-tx-77573/2680448",
-      "photoSource": "https://mediahar.harstatic.com/807777980/lr/810646531.jpeg",
+      "photoSource": "https://mediahar.harstatic.com/807777980/lr/810646532.jpeg",
       "photo": "img/listings/11267082.jpg"
     },
     {
@@ -440,7 +440,7 @@
       "id": "11256419",
       "street": "1102 Avenue C",
       "city": "Sweeny, TX 77480",
-      "price": "$215,000",
+      "price": "$207,620",
       "status": "Active",
       "type": "Single-Family",
       "beds": 3,
@@ -449,7 +449,7 @@
       "sqft": 1691,
       "lot": null,
       "url": "https://www.har.com/homedetail/1102-avenue-c-sweeny-tx-77480/798448",
-      "photoSource": "https://mediahar.harstatic.com/806099138/lr/809000198.jpeg",
+      "photoSource": "https://mediahar.harstatic.com/806099138/lr/809000260.jpeg",
       "photo": "img/listings/11256419.jpg"
     },
     {
@@ -769,7 +769,7 @@
       "sqft": 1262,
       "lot": null,
       "url": "https://www.har.com/homedetail/911-ruth-cir-texas-city-tx-77591/2582876",
-      "photoSource": "https://mediahar.harstatic.com/794209643/lr/794359488.jpeg",
+      "photoSource": "https://mediahar.harstatic.com/794209643/lr/794359447.jpeg",
       "photo": "img/listings/11089581.jpg"
     },
     {

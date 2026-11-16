@@ -1,5 +1,5 @@
 {
-  "asOf": "2026-11-16T08:17-06:00",
+  "asOf": "2026-11-16T13:19-06:00",
   "source": "Closings Board sheet, Closings tab",
   "closings": [
     {
@@ -48,12 +48,6 @@
       "address": "9607 HABITAT STREET, HOUSTON",
       "price": "$243,000",
       "expectedClose": "11/30",
-      "status": "Pending"
-    },
-    {
-      "address": "5226 Chasewood Drive, Bacliff",
-      "price": "$242,000",
-      "expectedClose": "11/13",
       "status": "Pending"
     },
     {
