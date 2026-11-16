@@ -1,5 +1,5 @@
 {
-  "asOf": "2026-11-13T13:24-06:00",
+  "asOf": "2026-11-16T08:17-06:00",
   "source": "Closings Board sheet, Closings tab",
   "closings": [
     {
@@ -65,7 +65,7 @@
     {
       "address": "11414 Kirkwyn Dr, Houston",
       "price": "$141,000",
-      "expectedClose": "extended",
+      "expectedClose": "12/11",
       "status": "Pending"
     },
     {
@@ -87,6 +87,12 @@
       "status": "Pending"
     },
     {
+      "address": "19730 TERRACE CLIFF COURT, RICHMOND",
+      "price": "$149,000",
+      "expectedClose": "12/17",
+      "status": "Pending"
+    },
+    {
       "address": "1115 25th Avenue N, Texas City",
       "price": "$256,000",
       "expectedClose": "11/23",
@@ -100,7 +106,7 @@
     },
     {
       "address": "15707 Fincher Drive, Friendswood",
-      "price": "$325,000",
+      "price": "$316,000",
       "expectedClose": "11/27",
       "status": "Pending"
     },
@@ -129,6 +135,12 @@
       "status": "Pending"
     },
     {
+      "address": "2547 Sandy Lake Drive, Friendswood",
+      "price": "$980,000",
+      "expectedClose": "12/21",
+      "status": "Pending"
+    },
+    {
       "address": "3 S ERIK DRIVE, ANGLETON",
       "price": "$243,000",
       "expectedClose": "12/4",
@@ -142,7 +154,7 @@
     },
     {
       "address": "15707 Fincher Drive, Friendswood",
-      "price": "$325,000",
+      "price": "$316,000",
       "expectedClose": "11/27",
       "status": "Pending"
     },
@@ -174,6 +186,12 @@
       "address": "4526 Selwyn Road, Richmond",
       "price": "$410,000",
       "expectedClose": "11/30",
+      "status": "Pending"
+    },
+    {
+      "address": "4838 Roaring Springs Road, Pasadena",
+      "price": "$350,000",
+      "expectedClose": "12/14",
       "status": "Pending"
     }
   ]
