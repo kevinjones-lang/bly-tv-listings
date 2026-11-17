@@ -209,6 +209,11 @@ body.dashmode #dash{grid-template-rows:minmax(0,1fr) 3.4em}
 .yl{font-size:1em;color:#9fb0cc;text-transform:uppercase;letter-spacing:.14em}
 .ysub{font-size:1.15em;color:#e6ecf5;margin-top:.3em;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .mtd .ph h2{font-size:1.8em}.mtd .ph span{font-size:1.2em}
+
+/* ===== Promo flyer overlay (promos.json) ===== */
+#promo{position:fixed;inset:0;z-index:50;display:flex;align-items:center;justify-content:center;background:#004d93;opacity:0;pointer-events:none;transition:opacity 1.2s ease}
+#promo.on{opacity:1}
+#promo img{height:96vh;max-width:96vw;object-fit:contain;border-radius:1vh;box-shadow:0 2vh 6vh rgba(0,0,0,.55)}
 </style>
 </head><body><div id="stage"><div id="slides"></div><div id="dash"></div>
 <div id="bar"></div><div id="asof"></div><div id="err"></div><div id="hint">&larr; &rarr; navigate &middot; F fullscreen</div></div><script>
@@ -390,6 +395,13 @@ async function startDash(){document.body.classList.add('dashmode');
  clock();setInterval(clock,10000);
  await Promise.all([loadListings(),refreshLB(),loadTraining(),loadMarket()]);lbD=lbData;drawRows();drawMTD();drawYTD();
  setInterval(boardTick,DSECS);setInterval(ytdFlip,(+P.get('ysecs')||15)*1000);setInterval(()=>{if(!document.querySelector('#rtrack.run'))cycle()},120000);document.body.dataset.ready='1'}
+// ===== Promo flyer overlay: shows each active promo full-screen for PSECS every PEVERY seconds, until its end time =====
+const PSECS=(+P.get('psecs')||20)*1000,PEVERY=(+P.get('pevery')||180)*1000;let promos=[],pIdx=0;
+async function loadPromos(){try{const r=await fetch('promos.json?t='+Date.now(),{cache:'no-store'});const j=await r.json();promos=(j.promos||[]).filter(x=>!x.until||new Date(x.until).getTime()>Date.now())}catch(e){console.warn('promos failed',e)}}
+function showPromo(){const now=Date.now();const act=promos.filter(x=>!x.until||new Date(x.until).getTime()>now);if(!act.length)return;
+ const x=act[pIdx++%act.length];let el=document.getElementById('promo');if(!el){el=document.createElement('div');el.id='promo';document.body.appendChild(el)}
+ el.innerHTML=`<img src="${x.img}" alt="${(x.alt||'').replace(/"/g,'&quot;')}">`;requestAnimationFrame(()=>el.classList.add('on'));setTimeout(()=>el.classList.remove('on'),PSECS)}
+loadPromos().then(()=>{setTimeout(showPromo,P.has('promo')?1000:PEVERY);setInterval(showPromo,PEVERY+PSECS);setInterval(loadPromos,30*60*1000)});
 if(VIEW==='classic')refresh().then(()=>{document.body.dataset.ready='1';show(+P.get('slide')||0)});
 else startDash();
 </script></body></html>
