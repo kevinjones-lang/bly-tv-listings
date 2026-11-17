@@ -1,5 +1,5 @@
 {
-  "asOf": "2026-11-16T13:18-06:00",
+  "asOf": "2026-11-17T08:17-06:00",
   "source": "https://www.har.com/deborah-bly/listings_bly",
   "leaseAsOf": null,
   "leaseSource": null,
@@ -145,7 +145,7 @@
       "sqft": 1505,
       "lot": null,
       "url": "https://www.har.com/homedetail/6607-independence-blvd-baytown-tx-77521/3740793",
-      "photoSource": "https://mediahar.harstatic.com/820280104/lr/820736846.jpeg",
+      "photoSource": "https://mediahar.harstatic.com/820280104/lr/820736857.jpeg",
       "photo": "img/listings/11374577.jpg"
     },
     {
@@ -553,7 +553,7 @@
       "street": "15707 Fincher Dr",
       "city": "Friendswood, TX 77546",
       "price": "$325,000",
-      "status": "Under Contract - OP",
+      "status": "Under Contract - P",
       "type": "Single-Family",
       "beds": 4,
       "fullBaths": 2,

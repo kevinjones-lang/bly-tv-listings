@@ -1,5 +1,5 @@
 {
-  "asOf": "2026-11-16T13:19-06:00",
+  "asOf": "2026-11-17T08:18-06:00",
   "source": "Closings Board sheet, Closings tab",
   "closings": [
     {
@@ -94,7 +94,7 @@
     },
     {
       "address": "9718 Perdita Trail, Missouri City",
-      "price": "$400,000",
+      "price": "$415,000",
       "expectedClose": "11/23",
       "status": "Pending"
     },
@@ -132,6 +132,12 @@
       "address": "2547 Sandy Lake Drive, Friendswood",
       "price": "$980,000",
       "expectedClose": "12/21",
+      "status": "Pending"
+    },
+    {
+      "address": "6129 Creekside Lane, League City",
+      "price": "$227,000",
+      "expectedClose": "12/11",
       "status": "Pending"
     },
     {
