@@ -1,5 +1,5 @@
 {
-  "asOf": "2026-11-17T08:18-06:00",
+  "asOf": "2026-11-17T13:20-06:00",
   "source": "Closings Board sheet, Closings tab",
   "closings": [
     {
@@ -11,7 +11,7 @@
     {
       "address": "261 26TH STREET, SAN LEON",
       "price": "$340,000",
-      "expectedClose": "11/16",
+      "expectedClose": "11/18",
       "status": "Pending"
     },
     {
@@ -41,7 +41,7 @@
     {
       "address": "111 Jamestown Avenue, Clute",
       "price": "$265,000",
-      "expectedClose": "11/26",
+      "expectedClose": "12/4",
       "status": "Pending"
     },
     {
@@ -82,7 +82,7 @@
     },
     {
       "address": "19730 TERRACE CLIFF COURT, RICHMOND",
-      "price": "$149,000",
+      "price": "$349,000",
       "expectedClose": "12/17",
       "status": "Pending"
     },
@@ -156,12 +156,6 @@
       "address": "15707 Fincher Drive, Friendswood",
       "price": "$316,000",
       "expectedClose": "11/27",
-      "status": "Pending"
-    },
-    {
-      "address": "7000 SEAWALL BOULEVARD #813, GALVESTON",
-      "price": "$169,000",
-      "expectedClose": "11/16",
       "status": "Pending"
     },
     {
