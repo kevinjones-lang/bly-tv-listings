@@ -1,5 +1,5 @@
 {
-  "asOf": "2026-11-17T13:20-06:00",
+  "asOf": "2026-11-18T08:21-06:00",
   "source": "Closings Board sheet, Closings tab",
   "closings": [
     {
@@ -12,12 +12,6 @@
       "address": "261 26TH STREET, SAN LEON",
       "price": "$340,000",
       "expectedClose": "11/18",
-      "status": "Pending"
-    },
-    {
-      "address": "31210 Harvest Time Drive, Fulshear (NH)",
-      "price": "$420,000",
-      "expectedClose": "11/16",
       "status": "Pending"
     },
     {

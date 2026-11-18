@@ -1,5 +1,5 @@
 {
-  "asOf": "2026-11-17T13:20-06:00",
+  "asOf": "2026-11-18T08:20-06:00",
   "source": "https://www.har.com/deborah-bly/listings_bly",
   "leaseAsOf": null,
   "leaseSource": null,
@@ -117,22 +117,6 @@
       "photo": "img/listings/11375133.jpg"
     },
     {
-      "id": "11373545",
-      "street": "2311 Thompson St",
-      "city": "La Marque, TX 77568",
-      "price": "$239,000",
-      "status": "Active",
-      "type": "Single-Family",
-      "beds": 3,
-      "fullBaths": 2,
-      "halfBaths": null,
-      "sqft": 1410,
-      "lot": null,
-      "url": "https://www.har.com/homedetail/2311-thompson-st-la-marque-tx-77568/8769875",
-      "photoSource": "https://mediahar.harstatic.com/820227741/lr/820527997.jpeg",
-      "photo": "img/listings/11373545.jpg"
-    },
-    {
       "id": "11374577",
       "street": "6607 Independence Blvd",
       "city": "Baytown, TX 77521",
@@ -147,6 +131,22 @@
       "url": "https://www.har.com/homedetail/6607-independence-blvd-baytown-tx-77521/3740793",
       "photoSource": "https://mediahar.harstatic.com/820280104/lr/820736857.jpeg",
       "photo": "img/listings/11374577.jpg"
+    },
+    {
+      "id": "11373545",
+      "street": "2311 Thompson St",
+      "city": "La Marque, TX 77568",
+      "price": "$239,000",
+      "status": "Active",
+      "type": "Single-Family",
+      "beds": 3,
+      "fullBaths": 2,
+      "halfBaths": null,
+      "sqft": 1410,
+      "lot": null,
+      "url": "https://www.har.com/homedetail/2311-thompson-st-la-marque-tx-77568/8769875",
+      "photoSource": "https://mediahar.harstatic.com/820227741/lr/820527997.jpeg",
+      "photo": "img/listings/11373545.jpg"
     },
     {
       "id": "11370403",
@@ -229,22 +229,6 @@
       "photo": "img/listings/11353643.jpg"
     },
     {
-      "id": "11348536",
-      "street": "6129 Creekside Ln",
-      "city": "League City, TX 77573",
-      "price": "$235,000",
-      "status": "Under Contract - P",
-      "type": "Single-Family",
-      "beds": 3,
-      "fullBaths": 2,
-      "halfBaths": null,
-      "sqft": 1520,
-      "lot": null,
-      "url": "https://www.har.com/homedetail/6129-creekside-ln-league-city-tx-77573/2607449",
-      "photoSource": "https://mediahar.harstatic.com/801913432/lr/818222918.jpeg",
-      "photo": "img/listings/11348536.jpg"
-    },
-    {
       "id": "11348932",
       "street": "14710 S Isle Of Pines Ct",
       "city": "Houston, TX 77049",
@@ -259,6 +243,22 @@
       "url": "https://www.har.com/homedetail/14710-isle-of-pines-ct-houston-tx-77049/9435494",
       "photoSource": "https://mediahar.harstatic.com/816731386/lr/818530563.jpeg",
       "photo": "img/listings/11348932.jpg"
+    },
+    {
+      "id": "11348536",
+      "street": "6129 Creekside Ln",
+      "city": "League City, TX 77573",
+      "price": "$235,000",
+      "status": "Under Contract - P",
+      "type": "Single-Family",
+      "beds": 3,
+      "fullBaths": 2,
+      "halfBaths": null,
+      "sqft": 1520,
+      "lot": null,
+      "url": "https://www.har.com/homedetail/6129-creekside-ln-league-city-tx-77573/2607449",
+      "photoSource": "https://mediahar.harstatic.com/801913432/lr/818222918.jpeg",
+      "photo": "img/listings/11348536.jpg"
     },
     {
       "id": "11348539",
@@ -504,7 +504,7 @@
       "id": "11226551",
       "street": "1805 Sterling Creek Dr",
       "city": "Friendswood, TX 77546",
-      "price": "$1,200,000",
+      "price": "$1,180,000",
       "status": "Active",
       "type": "Single-Family",
       "beds": 5,
