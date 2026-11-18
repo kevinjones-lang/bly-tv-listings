@@ -1,5 +1,5 @@
 {
-  "asOf": "2026-11-18T08:21-06:00",
+  "asOf": "2026-11-18T13:21-06:00",
   "source": "Closings Board sheet, Closings tab",
   "closings": [
     {
@@ -59,7 +59,7 @@
     {
       "address": "1749 Stargrass Lane, Alvin ( NH)",
       "price": "$328,990",
-      "expectedClose": "11/30",
+      "expectedClose": "12/1",
       "status": "Pending"
     },
     {
@@ -113,7 +113,7 @@
     {
       "address": "7408 Luce Del Porto Way, Texas City (NH)",
       "price": "$232,995",
-      "expectedClose": "11/20",
+      "expectedClose": "11/30",
       "status": "Pending"
     },
     {
@@ -159,15 +159,9 @@
       "status": "Pending"
     },
     {
-      "address": "2008 Williamsburg Court N, League City",
-      "price": "$229,000",
-      "expectedClose": "11/24",
-      "status": "Pending"
-    },
-    {
       "address": "16614 Hamill Drive, Rosharon (Lot)",
       "price": "$149,000",
-      "expectedClose": "11/30",
+      "expectedClose": "12/10",
       "status": "Pending"
     },
     {
