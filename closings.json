@@ -1,5 +1,5 @@
 {
-  "asOf": "2026-11-18T13:21-06:00",
+  "asOf": "2026-11-19T08:23-06:00",
   "source": "Closings Board sheet, Closings tab",
   "closings": [
     {
@@ -23,7 +23,7 @@
     {
       "address": "12823 Sandy Hook Drive, Houston",
       "price": "$207,000",
-      "expectedClose": "11/19",
+      "expectedClose": "11/25",
       "status": "Pending"
     },
     {
@@ -63,9 +63,15 @@
       "status": "Pending"
     },
     {
+      "address": "222 ASHLEY WAY, ALVIN",
+      "price": "$283,000",
+      "expectedClose": "12/17",
+      "status": "Pending"
+    },
+    {
       "address": "7411 Luce Del Porto Way, Texas City (NH)",
       "price": "$252,995",
-      "expectedClose": "11/19",
+      "expectedClose": "12/4",
       "status": "Pending"
     },
     {
@@ -168,6 +174,12 @@
       "address": "4526 Selwyn Road, Richmond",
       "price": "$410,000",
       "expectedClose": "11/30",
+      "status": "Pending"
+    },
+    {
+      "address": "4306 Oneida Street, Pasadena",
+      "price": "$255,000",
+      "expectedClose": "12/8",
       "status": "Pending"
     },
     {
