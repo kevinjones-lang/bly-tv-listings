@@ -1,17 +1,11 @@
 {
-  "asOf": "2026-11-19T08:23-06:00",
+  "asOf": "2026-11-19T13:22-06:00",
   "source": "Closings Board sheet, Closings tab",
   "closings": [
     {
       "address": "920 Bruce Ave, League City",
       "price": "$45,000",
       "expectedClose": "extended",
-      "status": "Pending"
-    },
-    {
-      "address": "261 26TH STREET, SAN LEON",
-      "price": "$340,000",
-      "expectedClose": "11/18",
       "status": "Pending"
     },
     {
@@ -161,7 +155,7 @@
     {
       "address": "3905 Spring Circle Drive W, Pearland",
       "price": "$335,000",
-      "expectedClose": "12/1",
+      "expectedClose": "12/18",
       "status": "Pending"
     },
     {

@@ -1,5 +1,5 @@
 {
-  "asOf": "2026-11-19T08:23-06:00",
+  "asOf": "2026-11-19T13:22-06:00",
   "source": "https://www.har.com/deborah-bly/listings_bly",
   "leaseAsOf": null,
   "leaseSource": null,
@@ -248,7 +248,7 @@
       "id": "11348932",
       "street": "14710 S Isle Of Pines Ct",
       "city": "Houston, TX 77049",
-      "price": "$279,900",
+      "price": "$275,000",
       "status": "Active",
       "type": "Single-Family",
       "beds": 5,
@@ -483,22 +483,6 @@
       "url": "https://www.har.com/homedetail/5762-birdwood-rd-houston-tx-77096/9388720",
       "photoSource": "https://mediahar.harstatic.com/807660044/lr/807707626.jpeg",
       "photo": "img/listings/11243092.jpg"
-    },
-    {
-      "id": "11230181",
-      "street": "261 26th St",
-      "city": "San Leon, TX 77539",
-      "price": "$348,500",
-      "status": "Under Contract - P",
-      "type": "Single-Family",
-      "beds": 3,
-      "fullBaths": 2,
-      "halfBaths": null,
-      "sqft": 1899,
-      "lot": null,
-      "url": "https://www.har.com/homedetail/261-26th-st-san-leon-tx-77539/10163703",
-      "photoSource": "https://mediahar.harstatic.com/804639303/lr/806435332.jpeg",
-      "photo": "img/listings/11230181.jpg"
     },
     {
       "id": "11226551",
