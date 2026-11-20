@@ -1,5 +1,5 @@
 {
-  "asOf": "2026-11-20T08:23-06:00",
+  "asOf": "2026-11-20T13:21-06:00",
   "source": "https://www.har.com/deborah-bly/listings_bly",
   "leaseAsOf": null,
   "leaseSource": null,
@@ -37,22 +37,6 @@
       "photo": "img/listings/11401944.jpg"
     },
     {
-      "id": "11375134",
-      "street": "4406 Anthony Court Ln",
-      "city": "Seabrook, TX 77586",
-      "price": "$599,890",
-      "status": "Active",
-      "type": "Single-Family",
-      "beds": 4,
-      "fullBaths": 3,
-      "halfBaths": 1,
-      "sqft": 2402,
-      "lot": null,
-      "url": "https://www.har.com/homedetail/4406-anthony-court-ln-seabrook-tx-77586/16601078",
-      "photoSource": "https://mediahar.harstatic.com/820293113/lr/820319120.jpeg",
-      "photo": "img/listings/11375134.jpg"
-    },
-    {
       "id": "11388179",
       "street": "21155 Armstrong County Dr",
       "city": "Cypress, TX 77433",
@@ -67,6 +51,22 @@
       "url": "https://www.har.com/homedetail/21155-armstrong-county-dr-cypress-tx-77433/17075284",
       "photoSource": "https://mediahar.harstatic.com/822174634/lr/822179200.jpeg",
       "photo": "img/listings/11388179.jpg"
+    },
+    {
+      "id": "11375134",
+      "street": "4406 Anthony Court Ln",
+      "city": "Seabrook, TX 77586",
+      "price": "$599,890",
+      "status": "Active",
+      "type": "Single-Family",
+      "beds": 4,
+      "fullBaths": 3,
+      "halfBaths": 1,
+      "sqft": 2402,
+      "lot": null,
+      "url": "https://www.har.com/homedetail/4406-anthony-court-ln-seabrook-tx-77586/16601078",
+      "photoSource": "https://mediahar.harstatic.com/820293113/lr/820319120.jpeg",
+      "photo": "img/listings/11375134.jpg"
     },
     {
       "id": "11375132",
