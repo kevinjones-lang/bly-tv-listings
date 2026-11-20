@@ -1,5 +1,5 @@
 {
-  "asOf": "2026-11-19T13:22-06:00",
+  "asOf": "2026-11-20T08:23-06:00",
   "source": "https://www.har.com/deborah-bly/listings_bly",
   "leaseAsOf": null,
   "leaseSource": null,
@@ -37,22 +37,6 @@
       "photo": "img/listings/11401944.jpg"
     },
     {
-      "id": "11388179",
-      "street": "21155 Armstrong County Dr",
-      "city": "Cypress, TX 77433",
-      "price": "$320,000",
-      "status": "Under Contract - P",
-      "type": "Single-Family",
-      "beds": 3,
-      "fullBaths": 2,
-      "halfBaths": null,
-      "sqft": 1781,
-      "lot": null,
-      "url": "https://www.har.com/homedetail/21155-armstrong-county-dr-cypress-tx-77433/17075284",
-      "photoSource": "https://mediahar.harstatic.com/822174634/lr/822179200.jpeg",
-      "photo": "img/listings/11388179.jpg"
-    },
-    {
       "id": "11375134",
       "street": "4406 Anthony Court Ln",
       "city": "Seabrook, TX 77586",
@@ -67,6 +51,22 @@
       "url": "https://www.har.com/homedetail/4406-anthony-court-ln-seabrook-tx-77586/16601078",
       "photoSource": "https://mediahar.harstatic.com/820293113/lr/820319120.jpeg",
       "photo": "img/listings/11375134.jpg"
+    },
+    {
+      "id": "11388179",
+      "street": "21155 Armstrong County Dr",
+      "city": "Cypress, TX 77433",
+      "price": "$320,000",
+      "status": "Under Contract - P",
+      "type": "Single-Family",
+      "beds": 3,
+      "fullBaths": 2,
+      "halfBaths": null,
+      "sqft": 1781,
+      "lot": null,
+      "url": "https://www.har.com/homedetail/21155-armstrong-county-dr-cypress-tx-77433/17075284",
+      "photoSource": "https://mediahar.harstatic.com/822174634/lr/822179200.jpeg",
+      "photo": "img/listings/11388179.jpg"
     },
     {
       "id": "11375132",
@@ -181,22 +181,6 @@
       "photo": "img/listings/11370442.jpg"
     },
     {
-      "id": "11368129",
-      "street": "1534 Wayside Dr",
-      "city": "Texas City, TX 77590",
-      "price": "$194,800",
-      "status": "Active",
-      "type": "Single-Family",
-      "beds": 3,
-      "fullBaths": 2,
-      "halfBaths": null,
-      "sqft": 1233,
-      "lot": null,
-      "url": "https://www.har.com/homedetail/1534-wayside-dr-texas-city-tx-77590/2673963",
-      "photoSource": "https://mediahar.harstatic.com/820096273/lr/820117240.jpeg",
-      "photo": "img/listings/11368129.jpg"
-    },
-    {
       "id": "11367747",
       "street": "16610 Jolly Roger Rd",
       "city": "Jamaica Beach, TX 77554",
@@ -211,6 +195,22 @@
       "url": "https://www.har.com/homedetail/16610-jolly-roger-cir-jamaica-beach-tx-77554/11034233",
       "photoSource": "https://mediahar.harstatic.com/818408785/lr/820231443.jpeg",
       "photo": "img/listings/11367747.jpg"
+    },
+    {
+      "id": "11368129",
+      "street": "1534 Wayside Dr",
+      "city": "Texas City, TX 77590",
+      "price": "$194,800",
+      "status": "Active",
+      "type": "Single-Family",
+      "beds": 3,
+      "fullBaths": 2,
+      "halfBaths": null,
+      "sqft": 1233,
+      "lot": null,
+      "url": "https://www.har.com/homedetail/1534-wayside-dr-texas-city-tx-77590/2673963",
+      "photoSource": "https://mediahar.harstatic.com/820096273/lr/820117240.jpeg",
+      "photo": "img/listings/11368129.jpg"
     },
     {
       "id": "11353643",
