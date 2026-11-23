@@ -1,5 +1,5 @@
 {
-  "asOf": "2026-11-20T13:21-06:00",
+  "asOf": "2026-11-23T08:23-06:00",
   "source": "Closings Board sheet, Closings tab",
   "closings": [
     {
@@ -51,6 +51,12 @@
       "status": "Pending"
     },
     {
+      "address": "312 Thistlewood Court, League City",
+      "price": "$290,000",
+      "expectedClose": "12/18",
+      "status": "Pending"
+    },
+    {
       "address": "11414 Kirkwyn Dr, Houston",
       "price": "$141,000",
       "expectedClose": "12/11",
@@ -82,7 +88,7 @@
     },
     {
       "address": "19730 TERRACE CLIFF COURT, RICHMOND",
-      "price": "$349,000",
+      "price": "$390,000",
       "expectedClose": "12/17",
       "status": "Pending"
     },
@@ -94,8 +100,8 @@
     },
     {
       "address": "9718 Perdita Trail, Missouri City",
-      "price": "$415,000",
-      "expectedClose": "11/23",
+      "price": "$430,000",
+      "expectedClose": "12/18",
       "status": "Pending"
     },
     {
@@ -173,7 +179,7 @@
     {
       "address": "4306 Oneida Street, Pasadena",
       "price": "$255,000",
-      "expectedClose": "12/8",
+      "expectedClose": "12/11",
       "status": "Pending"
     },
     {
