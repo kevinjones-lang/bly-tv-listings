@@ -1,38 +1,14 @@
 {
-  "asOf": "2026-11-23T13:24-06:00",
+  "asOf": "2026-11-24T08:20-06:00",
   "calendar": "Bly Team Training",
   "days": 30,
   "events": [
-    {
-      "title": "eXp - Fast forward",
-      "start": "2026-11-23T12:00:00-06:00",
-      "end": "2026-11-23T14:00:00-06:00",
-      "allDay": false,
-      "where": "Zoom",
-      "detail": ""
-    },
     {
       "title": "eXp Broker Meetings",
       "start": "2026-11-24T09:00:00-06:00",
       "end": "2026-11-24T10:00:00-06:00",
       "allDay": false,
       "where": "eXp World",
-      "detail": ""
-    },
-    {
-      "title": "Tuesday Team Meeting - FIRM",
-      "start": "2026-11-24T09:15:00-06:00",
-      "end": "2026-11-24T11:00:00-06:00",
-      "allDay": false,
-      "where": "In office",
-      "detail": ""
-    },
-    {
-      "title": "New Agent Training/Role Playing/Flex",
-      "start": "2026-11-25T09:15:00-06:00",
-      "end": "2026-11-25T11:00:00-06:00",
-      "allDay": false,
-      "where": "",
       "detail": ""
     },
     {
