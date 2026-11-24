@@ -1,5 +1,5 @@
 {
-  "asOf": "2026-11-23T13:24-06:00",
+  "asOf": "2026-11-24T13:24-06:00",
   "source": "Closings Board sheet, Closings tab",
   "closings": [
     {
@@ -107,7 +107,7 @@
     {
       "address": "15707 Fincher Drive, Friendswood",
       "price": "$316,000",
-      "expectedClose": "11/27",
+      "expectedClose": "11/25",
       "status": "Pending"
     },
     {
@@ -120,12 +120,6 @@
       "address": "7408 Luce Del Porto Way, Texas City (NH)",
       "price": "$232,995",
       "expectedClose": "11/30",
-      "status": "Pending"
-    },
-    {
-      "address": "3722 WOODLACE DRIVE, HUMBLE",
-      "price": "$245,000",
-      "expectedClose": "11/23",
       "status": "Pending"
     },
     {
