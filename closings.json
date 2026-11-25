@@ -1,5 +1,5 @@
 {
-  "asOf": "2026-11-25T08:17-06:00",
+  "asOf": "2026-11-25T13:23-06:00",
   "source": "Closings Board sheet, Closings tab",
   "closings": [
     {
@@ -150,6 +150,12 @@
       "address": "15707 Fincher Drive, Friendswood",
       "price": "$316,000",
       "expectedClose": "11/27",
+      "status": "Pending"
+    },
+    {
+      "address": "9122 Alaska Shores Drive, Baytown (NH)",
+      "price": "$288,990",
+      "expectedClose": "12/23",
       "status": "Pending"
     },
     {
