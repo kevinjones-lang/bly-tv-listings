@@ -1,0 +1,11 @@
+{
+  "spreadsheetId": "15k9G3UfIRNcTgxf3DW3nQesOW2KSCCoGZd5Ub0TNdO0",
+  "truncated": false,
+  "ranges": [
+    {
+      "sheet": "Listings",
+      "range": "Listings!A1:Q10",
+      "content": "Agent,Source,Address,List Price,Bed/Bath,sq ft,DOM,\"Vacant/\nOccupied\",,Agent,Source,Address,List Price,Bed/Bath,sq ft,DOM,\"Vacant/\nOccupied\"\nDeb,Call In,\"1534 Wayside Drive, Texas City\",\"$194,800\",3/4 & 2,\"1,233\",26,Vacant,,Celia,Zillow Preferred,\"1614 Roaring Springs Lane, Pasadena\",\"$369,500\",4/4 & 2/1,\"3,137\",11,Vacant\nAbbie,SOI,\"3847 Ohana Lane, Galveston (Lot)\",\"$199,900\",N/A,.1052 Acres,223,Vacant,,Stephen,Ylopo,\"16610 Jolly Roger Road, Jamaica Beach\",\"$649,000\",3 & 2,\"1,484\",26,Vacant\nSkip,SOI,\"99 Lease Lane, Houston\",\"$2,150/mo\",3 & 2,\"1,200\",5,Vacant,,Angie,SOI,\"874 Pebblebank Lane, League City\",\"$479,000\",5/5 & 3/1,\"3,303\",62,Vacant\n"
+    }
+  ]
+}

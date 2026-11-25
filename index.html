@@ -320,8 +320,9 @@ function boardRows(j){const list=j&&Array.isArray(j.listings)?j.listings:[];
  const leases=(j&&Array.isArray(j.leases)?j.leases:[]).concat(list.filter(x=>x&&x.kind==='lease'));
  return sales.concat(leases.map(leaseRow))}
 function shortDay(s){const d=new Date(s);return isNaN(d)?'':d.toLocaleDateString('en-US',{timeZone:'America/Chicago',month:'short',day:'numeric'})}
-function asofLine(j){const s=j&&j.asOf?shortDay(j.asOf):'',l=j&&j.leaseAsOf&&L.some(x=>x.kind==='lease')?shortDay(j.leaseAsOf):'';
- if(s&&l)return 'HAR.com \u00b7 sales '+s+' \u00b7 leases '+l;if(s)return 'HAR.com \u00b7 '+lbAsOf(j.asOf);return ''}
+function sourceName(j){const src=(j&&j.source)||'';if(/har\.com/i.test(src))return 'HAR.com';if(/closings board|listings tab/i.test(src))return 'Closings Board';return 'Listings'}
+function asofLine(j){const name=sourceName(j);const s=j&&j.asOf?shortDay(j.asOf):'',l=j&&j.leaseAsOf&&L.some(x=>x.kind==='lease')?shortDay(j.leaseAsOf):'';
+ if(s&&l)return name+' \u00b7 sales '+s+' \u00b7 leases '+l;if(s)return name+' \u00b7 '+lbAsOf(j.asOf);return ''}
 function countLine(){const nL=L.filter(x=>x.kind==='lease').length,nS=L.length-nL;
  document.body.dataset.sales=nS;document.body.dataset.leases=nL;return nL?nS+' sales \u00b7 '+nL+' leases':nS+' listings'}
 function moneyText(x){const p=x.price||'';if(x.kind!=='lease')return esc(p);if(/(\/\s*mo\b|per\s+month|\/\s*month)/i.test(p))return esc(p);return esc(p)+'<span class="mo">/mo</span>'}
@@ -335,7 +336,7 @@ async function loadListings(){let src=null;
   const err=document.getElementById('err');if(err)err.textContent='\u25CF offline \u2013 showing last saved listings'}}
  const as=document.getElementById('lasof');if(as&&src)as.textContent=asofLine(src);
  const lc=document.getElementById('lcount');if(lc)lc.textContent=countLine()}
-function feat(x){const b=x.beds!=null?x.beds+' bd':'';const ba=x.fullBaths!=null?(x.fullBaths+(x.halfBaths?'/'+x.halfBaths:''))+' ba':(x.bbText&&x.bbText!=='N/A'?x.bbText:'');const sf=x.sqft?x.sqft.toLocaleString('en-US')+' sf':(x.lot?cleanLot(x.lot):(x.sqftText||''));return[b,ba,sf].filter(Boolean).join(' \u00b7 ')}
+function feat(x){const b=x.beds!=null?x.beds+' bd':'';const ba=x.fullBaths!=null?(x.fullBaths+(x.halfBaths?'/'+x.halfBaths:''))+' ba':(x.bbText&&x.bbText!=='N/A'?x.bbText:'');const sf=x.sqft?x.sqft.toLocaleString('en-US')+' sf':(x.lot?cleanLot(x.lot):(x.sqftText||''));const ag=(x.agent&&!/\S+@\S+/.test(x.agent))?x.agent:'';return[b,ba,sf,ag].filter(Boolean).join(' \u00b7 ')}
 function drawRows(){const pages=Math.max(1,Math.ceil(L.length/ROWS));lpage=lpage%pages;const g=L.slice(lpage*ROWS,lpage*ROWS+ROWS);
  document.getElementById('rows').innerHTML=g.map((x,k)=>{const uc=/contract|pending|option/i.test(x.status||'');const lease=x.kind==='lease';
   return `<div class="row flip${lease?' lease':''}${uc?' uc':''}" style="animation-delay:${k*90}ms">${thumb(x)}<div class="ri"><div class="rst">${esc(x.street)}</div><div class="r3"><div class="rcity">${esc((x.city||'').replace(/,\s*TX\b/,''))}</div><div class="rpr">${moneyText(x)}</div></div><div class="r3"><div class="rft">${esc(feat(x))}</div><div class="rstat">${esc(statusText(x))}</div></div></div></div>`}).join('')+Array(ROWS-g.length).fill('<div class="row" style="visibility:hidden"></div>').join('');

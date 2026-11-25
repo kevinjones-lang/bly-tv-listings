@@ -34,11 +34,30 @@ The script reads public HAR pages and rewrites `listings.json`:
 
 HAR often returns HTTP 403 or a captcha page to automated fetches. The script exits 2 when that happens. It does not retry, change its user agent, or fill in numbers.
 
-* If the sale page is blocked or is not the expected listings page, `listings.json` is left unchanged.
+When HAR is blocked, fill `listings.json` from the Closings Board sheet (`15k9G3UfIRNcTgxf3DW3nQesOW2KSCCoGZd5Ub0TNdO0`), "Listings" tab, instead (approved 2026-11-25). Leases stay off. The tab has no photos, so the TV shows the existing brand placeholder until HAR works again.
+
+```bash
+# 1. Try HAR
+python3 scripts/update_har.py
+# 2. On exit 2: read the Listings tab (read-only, displayed values, columns A:AE)
+#    with the Google Sheets connector to /workspace/bly-tv-listings-listings-raw.json
+#    (ranges must be an array; keep the raw file outside the repo — it has lead Source).
+python3 scripts/update_listings_from_sheet.py --from-rows /workspace/bly-tv-listings-listings-raw.json
+```
+
+If the rows file is already saved, this one command tries HAR and falls back to the sheet only when HAR fails:
+
+```bash
+python3 scripts/update_har.py --from-rows /workspace/bly-tv-listings-listings-raw.json
+```
+
+* If the sale page is blocked or is not the expected listings page, and no `--from-rows` file is given, `listings.json` is left unchanged.
+* If the sale page is blocked and `--from-rows` is given (or `update_listings_from_sheet.py` is run), the Listings tab is parsed and `listings.json` is replaced. A missing, unreadable, or zero-row sheet exits 2 and leaves the file unchanged. Zero rows is a failed read, not an empty inventory.
+* Only public listing fields are published (address, price, beds/baths/sqft or lot, agent, status, type, and a photo/url when the sheet has a safe URL). Lead Source, occupancy, DOM, client names, phones, emails and meeting links are never written.
 * With `--leases`: if sales load and the lease page is blocked or has no portrait cards, the new sales are saved and the previous `leases` array is kept (empty while leases are off). Zero cards is a failed read, not an empty inventory.
 * Lease cards use the same HAR portrait markup as sale cards (`cardv2--portrait`).
 
-No client, lead, or lender fields are written. The 14-row lease scrape from 2026-10-28 is kept only as a test fixture (`scripts/fixtures/har-leases-2026-10-28.json`); it is no longer on the board. Tests: `python3 scripts/test_update_har.py`.
+No client, lead, or lender fields are written. The 14-row lease scrape from 2026-10-28 is kept only as a test fixture (`scripts/fixtures/har-leases-2026-10-28.json`); it is no longer on the board. Tests: `python3 scripts/test_update_har.py` and `python3 scripts/test_update_listings_from_sheet.py`.
 
 ## Pending closings (closings.json)
 

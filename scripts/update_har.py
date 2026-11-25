@@ -6,6 +6,9 @@ Leases: https://www.har.com/realestatepro/rent-by-agent/bly
 
 Usage: python3 scripts/update_har.py            (run from repo root). Needs Pillow.
        python3 scripts/update_har.py --leases   (also refresh leases; opt-in)
+       python3 scripts/update_har.py --from-rows FILE
+           try HAR first; if the sale page is blocked, write listings.json
+           from the Closings Board Listings tab (see update_listings_from_sheet.py)
 
 Leases are OFF by default: the plain command refreshes sales only, does not
 fetch the rent page, and writes an empty leases array (leaseAsOf/leaseSource
@@ -13,9 +16,12 @@ null), so stale rents never come back. Pass --leases once there is a working
 lease source again.
 
 HAR often answers with HTTP 403 or a captcha page. This script stops on that
-(exit 2) and never retries, changes identity, or fills in numbers.
+(exit 2) and never retries, changes identity, or fills in numbers — unless
+--from-rows FILE is given, in which case a blocked sale page falls back to
+the Closings Board Listings tab via update_listings_from_sheet.py.
 
-* A blocked or unreadable sale page leaves listings.json untouched.
+* A blocked or unreadable sale page leaves listings.json untouched when no
+  --from-rows file is given. With --from-rows, the sheet converter runs instead.
 * With --leases, a blocked or unreadable lease page still saves a successful
   sale refresh and keeps the previous leases array (empty while leases are
   off). It does not invent rents.
@@ -253,14 +259,33 @@ def run(root=None, fetch=None, clock=None, leases_enabled=False):
     return doc
 
 
+def parse_argv(args):
+    leases, rows_file, i = False, None, 0
+    while i < len(args):
+        if args[i] == "--leases":
+            leases = True
+            i += 1
+        elif args[i] == "--from-rows":
+            if i + 1 >= len(args):
+                stop("usage: update_har.py [--leases] [--from-rows FILE]")
+            rows_file = args[i + 1]
+            i += 2
+        else:
+            stop(f"unknown option(s): {args[i]}. Usage: update_har.py [--leases] [--from-rows FILE]")
+    return leases, rows_file
+
+
 def main(root=None, fetch=None, clock=None, argv=None):
     args = sys.argv[1:] if argv is None else argv
-    unknown = [a for a in args if a != "--leases"]
-    if unknown:
-        stop(f"unknown option(s): {' '.join(unknown)}. Usage: update_har.py [--leases]")
+    leases, rows_file = parse_argv(args)
     try:
-        run(root=root, fetch=fetch, clock=clock, leases_enabled="--leases" in args)
+        run(root=root, fetch=fetch, clock=clock, leases_enabled=leases)
     except Blocked as e:
+        if rows_file:
+            print(f"{e} Falling back to Closings Board Listings tab.", file=sys.stderr)
+            import update_listings_from_sheet as uls
+            uls.main(root=root, clock=clock, argv=["--from-rows", rows_file])
+            return
         stop(str(e))
 
 
