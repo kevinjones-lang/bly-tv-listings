@@ -1,5 +1,5 @@
 {
-  "asOf": "2026-11-25T13:23-06:00",
+  "asOf": "2026-11-26T08:22-06:00",
   "source": "Closings Board sheet, Closings tab",
   "closings": [
     {
@@ -17,7 +17,7 @@
     {
       "address": "12823 Sandy Hook Drive, Houston",
       "price": "$207,000",
-      "expectedClose": "11/25",
+      "expectedClose": "12/04",
       "status": "Pending"
     },
     {
@@ -105,12 +105,6 @@
       "status": "Pending"
     },
     {
-      "address": "15707 Fincher Drive, Friendswood",
-      "price": "$316,000",
-      "expectedClose": "11/25",
-      "status": "Pending"
-    },
-    {
       "address": "7006 Texas Wrangler Drive, League City (NH)",
       "price": "$439,990",
       "expectedClose": "1/14",
@@ -144,12 +138,6 @@
       "address": "2133 Greenlee Lane, Dickinson",
       "price": "$215,000",
       "expectedClose": "12/4",
-      "status": "Pending"
-    },
-    {
-      "address": "15707 Fincher Drive, Friendswood",
-      "price": "$316,000",
-      "expectedClose": "11/27",
       "status": "Pending"
     },
     {
