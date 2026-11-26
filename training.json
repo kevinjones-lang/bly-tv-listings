@@ -1,24 +1,8 @@
 {
-  "asOf": "2026-11-26T08:21-06:00",
+  "asOf": "2026-11-26T13:16-06:00",
   "calendar": "Bly Team Training",
   "days": 30,
   "events": [
-    {
-      "title": "Agents' Contracts Q&A",
-      "start": "2026-11-26T09:00:00-06:00",
-      "end": "2026-11-26T09:30:00-06:00",
-      "allDay": false,
-      "where": "Zoom",
-      "detail": ""
-    },
-    {
-      "title": "Ylopo Mastermind: Ylopo AI Radar",
-      "start": "2026-11-26T10:00:00-06:00",
-      "end": "2026-11-26T11:00:00-06:00",
-      "allDay": false,
-      "where": "Zoom",
-      "detail": ""
-    },
     {
       "title": "Marketing Mastermind",
       "start": "2026-11-26T13:00:00-06:00",
