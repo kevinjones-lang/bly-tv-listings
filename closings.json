@@ -1,5 +1,5 @@
 {
-  "asOf": "2026-11-27T08:20-06:00",
+  "asOf": "2026-11-27T13:17-06:00",
   "source": "Closings Board sheet, Closings tab",
   "closings": [
     {
@@ -99,12 +99,6 @@
       "status": "Pending"
     },
     {
-      "address": "9718 Perdita Trail, Missouri City",
-      "price": "$430,000",
-      "expectedClose": "12/18",
-      "status": "Pending"
-    },
-    {
       "address": "7006 Texas Wrangler Drive, League City (NH)",
       "price": "$439,990",
       "expectedClose": "1/14",
@@ -125,7 +119,7 @@
     {
       "address": "6129 Creekside Lane, League City",
       "price": "$227,000",
-      "expectedClose": "12/11",
+      "expectedClose": "12/10",
       "status": "Pending"
     },
     {

@@ -1,46 +1,46 @@
 {
  "title": "November MTD Leaderboard",
  "source": "Follow Up Boss Activity Leaderboard (Everyone, This Month)",
- "asOf": "2026-11-27T08:25:00-06:00",
+ "asOf": "2026-11-27T13:20:00-06:00",
  "agents": [
   {
    "rank": 1,
    "name": "Shanna Ramon",
-   "score": 15340,
+   "score": 16198,
    "metrics": {
-    "appointments": 13,
-    "conversations": 62,
-    "callAttempts": 59,
-    "texts": 558,
-    "emails": 754,
-    "zillowMessages": 36,
-    "conversationTime": "6 hrs 2m"
+    "appointments": 14,
+    "conversations": 65,
+    "callAttempts": 61,
+    "texts": 568,
+    "emails": 757,
+    "zillowMessages": 39,
+    "conversationTime": "6 hrs 36m"
    }
   },
   {
    "rank": 2,
    "name": "Meggan Flanagan",
-   "score": 14578,
+   "score": 14606,
    "metrics": {
     "appointments": 12,
     "conversations": 66,
     "callAttempts": 62,
-    "texts": 580,
-    "emails": 93,
-    "zillowMessages": 21,
+    "texts": 590,
+    "emails": 96,
+    "zillowMessages": 22,
     "conversationTime": "12 hrs 57m"
    }
   },
   {
    "rank": 3,
    "name": "Deborah Bly",
-   "score": 13708,
+   "score": 13709,
    "metrics": {
     "appointments": 5,
     "conversations": 66,
     "callAttempts": 60,
     "texts": 433,
-    "emails": 3142,
+    "emails": 3143,
     "zillowMessages": 0,
     "conversationTime": "8 hrs 52m"
    }
@@ -48,28 +48,28 @@
   {
    "rank": 4,
    "name": "Annie Otwell",
-   "score": 13326,
+   "score": 13331,
    "metrics": {
     "appointments": 22,
     "conversations": 17,
     "callAttempts": 20,
     "texts": 50,
     "emails": 46,
-    "zillowMessages": 56,
+    "zillowMessages": 57,
     "conversationTime": "1 hr 31m"
    }
   },
   {
    "rank": 5,
    "name": "Sean Spellman",
-   "score": 11192,
+   "score": 11263,
    "metrics": {
     "appointments": 13,
     "conversations": 24,
     "callAttempts": 53,
-    "texts": 501,
+    "texts": 534,
     "emails": 605,
-    "zillowMessages": 31,
+    "zillowMessages": 32,
     "conversationTime": "2 hrs 56m"
    }
   },
@@ -118,15 +118,15 @@
   {
    "rank": 9,
    "name": "Daisia Frank",
-   "score": 6048,
+   "score": 6058,
    "metrics": {
     "appointments": 1,
     "conversations": 5,
     "callAttempts": 20,
     "texts": 1421,
-    "emails": 1981,
+    "emails": 1991,
     "zillowMessages": 5,
-    "conversationTime": "37m 50s"
+    "conversationTime": "39m 25s"
    }
   },
   {
@@ -145,15 +145,15 @@
   }
  ],
  "totals": {
-  "appointments": 146,
-  "conversations": 513,
-  "callAttempts": 820,
-  "texts": 7543,
-  "emails": 32924,
-  "zillowMessages": 513,
-  "conversationTime": "2 days 23 hrs"
+  "appointments": 148,
+  "conversations": 520,
+  "callAttempts": 829,
+  "texts": 7628,
+  "emails": 32950,
+  "zillowMessages": 527,
+  "conversationTime": "3 days"
  },
- "ytdAsOf": "2026-11-27T08:25:00-06:00",
+ "ytdAsOf": "2026-11-27T13:20:00-06:00",
  "ytd": [
   {
    "rank": 1,
@@ -172,40 +172,40 @@
   {
    "rank": 2,
    "name": "Meggan Flanagan",
-   "score": 205842,
+   "score": 205870,
    "metrics": {
     "appointments": 219,
     "conversations": 691,
     "callAttempts": 673,
-    "texts": 8702,
-    "emails": 1343,
-    "zillowMessages": 353,
+    "texts": 8712,
+    "emails": 1346,
+    "zillowMessages": 354,
     "conversationTime": "5 days 15 hrs"
    }
   },
   {
    "rank": 3,
    "name": "Deborah Bly",
-   "score": 175149,
+   "score": 175150,
    "metrics": {
     "appointments": 92,
     "conversations": 960,
     "callAttempts": 1058,
     "texts": 6276,
-    "emails": 10017,
+    "emails": 10018,
     "zillowMessages": 0,
     "conversationTime": "6 days"
    }
   }
  ],
  "ytdTotals": {
-  "appointments": 1970,
-  "conversations": 7907,
-  "callAttempts": 11786,
-  "texts": 90750,
-  "emails": 174638,
-  "zillowMessages": 6699,
-  "conversationTime": "48 days 15 hrs"
+  "appointments": 1972,
+  "conversations": 7914,
+  "callAttempts": 11795,
+  "texts": 90835,
+  "emails": 174664,
+  "zillowMessages": 6713,
+  "conversationTime": "48 days 16 hrs"
  },
  "dealsAsOf": "2026-11-27T06:52:00-06:00",
  "deals": {
@@ -343,41 +343,41 @@
   {
    "rank": 1,
    "name": "Shanna Ramon",
-   "score": 15340,
+   "score": 16198,
    "metrics": {
-    "appointments": 13,
-    "conversations": 62,
-    "callAttempts": 59,
-    "texts": 558,
-    "emails": 754,
-    "zillowMessages": 36,
-    "conversationTime": "6 hrs 2m"
+    "appointments": 14,
+    "conversations": 65,
+    "callAttempts": 61,
+    "texts": 568,
+    "emails": 757,
+    "zillowMessages": 39,
+    "conversationTime": "6 hrs 36m"
    }
   },
   {
    "rank": 2,
    "name": "Meggan Flanagan",
-   "score": 14578,
+   "score": 14606,
    "metrics": {
     "appointments": 12,
     "conversations": 66,
     "callAttempts": 62,
-    "texts": 580,
-    "emails": 93,
-    "zillowMessages": 21,
+    "texts": 590,
+    "emails": 96,
+    "zillowMessages": 22,
     "conversationTime": "12 hrs 57m"
    }
   },
   {
    "rank": 3,
    "name": "Deborah Bly",
-   "score": 13708,
+   "score": 13709,
    "metrics": {
     "appointments": 5,
     "conversations": 66,
     "callAttempts": 60,
     "texts": 433,
-    "emails": 3142,
+    "emails": 3143,
     "zillowMessages": 0,
     "conversationTime": "8 hrs 52m"
    }
@@ -385,28 +385,28 @@
   {
    "rank": 4,
    "name": "Annie Otwell",
-   "score": 13326,
+   "score": 13331,
    "metrics": {
     "appointments": 22,
     "conversations": 17,
     "callAttempts": 20,
     "texts": 50,
     "emails": 46,
-    "zillowMessages": 56,
+    "zillowMessages": 57,
     "conversationTime": "1 hr 31m"
    }
   },
   {
    "rank": 5,
    "name": "Sean Spellman",
-   "score": 11192,
+   "score": 11263,
    "metrics": {
     "appointments": 13,
     "conversations": 24,
     "callAttempts": 53,
-    "texts": 501,
+    "texts": 534,
     "emails": 605,
-    "zillowMessages": 31,
+    "zillowMessages": 32,
     "conversationTime": "2 hrs 56m"
    }
   },
@@ -455,15 +455,15 @@
   {
    "rank": 9,
    "name": "Daisia Frank",
-   "score": 6048,
+   "score": 6058,
    "metrics": {
     "appointments": 1,
     "conversations": 5,
     "callAttempts": 20,
     "texts": 1421,
-    "emails": 1981,
+    "emails": 1991,
     "zillowMessages": 5,
-    "conversationTime": "37m 50s"
+    "conversationTime": "39m 25s"
    }
   },
   {
@@ -511,29 +511,29 @@
   {
    "rank": 13,
    "name": "Stephanie Cardona",
-   "score": 4279,
+   "score": 4297,
    "metrics": {
     "appointments": 7,
     "conversations": 3,
-    "callAttempts": 3,
-    "texts": 77,
-    "emails": 20,
+    "callAttempts": 4,
+    "texts": 80,
+    "emails": 22,
     "zillowMessages": 55,
-    "conversationTime": "42m 13s"
+    "conversationTime": "42m 37s"
    }
   },
   {
    "rank": 14,
    "name": "Monika Kardos",
-   "score": 4049,
+   "score": 4170,
    "metrics": {
     "appointments": 4,
-    "conversations": 14,
-    "callAttempts": 15,
-    "texts": 128,
+    "conversations": 15,
+    "callAttempts": 16,
+    "texts": 131,
     "emails": 33,
-    "zillowMessages": 42,
-    "conversationTime": "1 hr 35m"
+    "zillowMessages": 43,
+    "conversationTime": "1 hr 42m"
    }
   },
   {
@@ -567,19 +567,33 @@
   {
    "rank": 17,
    "name": "Christine Tran",
-   "score": 3096,
+   "score": 3100,
    "metrics": {
     "appointments": 2,
     "conversations": 16,
     "callAttempts": 31,
-    "texts": 87,
+    "texts": 89,
     "emails": 12,
     "zillowMessages": 0,
-    "conversationTime": "2 hrs 56m"
+    "conversationTime": "2 hrs 57m"
    }
   },
   {
    "rank": 18,
+   "name": "King Ketchum",
+   "score": 2802,
+   "metrics": {
+    "appointments": 2,
+    "conversations": 11,
+    "callAttempts": 34,
+    "texts": 119,
+    "emails": 19,
+    "zillowMessages": 21,
+    "conversationTime": "1 hr 22m"
+   }
+  },
+  {
+   "rank": 19,
    "name": "Sandra Fuller",
    "score": 2717,
    "metrics": {
@@ -589,21 +603,7 @@
     "texts": 248,
     "emails": 6,
     "zillowMessages": 31,
-    "conversationTime": "1 hr 51m"
-   }
-  },
-  {
-   "rank": 19,
-   "name": "King Ketchum",
-   "score": 2590,
-   "metrics": {
-    "appointments": 2,
-    "conversations": 9,
-    "callAttempts": 33,
-    "texts": 118,
-    "emails": 19,
-    "zillowMessages": 21,
-    "conversationTime": "1 hr 15m"
+    "conversationTime": "1 hr 52m"
    }
   },
   {
@@ -622,6 +622,20 @@
   },
   {
    "rank": 21,
+   "name": "Adriana Sanchez",
+   "score": 2110,
+   "metrics": {
+    "appointments": 1,
+    "conversations": 13,
+    "callAttempts": 5,
+    "texts": 83,
+    "emails": 19,
+    "zillowMessages": 15,
+    "conversationTime": "1 hr 7m"
+   }
+  },
+  {
+   "rank": 22,
    "name": "Matthew Sears",
    "score": 2059,
    "metrics": {
@@ -635,28 +649,14 @@
    }
   },
   {
-   "rank": 22,
-   "name": "Adriana Sanchez",
-   "score": 1999,
-   "metrics": {
-    "appointments": 1,
-    "conversations": 12,
-    "callAttempts": 5,
-    "texts": 80,
-    "emails": 19,
-    "zillowMessages": 14,
-    "conversationTime": "1 hr 3m"
-   }
-  },
-  {
    "rank": 23,
    "name": "Abbie Reeves",
-   "score": 1968,
+   "score": 1982,
    "metrics": {
     "appointments": 0,
     "conversations": 16,
     "callAttempts": 4,
-    "texts": 118,
+    "texts": 125,
     "emails": 12,
     "zillowMessages": 16,
     "conversationTime": "1 hr 40m"
@@ -664,48 +664,62 @@
   },
   {
    "rank": 24,
-   "name": "Flynn Cordova",
-   "score": 1812,
+   "name": "Melinda Suchecki",
+   "score": 1927,
    "metrics": {
-    "appointments": 1,
+    "appointments": 2,
     "conversations": 5,
-    "callAttempts": 55,
-    "texts": 90,
-    "emails": 82,
-    "zillowMessages": 0,
-    "conversationTime": "53m 33s"
+    "callAttempts": 15,
+    "texts": 100,
+    "emails": 2,
+    "zillowMessages": 15,
+    "conversationTime": "1 hr 18m"
    }
   },
   {
    "rank": 25,
+   "name": "Flynn Cordova",
+   "score": 1834,
+   "metrics": {
+    "appointments": 1,
+    "conversations": 5,
+    "callAttempts": 56,
+    "texts": 96,
+    "emails": 82,
+    "zillowMessages": 0,
+    "conversationTime": "54m 53s"
+   }
+  },
+  {
+   "rank": 26,
    "name": "Jason Suchecki",
-   "score": 1773,
+   "score": 1779,
    "metrics": {
     "appointments": 0,
     "conversations": 15,
     "callAttempts": 7,
     "texts": 17,
-    "emails": 169,
+    "emails": 175,
     "zillowMessages": 0,
     "conversationTime": "2 hrs 1m"
    }
   },
   {
-   "rank": 26,
+   "rank": 27,
    "name": "Susan O'Rourke",
-   "score": 1688,
+   "score": 1707,
    "metrics": {
     "appointments": 1,
     "conversations": 5,
     "callAttempts": 8,
-    "texts": 147,
+    "texts": 149,
     "emails": 19,
-    "zillowMessages": 59,
-    "conversationTime": "29m 50s"
+    "zillowMessages": 62,
+    "conversationTime": "31m 14s"
    }
   },
   {
-   "rank": 27,
+   "rank": 28,
    "name": "Toni Wilson",
    "score": 1679,
    "metrics": {
@@ -716,20 +730,6 @@
     "emails": 63,
     "zillowMessages": 6,
     "conversationTime": "0m"
-   }
-  },
-  {
-   "rank": 28,
-   "name": "Melinda Suchecki",
-   "score": 1372,
-   "metrics": {
-    "appointments": 1,
-    "conversations": 5,
-    "callAttempts": 12,
-    "texts": 95,
-    "emails": 2,
-    "zillowMessages": 12,
-    "conversationTime": "1 hr 16m"
    }
   },
   {
@@ -813,7 +813,7 @@
     "texts": 22,
     "emails": 56,
     "zillowMessages": 1,
-    "conversationTime": "47m 28s"
+    "conversationTime": "48m 39s"
    }
   },
   {
@@ -841,7 +841,7 @@
     "texts": 49,
     "emails": 1,
     "zillowMessages": 1,
-    "conversationTime": "29m 22s"
+    "conversationTime": "29m 28s"
    }
   },
   {
@@ -869,7 +869,7 @@
     "texts": 19,
     "emails": 2,
     "zillowMessages": 10,
-    "conversationTime": "18m 38s"
+    "conversationTime": "19m 46s"
    }
   },
   {
